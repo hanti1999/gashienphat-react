@@ -2,34 +2,28 @@ import facebookLogo from '../../assets/img/icon/facebookLogo.png'
 import zaloLogo from '../../assets/img/icon/zaloLogo.jpg'
 import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
 import HpLogo from '../../assets/img/icon/gashienphatlogo.png'
-// import {links} from '../../assets/links'
+// import { links } from '../../assets/links'
 import SideBar from './sidebar'
-import firebase, {db, auth} from '../../firebase/config'
+import firebase, { db, auth } from '../../firebase/config'
 import React, { useState, useEffect } from 'react'
-
-// async function getDocument(db) {
-//     const linksRef = db.collection('links').doc('cRoeTa5CiYehg15syDdw');
-//     const doc = await linksRef.get()
-//     if (!doc.exists) {
-//         console.log('Không tìm thấy dữ liệu!');
-//     } else {
-//         console.log('Dữ liệu chứa:', doc.data());
-//     }
-// }
-// getDocument(db)
+import { mainNavs } from '../../assets/mainNav';
 
 function AppHeader() {
+    // Get 'links' from firebase (test)
     const [links, setlinks] = useState([]);
 
     useEffect(() => {
         db.collection("links").onSnapshot((snapshot) => {
-            setlinks(snapshot.docs.map((doc) => ({
+            setlinks(snapshot.docs.map(doc => ({
               id: doc.id,
               data: doc.data(),
             })));
         });
         // console.log({ links });
     }, []);
+
+    // change color nav
+    const [action, setAction] = useState('Trang chủ');
 
     return (
         <header className='appHeader mx-0 max-md:mx-[8px]'>
@@ -80,19 +74,19 @@ function AppHeader() {
                 <div className='hidden max-md:block fixed inset-x-0 bottom-0 h-[46px] bg-rgb237 z[1]'>
                     <div className='grid grid-cols-3 h-full'>
                         <div>
-                            <a href="#" className='text-14 no-underline flex h-full items-center justify-center flex-col text-333'>
+                            <a href="#" className='mobile-nav-link'>
                                 <i className='text-20 fa-solid fa-user'></i>
                                 <span>Tài khoản</span>
                             </a>
                         </div>
                         <div className='border-l border-solid border-[#e0e0e0]'>
-                            <a href="#" className='text-14 no-underline flex h-full items-center justify-center flex-col text-333'>
+                            <a href="#" className='mobile-nav-link'>
                                 <i className='text-20 fa-solid fa-heart'></i>
                                 <span>Yêu thích</span>
                             </a>
                         </div>
                         <div className='border-l border-solid border-[#e0e0e0]'>
-                            <a href="#" className='text-14 no-underline flex h-full items-center justify-center flex-col text-333'>
+                            <a href="#" className='mobile-nav-link'>
                                 <i className='text-20 fa-solid fa-cart-shopping'></i>
                                 <span>Giỏ hàng</span>
                             </a>
@@ -109,18 +103,11 @@ function AppHeader() {
                     <nav className="col-span-9 max-lg:col-span-full">
                         <div className='flex items-center justify-center'>
                             <div className='flex flex-1 max-md:justify-between max-lg:justify-around'>
-                                <div className='lg:mr-[40px]'>
-                                    <a href="#" className='navlink active md:max-lg:text-20'>Trang chủ</a>
-                                </div>
-                                <div className='lg:mr-[40px]'>
-                                    <a href="#" className='navlink md:max-lg:text-20'>Mua hàng</a>
-                                </div>
-                                <div className='lg:mr-[40px]'>
-                                    <a href="#" className='navlink md:max-lg:text-20'>Tin tức</a>
-                                </div>
-                                <div className='lg:mr-[40px]'>
-                                    <a href="#" className='navlink md:max-lg:text-20'>Liên hệ</a>
-                                </div>
+                                {mainNavs.map((mainNav, index) => (
+                                   <div key={index} className='lg:mr-[40px]' onClick={() => {setAction(mainNav.title)}}>
+                                        <a href={mainNav.href} className={action === mainNav.title ? 'navlink active' : 'navlink'}>{mainNav.title}</a>
+                                   </div>
+                                ))}
                             </div>
                         </div>
                     </nav>

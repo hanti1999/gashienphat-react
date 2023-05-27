@@ -63,7 +63,7 @@
     }
 
     .navlink {
-        @apply text-333 font-bold text-16 hover:text-primary;
+        @apply text-333 font-bold text-16 hover:text-primary md:max-lg:text-20;
     }
 
     .phone-number {
@@ -72,5 +72,9 @@
 
     .showSTTBtn {
         @apply fixed w-20 h-20 bottom-12 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300;
+    }
+
+    .mobile-nav-link {
+        @apply text-14 no-underline flex h-full items-center justify-center flex-col text-333;
     }
 }
