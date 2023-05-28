@@ -17,6 +17,7 @@ export default {
       },
       boxShadow: {
         's0': 'rgba(0, 0, 0, 0.16) 0px 1px 4px 0px;',
+        's1': 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
       },
       backgroundImage: {
         'mainBanner': "url('./assets/img/banner-1.png')"

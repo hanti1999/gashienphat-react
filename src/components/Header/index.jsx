@@ -71,7 +71,7 @@ function AppHeader() {
                     </div>
                 </div>
                 {/* Mobile nav bar */}
-                <div className='hidden max-md:block fixed inset-x-0 bottom-0 h-[46px] bg-rgb237 z[1]'>
+                <div className='hidden max-md:block fixed inset-x-0 bottom-0 h-[46px] bg-rgb237 z-10'>
                     <div className='grid grid-cols-3 h-full'>
                         <div>
                             <a href="#" className='mobile-nav-link'>
@@ -104,7 +104,7 @@ function AppHeader() {
                         <div className='flex items-center justify-center'>
                             <div className='flex flex-1 max-md:justify-between max-lg:justify-around'>
                                 {mainNavs.map((mainNav, index) => (
-                                   <div key={index} className='lg:mr-[40px]' onClick={() => {setAction(mainNav.title)}}>
+                                   <div key={index} className='lg:mr-[40px]' onClick={() => (setAction(mainNav.title))}>
                                         <a href={mainNav.href} className={action === mainNav.title ? 'navlink active' : 'navlink'}>{mainNav.title}</a>
                                    </div>
                                 ))}
