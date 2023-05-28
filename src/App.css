@@ -71,7 +71,7 @@
     }
 
     .showSTTBtn {
-        @apply fixed w-20 h-20 bottom-12 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300;
+        @apply fixed w-20 h-20 bottom-12 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300 hover:bg-333;
     }
 
     .mobile-nav-link {

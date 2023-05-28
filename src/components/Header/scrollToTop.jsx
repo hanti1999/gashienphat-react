@@ -1,22 +1,24 @@
+import React, { useState, useEffect } from 'react'
+
 function ScrollTop() {
-    window.onscroll = function() {scrollFunction()};
+    const [showScrollBtn, setShowScrollBtn] = useState(false);
 
-    function scrollFunction() {
-        let myBtn = document.getElementById("scrollToTopBtn");
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            myBtn.className = "showSTTBtn";
-        } else {
-            myBtn.className = "opacity-0 invisible";
+    useEffect(() => {
+        window.onscroll = () => {handleScroll()};
+
+        const handleScroll = () => {
+            setShowScrollBtn(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
         }
-    }
-
-    function topFunction() {
+    }, [])
+    
+    // click and back to top
+    const topFunction = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
     return (
-        <button onClick={topFunction} id="scrollToTopBtn" className='opacity-0 invisible'>
+        <button onClick={topFunction} className={showScrollBtn ? 'showSTTBtn' : 'opacity-0 invisible'}>
             <i className="fa-solid fa-angle-up"></i>
         </button>
     )
