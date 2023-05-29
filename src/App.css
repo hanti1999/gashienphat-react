@@ -13,6 +13,12 @@
         transition: height linear .3s;
     }
 }
+/* Product */
+.product-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
 
 @layer base {
     body {
@@ -30,6 +36,9 @@
 
 @layer components {
     /* Category */
+    .wid-1200 {
+        @apply max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px];
+    }
     .active {
         @apply !text-primary;
     }

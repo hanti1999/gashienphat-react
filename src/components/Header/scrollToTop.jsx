@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function ScrollTop() {
+function ScrollToTop() {
     const [showScrollBtn, setShowScrollBtn] = useState(false);
 
     useEffect(() => {
@@ -24,4 +24,4 @@ function ScrollTop() {
     )
 }
 
-export default ScrollTop
+export default ScrollToTop

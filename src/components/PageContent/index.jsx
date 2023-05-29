@@ -1,5 +1,6 @@
-import ProductCategory from './productCategory';
+import ProductCategory from './ProductCategory';
 import banner1 from '../../assets/img/banner/bannerr.jpg'
+import HotSaleProducts from './HotSaleProducts';
 
 function PageContent() {
     return (
@@ -12,6 +13,7 @@ function PageContent() {
                     </a>
                 </div>
             </div>
+            <HotSaleProducts />
         </div>
     )
 }

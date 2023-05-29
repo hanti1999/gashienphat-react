@@ -3,7 +3,7 @@ import zaloLogo from '../../assets/img/icon/zaloLogo.jpg'
 import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
 import HpLogo from '../../assets/img/icon/gashienphatlogo.png'
 // import { links } from '../../assets/links'
-import SideBar from './sidebar'
+import SideBar from './Sidebar'
 import firebase, { db, auth } from '../../firebase/config'
 import React, { useState, useEffect } from 'react'
 import { mainNavs } from '../../assets/mainNav';
@@ -28,7 +28,7 @@ function AppHeader() {
     return (
         <header className='appHeader mx-0 max-md:mx-[8px]'>
             <div className='bg-rgb237 h-[46px] absolute inset-x-0 z-[-1]'></div>
-            <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+            <div className='wid-1200'>
                 {/* Top header */}
                 <div className="flex h-[46px] justify-between items-center max-md:justify-center">
                     <div className="flex items-center">
