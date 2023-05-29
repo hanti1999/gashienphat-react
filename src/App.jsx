@@ -1,7 +1,7 @@
 import './App.css'
 import AppFooter from './components/Footer'
 import AppHeader from './components/Header'
-import ScrollToTop from './components/Header/ScrollToTop'
+import ScrollToTop from './components/Header/scrollToTop'
 // import SignIn from './components/Login'
 import PageContent from './components/PageContent'
 
