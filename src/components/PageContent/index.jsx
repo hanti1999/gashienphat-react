@@ -1,6 +1,6 @@
-import ProductCategory from './ProductCategory';
+import ProductCategory from './productCategory';
 import banner1 from '../../assets/img/banner/bannerr.jpg'
-import HotSaleProducts from './HotSaleProducts';
+import HotSaleProducts from './hotSaleProducts';
 
 function PageContent() {
     return (

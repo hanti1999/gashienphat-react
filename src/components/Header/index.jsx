@@ -3,7 +3,7 @@ import zaloLogo from '../../assets/img/icon/zaloLogo.jpg'
 import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
 import HpLogo from '../../assets/img/icon/gashienphatlogo.png'
 // import { links } from '../../assets/links'
-import SideBar from './Sidebar'
+import SideBar from './sidebar'
 import firebase, { db, auth } from '../../firebase/config'
 import React, { useState, useEffect } from 'react'
 import { mainNavs } from '../../assets/mainNav';
