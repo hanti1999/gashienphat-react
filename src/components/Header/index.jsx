@@ -25,6 +25,12 @@ function AppHeader() {
     // change color nav
     const [action, setAction] = useState('Trang chủ');
 
+    // show sidebar cat
+    // const [showSB, setShowSB] = useState(false)
+    // const toggleSB = () => {
+    //     setShowSB(!showSB)
+    // }
+
     return (
         <header className='appHeader mx-0 max-md:mx-[8px]'>
             <div className='bg-rgb237 h-[46px] absolute inset-x-0 z-[-1]'></div>
@@ -105,7 +111,7 @@ function AppHeader() {
                             <div className='flex flex-1 max-md:justify-between max-lg:justify-around'>
                                 {mainNavs.map((mainNav, index) => (
                                    <div key={index} className='lg:mr-[40px]' onClick={() => (setAction(mainNav.title))}>
-                                        <a href={mainNav.href} className={action === mainNav.title ? 'navlink active' : 'navlink'}>{mainNav.title}</a>
+                                        <a href={mainNav.href} className={`navlink ${action === mainNav.title ? 'active' : ''}`}>{mainNav.title}</a>
                                    </div>
                                 ))}
                             </div>
@@ -123,6 +129,15 @@ function AppHeader() {
                             </label>
                             <input type="checkbox" hidden name="" id="show-category" />
                             <SideBar />
+                            {/* Dùng thay label + checkbox nhưng bị warning code 400
+                            <button onClick={toggleSB} className='category-btn max-md:h-[46px]'>
+                                <i className='fa-solid fa-list-ul'></i>
+                                <span className='mx-[10px]'>Tất cả ngành hàng</span>
+                                <i className='fa-solid fa-angle-down'></i>
+                            </button>
+                            <div className={`category-list ${showSB ? 'max-lg:h-[430px]' : 'max-lg:h-0'}`}>
+                                <SideBar />
+                            </div> */}
                         </div>
                     </div>
                     <div className='col-span-9 max-lg:col-span-full'>
@@ -136,7 +151,7 @@ function AppHeader() {
                             <div className='flex items-center max-md:hidden'>
                                 <div className='w-[120px] relative text-center'>
                                     <a href="#" className='text-333'>
-                                        <i className='text-26 cursor-pointer fa-solid fa-cart-shopping'></i>
+                                        <i className='text-26 cursor-pointer fa-solid fa-cart-shopping transiton'></i>
                                         <span className='cart-badge'>0</span>
                                     </a>
                                 </div>

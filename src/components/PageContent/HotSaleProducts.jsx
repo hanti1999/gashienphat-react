@@ -38,7 +38,7 @@ function HotSaleProducts() {
                                     <div className='bg-[#f8f9fa] rounded-t p-[8px]'>
                                         <ul className='ml-[12px]'>
                                             {HotSale.description.map((des, index) => (
-                                                <li key={index} className='text-13 mb-[4px]'>{des}</li>
+                                                <li key={index} className='text-13 mb-[4px] list-disc'>{des}</li>
                                             ))}
                                             <span className='text-14 italic'>{HotSale.gift}</span>
                                         </ul>

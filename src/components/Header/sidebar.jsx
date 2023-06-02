@@ -2,7 +2,7 @@ import { catItems } from "../../assets/category"; // Dùng tạm trước khi ch
 
 function SideBar() {
     return (
-        <div className='category-list max-lg:h-0 max-lg:overflow-hidden'>
+        <div className='category-list max-lg:h-0'>
             <ul className='list-none bg-white'>
                 {catItems.map((catItem, index) => (
                     <li key={index} className='category-item'>

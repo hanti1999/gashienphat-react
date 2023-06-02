@@ -44,7 +44,7 @@
     }
 
     .category-btn {
-        @apply text-white text-18 bg-primary h-[50px] font-bold flex items-center justify-center select-none rounded-t w-full;
+        @apply text-white text-18 bg-primary h-[50px] font-bold flex items-center justify-center select-none rounded-t w-full cursor-default;
     }
 
     .cart-badge {
@@ -52,7 +52,7 @@
     }
 
     .category-list {
-        @apply shadow-s0 absolute h-[430px] origin-top top-full inset-x-0 rounded-b bg-white z-10 transition-[height] duration-300;
+        @apply shadow-s0 absolute h-[430px] origin-top top-full inset-x-0 rounded-b bg-white z-10 transition-[height] duration-300 max-lg:overflow-hidden;
     }
 
     .category-item {
@@ -80,7 +80,7 @@
     }
 
     .showSTTBtn {
-        @apply fixed w-20 h-20 bottom-12 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300 hover:bg-333;
+        @apply fixed w-20 h-20 bottom-12 max-md:bottom-20 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300 hover:bg-333;
     }
 
     .mobile-nav-link {

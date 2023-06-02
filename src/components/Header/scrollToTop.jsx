@@ -18,7 +18,7 @@ function ScrollToTop() {
     }
 
     return (
-        <button onClick={topFunction} className={showScrollBtn ? 'showSTTBtn' : 'showSTTBtn opacity-0 invisible'}>
+        <button onClick={topFunction} className={`showSTTBtn ${showScrollBtn ? '' : 'opacity-0 invisible'}`}>
             <i className="fa-solid fa-angle-up"></i>
         </button>
     )
