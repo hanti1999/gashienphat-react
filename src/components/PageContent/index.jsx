@@ -7,13 +7,15 @@ import HotSaleProducts from './HotSaleProducts';
 import GasStove from './GasStove';
 import ElectricStove from './ElectricStove';
 import WaterPurification from './WaterPurification';
+import Recommend from './Recommend';
+import Blog from './Blog';
 
 function PageContent() {
     return (
         <div className="pageContent mt-[20px] max-md:mx-[8px]">
             <ProductCategory />
             <div className='my-[10px]'>
-                <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+                <div className='wid-1200'>
                     <a href='#'>
                         <img src={banner1} alt="" className='w-full rounded shadow-s0'/>
                     </a>
@@ -21,7 +23,7 @@ function PageContent() {
             </div>
             <HotSaleProducts />
             <div className='my-[10px]'>
-                <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+                <div className='wid-1200'>
                     <a href='#'>
                         <img src={banner2} alt="" className='w-full rounded shadow-s0'/>
                     </a>
@@ -29,7 +31,7 @@ function PageContent() {
             </div>
             <GasStove />
             <div className='my-[10px]'>
-                <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+                <div className='wid-1200'>
                     <a href='#'>
                         <img src={banner3} alt="" className='w-full rounded shadow-s0'/>
                     </a>
@@ -37,7 +39,7 @@ function PageContent() {
             </div>
             <ElectricStove />
             <div className='my-[10px]'>
-                <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+                <div className='wid-1200'>
                     <a href='#'>
                         <img src={banner4} alt="" className='w-full rounded shadow-s0'/>
                     </a>
@@ -45,12 +47,14 @@ function PageContent() {
             </div>
             <WaterPurification />
             <div className='my-[10px]'>
-                <div className='max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px]'>
+                <div className='wid-1200'>
                     <a href='#'>
                         <img src={banner2} alt="" className='w-full rounded shadow-s0'/>
                     </a>
                 </div>
             </div>
+            <Recommend />
+            <Blog />
         </div>
     )
 }

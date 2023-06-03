@@ -14,10 +14,16 @@
     }
 }
 /* Product */
-.product-name {
+.product-name, .blog-name {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+
+.blog-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
 }
 
 @layer base {
@@ -95,4 +101,6 @@
     .product-cat-item-link {
         @apply flex flex-col items-center justify-center p-[8px] text-14 text-333 bg-transparent;
     }
+
+    /* BLog */
 }
