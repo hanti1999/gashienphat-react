@@ -15,22 +15,22 @@ export const ProductCat = [
     {
         name: 'Bếp gas đôi',
         src: Akia,
-        href: '#'
+        href: '#bep-gas'
     },
     {
         name: 'Bếp gas mini',
         src: NamiLuxPL2021AS,
-        href: '#'
+        href: '#bep-gas'
     },
     {
         name: 'Bếp gas khè/CN',
         src: ThaiFlameCN,
-        href: '#'
+        href: '#bep-gas'
     },
     {
         name: 'Bếp điện',
         src: ladomaxha668,
-        href: '#'
+        href: '#bep-dien'
     },
     {
         name: 'Nồi cơm điện',
@@ -45,7 +45,7 @@ export const ProductCat = [
     {
         name: 'Máy lọc nước',
         src: daikiosandsw32009h2,
-        href: '#'
+        href: '#may-loc-nuoc'
     },
     {
         name: 'Quạt làm mát',

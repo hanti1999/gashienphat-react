@@ -2,7 +2,7 @@ import { waterPurificationList } from '../../assets/waterPurifiactionList';
 
 function WaterPurification() {
     return (
-        <div className="my-[10px]">
+        <div id='may-loc-nuoc' className="my-[10px]">
             <div className="wid-1200">
                 <div className="flex items-center justify-between px-[8px]">
                     <div className="text-[#ff0000] text-24 font-medium">

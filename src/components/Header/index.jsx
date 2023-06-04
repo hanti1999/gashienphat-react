@@ -7,6 +7,7 @@ import SideBar from './sidebar'
 import firebase, { db, auth } from '../../firebase/config'
 import React, { useState, useEffect } from 'react'
 import { mainNavs } from '../../assets/mainNav';
+import Notice from './Notice'
 
 function AppHeader() {
     // Get 'links' from firebase (test)
@@ -33,6 +34,7 @@ function AppHeader() {
 
     return (
         <header className='appHeader mx-0 max-md:mx-[8px]'>
+            <Notice />
             <div className='bg-rgb237 h-[46px] absolute inset-x-0 z-[-1]'></div>
             <div className='wid-1200'>
                 {/* Top header */}

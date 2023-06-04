@@ -6,7 +6,7 @@ import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
 function AppFooter() {
     return (
         <footer className="appFooter bg-[#f5f5f5] border-t-2 border-primary mt-[20px]">
-            <div className='bg-[#f8f9fa] pb-[20px] text-14'>
+            <div className='bg-[#f8f9fa] pb-[20px] text-14 max-md:mx-[8px]'>
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 gap-[24px]'>
                         <div className='col-span-4 max-lg:col-span-12'>
@@ -28,7 +28,7 @@ function AppFooter() {
                                 <li className='block mb-[10px]'><a className='text-primary' href="#">Giới thiệu về công ty</a></li>
                                 <li className='block mb-[10px]'><a className='text-primary' href="#">Giao hàng & thanh toán</a></li>
                                 <li className='block mb-[10px]'><a className='text-primary' href="#">Hướng dẫn mua online</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Cảng báo giá mạo</a></li>
+                                <li className='block mb-[10px]'><a className='text-primary' href="#">Cảnh báo giả mạo</a></li>
                                 <li className='block mb-[10px]'><a className='text-primary' href="#">Thông tin khuyến mãi</a></li>
                             </ul>
                             <ul className="mt-[20px] w-1/2 float-left">
@@ -45,7 +45,7 @@ function AppFooter() {
                                 <a className='inline-block' target="_blank" href="https://www.facebook.com/hienphatvina">
                                     <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={facebookLogo} alt=""/>
                                 </a>
-                                <a className='inline-block' target="_blank" href="https://zalo.me/0965266926">
+                                <a className='inline-block' target="_blank" href="https://zalo.me/0975841582">
                                     <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={zaloLogo} alt=""/>
                                 </a>
                                 <a className='inline-block' target="_blank" href="https://www.youtube.com/c/gashienphat">
@@ -60,22 +60,22 @@ function AppFooter() {
                     </div>
                 </div>
             </div>
-            <div className='pt-[6px] pb-[10px]'>
+            <div className='pt-[6px] pb-[10px] max-md:pb-[50px] max-md:mx-[8px]'>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>Công ty TNHH Hiền Phát Vina</div>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>Mã số doanh nghiệp: 3603240938 do Sở Kế hoạch & Đầu tư tỉnh Đồng Nai cấp lần đầu ngày 30/12/2014</div>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
                     Phát triển bởi: <b>Nguyễn Thông Hoàng Anh</b>
                     <a target="_blank" href="https://www.instagram.com/hoangfanh.99/">
-                        <i className="px-[3px] fa-brands fa-instagram"></i>
+                        <i className="text-16 px-[3px] fa-brands fa-instagram"></i>
                     </a>
                     <a target="_blank" href="https://www.facebook.com/hoangfanh.99/">
-                        <i className="px-[3px] fa-brands fa-facebook"></i>
+                        <i className="text-16 px-[3px] fa-brands fa-facebook"></i>
                     </a>
                     <a target="_blank" href="https://zalo.me/0986359498">
-                        <i className="px-[3px] fa-solid fa-phone"></i>
+                        <i className="text-16 px-[3px] fa-solid fa-phone"></i>
                     </a>
                     <a target="_blank" href="mailto:nth.anh020209@gmail.com">
-                        <i className="px-[3px] fa-solid fa-envelope"></i>
+                        <i className="text-16 px-[3px] fa-solid fa-envelope"></i>
                     </a>
                 </div>
             </div>
