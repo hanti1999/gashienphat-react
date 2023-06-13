@@ -5,7 +5,7 @@ import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
 
 function AppFooter() {
     return (
-        <footer className="appFooter bg-[#f5f5f5] border-t-2 border-primary mt-[20px]">
+        <footer id='lien-he' className="appFooter bg-[#f5f5f5] border-t-2 border-primary mt-[20px]">
             <div className='bg-[#f8f9fa] pb-[20px] text-14 max-md:mx-[8px]'>
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 gap-[24px]'>

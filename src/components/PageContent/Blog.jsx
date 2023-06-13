@@ -31,7 +31,7 @@ const blogItems = [
 
 function Blog() {
     return (
-        <div className="blog wid-1200">
+        <div id='tin-tuc' className="blog wid-1200">
             <div className='bg-white rounded shadow-s0 p-[8px]'>
                 <div className='flex items-center justify-between mb-[8px]'>
                     <h3 className='text-24 text-red-600 font-medium'>

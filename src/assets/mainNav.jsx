@@ -1,18 +1,18 @@
 export const mainNavs = [
     {
         title: 'Trang chủ',
-        href: '#'
-    },
-    {
-        title: 'Mua hàng',
-        href: '#'
+        href: '/'
     },
     {
         title: 'Tin tức',
-        href: '#'
+        href: '/News'
     }
     ,{
         title: 'Liên hệ',
-        href: '#'
+        href: '/Contact'
+    },
+    {
+        title: 'Giỏ hàng',
+        href: '/Cart'
     },
 ];
