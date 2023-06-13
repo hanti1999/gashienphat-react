@@ -8,6 +8,7 @@ import Contact from './pages/Contact.jsx';
 import News from './pages/News.jsx';
 import Cart from './pages/Cart.jsx';
 import PageNotFound from './pages/PageNoteFound.jsx';
+import SignIn from './pages/SignIn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: '*',
         element: <PageNotFound />
       },
+      {
+        path: '/SignIn',
+        element: <SignIn />
+      }
     ]
   }
 ]);

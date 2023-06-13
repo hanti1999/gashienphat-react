@@ -2,7 +2,6 @@ import { Link, Outlet } from 'react-router-dom';
 import firebase, { db, auth } from './firebase/config'
 import React, { useState, useEffect } from 'react'
 import './App.css'
-// import SignIn from './components/Login'
 import Notice from './components/Header/Notice';
 import { mainNavs } from './assets/mainNav';
 import facebookLogo from './assets/img/icon/facebookLogo.png'
@@ -13,11 +12,15 @@ import HpLogo from './assets/img/icon/gashienphatlogo.png'
 function App() {
   // change title
   const changeTitle = e => {
-    document.title = e.target.innerHTML;
+    if (e.target.innerHTML === '') {
+      document.title = 'Gas Hiền Phát'
+    } else {
+      document.title = e.target.innerHTML;
+    }
   }
 
   // change color nav
-  const [action, setAction] = useState('Trang chủ');
+  const [action, setAction] = useState("Trang chủ");
 
   // Get 'links' from firebase (test)
   const [links, setlinks] = useState([]);
@@ -71,10 +74,10 @@ function App() {
                       </div>
                   ))}
                   <div className="flex items-center lg:pl-[20px] lg:border-l lg:border-solid lg:border-[#ccc]">
-                      <a href="#" className='text-333 no-underline'>
+                      <Link onClick={() => (changeTitle, setAction(''))} to="/SignIn" className='text-333 no-underline'>
                           <i className='fa-solid fa-user text-16 mr-[8px]'></i>
                           <span className='text-16 max-lg:text-20'>Đăng nhập/Đăng ký</span>
-                      </a>
+                      </Link>
                   </div>
               </div>
           </div>
@@ -82,31 +85,31 @@ function App() {
           <div className='hidden max-md:block fixed inset-x-0 bottom-0 h-[46px] bg-rgb237 z-10'>
               <div className='grid grid-cols-3 h-full'>
                   <div>
-                      <a href="#" className='mobile-nav-link'>
+                      <Link to="/" className='mobile-nav-link'>
                           <i className='text-20 fa-solid fa-user'></i>
                           <span>Tài khoản</span>
-                      </a>
+                      </Link>
                   </div>
                   <div className='border-l border-solid border-[#e0e0e0]'>
-                      <a href="#" className='mobile-nav-link'>
+                      <Link to="/" className='mobile-nav-link'>
                           <i className='text-20 fa-solid fa-heart'></i>
                           <span>Yêu thích</span>
-                      </a>
+                      </Link>
                   </div>
                   <div className='border-l border-solid border-[#e0e0e0]'>
-                      <a href="#" className='mobile-nav-link'>
+                      <Link to='/Cart' className='mobile-nav-link'>
                           <i className='text-20 fa-solid fa-cart-shopping'></i>
                           <span>Giỏ hàng</span>
-                      </a>
+                      </Link>
                   </div>
               </div>
           </div>
           {/* Nav bar */}
           <div className='max-md:mx-[8px] items-center h-[80px] grid grid-cols-12 lg:gap-[24px] max-lg:grid-cols-1 max-lg:h-[46px]'>
               <div className="col-span-3 max-lg:hidden">
-                  <a href="#" className='text-transparent block w-[60px] no-underline'>
+                  <Link onClick={() => (changeTitle, setAction('Trang chủ'))} to="/" className='text-transparent block w-[60px] no-underline'>
                       <img src={HpLogo} alt="" />
-                  </a>
+                  </Link>
               </div>
               <nav className="col-span-9 max-lg:col-span-full">
                   <div className='flex items-center justify-center'>

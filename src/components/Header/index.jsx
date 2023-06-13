@@ -1,6 +1,6 @@
-// import { links } from '../../assets/links'
 import SideBar from './sidebar'
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 function AppHeader() {
     // show sidebar cat
@@ -44,10 +44,10 @@ function AppHeader() {
                             </div>
                             <div className='flex items-center max-md:hidden'>
                                 <div className='w-[120px] relative text-center'>
-                                    <a href="#" className='text-333'>
+                                    <Link to="/Cart" className='text-333'>
                                         <i className='text-26 cursor-pointer fa-solid fa-cart-shopping transiton'></i>
                                         <span className='cart-badge'>0</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

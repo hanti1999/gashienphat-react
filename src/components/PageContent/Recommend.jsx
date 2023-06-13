@@ -6,7 +6,7 @@ function Recommend() {
                 <div className="flex items-center justify-between px-[8px]">
                     <div className="text-[#ff0000] text-24 font-medium">
                         <i className="fa-regular fa-thumbs-up mr-[4px]"></i>
-                        MÁY LỌC NƯỚC NÓNG - MẠNH
+                        SẢN PHẨM GỢI Ý
                     </div>
                     <div className="text-14 text-primary cursor-pointer">
                         <a href="#">Xem tất cả</a>

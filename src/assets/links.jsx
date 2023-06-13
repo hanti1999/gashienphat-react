@@ -2,7 +2,7 @@ export const links = {
     'facebookHP': 'https://www.facebook.com/hienphatvina',
     'facebookHA': 'https://www.facebook.com/hoangfanh.99',
     'instaHA': 'https://www.instagram.com/hoangfanh.99/',
-    'zaloLink926': 'https://zalo.me/0965266926',
+    'zaloLink926': 'https://zalo.me/0975841582',
     'zaloLink072': 'https://zalo.me/0986573072',
     'zaloLink498': 'https://zalo.me/0986359498',
     'youtubeLink': 'https://www.youtube.com/c/gashienphat',
