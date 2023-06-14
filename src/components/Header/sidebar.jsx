@@ -1,8 +1,8 @@
-import { catItems } from "../../assets/category"; // Dùng tạm trước khi chuyển sang firebase
+import { catItems } from "../../assets/data/category";
 
 function SideBar() {
     return (
-        <div className='category-list max-lg:h-0'>
+        <div className='category-list max-lg:h-0 lg:h-[430px]'>
             <ul className='list-none bg-white'>
                 {catItems.map((catItem, index) => (
                     <li key={index} className='category-item'>

@@ -1,4 +1,6 @@
 import firebase, { auth } from '../firebase/config';
+import Helmet from '../components/Helmet/Helmet';
+
 
 function SignIn() {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -11,12 +13,13 @@ function SignIn() {
         auth.signInWithPopup(facebookProvider);
     }
 
-    auth.onAuthStateChanged((user) => {
-        console.log({user});
-    })
+    // auth.onAuthStateChanged((user) => {
+    //     console.log({user});
+    // })
 
     return (
         <>
+        <Helmet title={'Đăng nhập'} /> 
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h2 className="mt-[20px] text-center text-18 font-bold tracking-tight text-333">

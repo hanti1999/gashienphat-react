@@ -54,11 +54,11 @@
     }
 
     .cart-badge {
-        @apply absolute w-[20px] h-[20px] text-center leading-[2rem] bg-primary text-white rounded-full text-10 font-bold right-1/4 bottom-[80%];
+        @apply absolute w-[20px] h-[20px] text-center leading-[2rem] bg-primary text-white rounded-full text-10 font-bold left-1/2 bottom-[80%];
     }
 
     .category-list {
-        @apply shadow-s0 absolute h-[430px] origin-top top-full inset-x-0 rounded-b bg-white z-10 transition-[height] duration-300 max-lg:overflow-hidden;
+        @apply shadow-s0 absolute origin-top top-full inset-x-0 rounded-b bg-white z-10 transition-[height] duration-300 max-lg:overflow-hidden;
     }
 
     .category-item {
