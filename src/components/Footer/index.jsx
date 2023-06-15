@@ -38,10 +38,10 @@ const footerLinks = [
     }
 ]
 
-function AppFooter() {
+function Footer() {
     const year = new Date().getFullYear;
     return (
-        <footer className="appFooter bg-[#f5f5f5] border-t-4 border-primary mt-[20px]">
+        <footer className="bg-[#f5f5f5] border-t-4 border-primary mt-[20px]">
             <div className='bg-[#f8f9fa] pb-[20px] text-14 max-md:mx-[8px]'>
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 gap-[24px]'>
@@ -123,9 +123,16 @@ function AppFooter() {
                         <i className="text-16 px-[3px] fa-solid fa-envelope"></i>
                     </a>
                 </div>
+                <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
+                    Tài nguyên:
+                    <a className='text-primary' href="https://fontawesome.com/" target='_blank'> icon: Fontawesome | </a>
+                    <a className='text-primary' href="https://tailwindcss.com/" target='_blank'>UI/css: Tailwind | </a>
+                    <a className='text-primary' href="https://fonts.google.com/" target='_blank'>font: Google fonts | </a>
+                    <a className='text-primary' href="https://www.freepik.com/" target='_blank'>images: Freepik</a>
+                </div>
             </div>
         </footer>
     )
 }
 
-export default AppFooter;
+export default Footer;

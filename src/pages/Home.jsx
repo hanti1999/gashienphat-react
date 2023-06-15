@@ -41,7 +41,7 @@ function Home() {
     return (
         <>
             <Helmet title={'Trang chủ'} />
-            <div className='appHeader mx-0 max-md:mx-[8px]'>
+            <div className='mx-0 max-md:mx-[8px]'>
                 {/* category + search bar */}
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 lg:gap-[24px] max-lg:grid-cols-1'>
@@ -89,20 +89,6 @@ function Home() {
                                         <span className='text-white text-14 font-bold leading-[5rem] block'>Tìm kiếm</span>
                                     </button>
                                 </div>
-                                {/* <div className='flex items-center max-md:hidden'>
-                                    <div className='w-[50px] relative text-center'>
-                                        <Link to="/cart" className='text-333'>
-                                            <i className='text-22 cursor-pointer fa-solid fa-cart-shopping transiton'></i>
-                                            <span className='cart-badge'>0</span>
-                                        </Link>
-                                    </div>
-                                    <div className='w-[50px] relative text-center'>
-                                        <Link to="/cart" className='text-333'>
-                                            <i className='text-22 cursor-pointer fa-solid fa-heart transiton'></i>
-                                            <span className='cart-badge'>0</span>
-                                        </Link>
-                                    </div>
-                                </div> */}
                             </div>
                             <div className='mt-[10px] rounded overflow-hidden relative max-md:mt-[4px]'>
                                 <div className="bg-mainBanner h-[420px] bg-no-repeat bg-center bg-cover blur-sm"></div>

@@ -1,16 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, Outlet, NavLink } from 'react-router-dom';
 
-import fLogo from '../../assets/img/icon/facebookLogo.png'
-import zLogo from '../../assets/img/icon/zaloLogo.jpg'
-import yLogo from '../../assets/img/icon/youtubeLogo.png'
 import cLogo from '../../assets/img/icon/gashienphatlogo.png'
 
-import links from '../../assets/data/links';
-
 import firebase, { db, auth } from '../../firebase/config';
-
-import Notice from '../UI/Notice';
 
 import './header.css'
 
@@ -33,7 +26,7 @@ const mainNavs = [
     },
 ];
 
-function AppHeader() {
+function Header() {
     // Get 'links' from firebase (test)
     // const [links, setlinks] = useState([]);
     // useEffect(() => {
@@ -72,7 +65,6 @@ function AppHeader() {
 
     return (
         <>
-            {/* <Notice /> */}
             <header ref={headerRef} className='h-[70px] leading-[7rem] max-lg:h-[60px] max-lg:leading-[6rem]'>
                 {/* Nav bar */}
                 <div className='wid-1200'>
@@ -126,4 +118,4 @@ function AppHeader() {
     )
 }
 
-export default AppHeader;
+export default Header;

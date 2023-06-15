@@ -1,14 +1,14 @@
 import './App.css'
-import AppFooter from './components/Footer';
-import AppHeader from './components/Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import ScrollToTop from './components/UI/ScrollToTop';
 
 function App() {
     return (
         <div className='App'>
-            <AppHeader />
+            <Header />
             <ScrollToTop />
-            <AppFooter />
+            <Footer />
         </div>
     )
 }

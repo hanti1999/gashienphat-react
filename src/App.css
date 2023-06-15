@@ -7,7 +7,7 @@
     opacity: 1;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     #show-category:checked ~ .category-list {
         height: 430px;
         transition: height linear .3s;
