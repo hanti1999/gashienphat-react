@@ -11,7 +11,7 @@ import VanKatsura from '../img/product/Van-Katsura.png'
 import rice from '../img/product/rice.png'
 import pan from '../img/product/pan.png'
 
-export const ProductCat = [
+const ProductCat = [
     {
         name: 'Bếp gas đôi',
         src: Akia,
@@ -73,3 +73,5 @@ export const ProductCat = [
         href: '#'
     },
 ]
+
+export default ProductCat

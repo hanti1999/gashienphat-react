@@ -1,6 +1,3 @@
-import Helmet from '../components/Helmet/Helmet';
-import SideBar from "../components/Header/sidebar";
-import ProductList from "../components/UI/ProductList";
 
 import { useState, useEffect } from "react";
 
@@ -8,9 +5,12 @@ import { Link } from "react-router-dom";
 
 import products from '../assets/data/products'
 import blogItems from '../assets/data/blogs';
-import { ProductCat } from '../assets/data/productCat';
+import ProductCat from '../assets/data/productCat';
+import Category from '../assets/data/category';
 
+import Helmet from '../components/Helmet/Helmet';
 import Clock from '../components/UI/Clock';
+import ProductList from "../components/UI/ProductList";
 
 import banner1 from '../assets/img/banner/bannerr.jpg'
 import banner2 from '../assets/img/banner/salebanner.jpg'
@@ -23,8 +23,6 @@ function Home() {
     const [bestSalesProducts, setBestSalesProducts] = useState([])
     const [newProducts, setNewProducts] = useState([])
     const [recommendedProducts, setRecommendedProducts] = useState([])
-    const [gasStoveProducts, setGasStoveProducts] = useState([])
-    const [electricStoveProducts, setElectricStoveProducts] = useState([])
 
     useEffect(() => {
         const filterHotSalesProducts = products.filter(item => item.displayHome === 'hotSale');
@@ -38,12 +36,6 @@ function Home() {
 
         const filterRecommendedProducts = products.filter(item => item.displayHome === 'recommended');
         setRecommendedProducts(filterRecommendedProducts)
-
-        const filterGasStoveProducts = products.filter(item => item.category === 'bep-gas');
-        setGasStoveProducts(filterGasStoveProducts)
-
-        const filterElectricStoveProducts = products.filter(item => item.category === 'bep-dien');
-        setElectricStoveProducts(filterElectricStoveProducts)
     }, [])
 
     return (
@@ -61,7 +53,32 @@ function Home() {
                                     <i className='fa-solid fa-angle-down'></i>
                                 </label>
                                 <input type="checkbox" hidden name="" id="show-category" />
-                                <SideBar />
+                                <div className='category-list max-lg:h-0 lg:h-[430px]'>
+                                    <ul className='list-none bg-white'>
+                                        {Category.map((item, index) => (
+                                            <li key={index} className='category-item'>
+                                                <a className='category-item-link' href={item.typeHref}>{item.type}</a>
+                                                <i className="fa-solid fa-angle-right"></i>
+                                                <div className='category-child'>
+                                                    {item.childCats.map((childCat, index) => (
+                                                        <div key={index} className={childCat.title === '' ? 'hidden' : 'w-[180px]'}>
+                                                            <div className="py-[10px] px-[12px]">
+                                                                <span className='category-child--head'>{childCat.title}</span>
+                                                            </div>
+                                                            <ul className="list-none">
+                                                                {childCat.childItems.map((childItem, index) => (
+                                                                    <li key={index} className="px-[12px]">
+                                                                        <a className="text-16 py-[10px] block hover:text-primary hover:font-medium" href={childItem.href}>{childItem.name}</a>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className='col-span-9 max-lg:col-span-full'>
@@ -72,20 +89,20 @@ function Home() {
                                         <span className='text-white text-14 font-bold leading-[5rem] block'>Tìm kiếm</span>
                                     </button>
                                 </div>
-                                <div className='flex items-center max-md:hidden'>
+                                {/* <div className='flex items-center max-md:hidden'>
                                     <div className='w-[50px] relative text-center'>
-                                        <Link to="/Cart" className='text-333'>
+                                        <Link to="/cart" className='text-333'>
                                             <i className='text-22 cursor-pointer fa-solid fa-cart-shopping transiton'></i>
                                             <span className='cart-badge'>0</span>
                                         </Link>
                                     </div>
                                     <div className='w-[50px] relative text-center'>
-                                        <Link to="/Cart" className='text-333'>
+                                        <Link to="/cart" className='text-333'>
                                             <i className='text-22 cursor-pointer fa-solid fa-heart transiton'></i>
                                             <span className='cart-badge'>0</span>
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='mt-[10px] rounded overflow-hidden relative max-md:mt-[4px]'>
                                 <div className="bg-mainBanner h-[420px] bg-no-repeat bg-center bg-cover blur-sm"></div>
@@ -241,7 +258,7 @@ function Home() {
                         <div className='grid grid-cols-12 gap-[24px]'>
                             {blogItems.map((blogItem, index) => (
                                 <div key={index} className='col-span-4 max-md:col-span-12'>
-                                    <a href={blogItem.blogHref} className='text-14'>
+                                    <div className='text-14'>
                                         <div className='shadow-s0 overflow-hidden rounded aspect-video'>
                                             <img src={blogItem.blogImg} alt="" className='w-full' />
                                         </div>
@@ -252,10 +269,12 @@ function Home() {
                                             <span className='mx-[4px]'>{blogItem.blogCmt}</span>
                                         </div>
                                         <h2 className='blog-name overflow-hidden text-18 font-semibold text-333'>
-                                            {blogItem.blogName}
+                                            <Link to={`news/${blogItem.id}`}>
+                                                {blogItem.blogName}
+                                            </Link>
                                         </h2>
                                         <span className='blog-desc overflow-hidden list-disc'>{blogItem.blogDesc}</span>
-                                    </a>
+                                    </div>
                                 </div>
                             ))}
                         </div>

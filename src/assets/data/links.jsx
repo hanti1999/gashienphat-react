@@ -1,8 +1,8 @@
-export const links = {
+const links = {
     'facebookHP': 'https://www.facebook.com/hienphatvina',
     'facebookHA': 'https://www.facebook.com/hoangfanh.99',
     'instaHA': 'https://www.instagram.com/hoangfanh.99/',
-    'zaloLink926': 'https://zalo.me/0975841582',
+    'zaloLink582': 'https://zalo.me/0975841582',
     'zaloLink072': 'https://zalo.me/0986573072',
     'zaloLink498': 'https://zalo.me/0986359498',
     'youtubeLink': 'https://www.youtube.com/c/gashienphat',
@@ -11,3 +11,5 @@ export const links = {
     'sendmail': 'mailto:gashienphat1979@gmail.com',
     'sandmailHA': 'mailto:nth.anh020209@gmail.com'
 }
+
+export default links;

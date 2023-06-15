@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, Outlet, NavLink } from 'react-router-dom';
 
-import facebookLogo from '../../assets/img/icon/facebookLogo.png'
-import zaloLogo from '../../assets/img/icon/zaloLogo.jpg'
-import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
-import HpLogo from '../../assets/img/icon/gashienphatlogo.png'
+import fLogo from '../../assets/img/icon/facebookLogo.png'
+import zLogo from '../../assets/img/icon/zaloLogo.jpg'
+import yLogo from '../../assets/img/icon/youtubeLogo.png'
+import cLogo from '../../assets/img/icon/gashienphatlogo.png'
+
+import links from '../../assets/data/links';
 
 import firebase, { db, auth } from '../../firebase/config';
 
-import Notice from './Notice';
+import Notice from '../UI/Notice';
+
+import './header.css'
 
 const mainNavs = [
     {
@@ -31,111 +35,90 @@ const mainNavs = [
 
 function AppHeader() {
     // Get 'links' from firebase (test)
-    const [links, setlinks] = useState([]);
+    // const [links, setlinks] = useState([]);
+    // useEffect(() => {
+    //     db.collection("links").onSnapshot((snapshot) => {
+    //         setlinks(snapshot.docs.map(doc => ({
+    //             id: doc.id,
+    //             data: doc.data(),
+    //         })));
+    //     });
+    // }, []);
+
+    const headerRef = useRef(null);
+
+    const menuRef = useRef(null)
+    const menuRef2 = useRef(null)
+
+    const stickyHeaderFunc = () => {
+        window.addEventListener('scroll', () => {
+            if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                headerRef.current.classList.add('sticky__header');
+            } else {
+                headerRef.current.classList.remove('sticky__header');
+            }
+        })
+    }
+
     useEffect(() => {
-        db.collection("links").onSnapshot((snapshot) => {
-            setlinks(snapshot.docs.map(doc => ({
-                id: doc.id,
-                data: doc.data(),
-            })));
-        });
-        // console.log({ links });
-    }, []);
+        stickyHeaderFunc();
+        return () => window.removeEventListener('scroll', stickyHeaderFunc)
+    })
+
+    const menuToggle = () => {
+        menuRef.current.classList.toggle('active__menu')
+        menuRef2.current.classList.toggle('active__menu')
+    }
 
     return (
         <>
-            <Notice />
-            <div className='bg-rgb237 h-[46px] absolute inset-x-0 z-[-1]'></div>
-            <div className='wid-1200'>
-                {/* Top header */}
-                <div className="flex h-[46px] justify-between items-center max-md:justify-center">
-                    <div className="flex items-center">
-                        <div className="flex items-center lg:pr-[20px]">
-                            <i className="fa-solid fa-phone text-16"></i>
-                            {links?.map(({id, data}) => (
-                                <div className='flex' key={id}>
-                                    <a className="phone-number" href={data.call072}>0986 573 072</a>
-                                    <a className="phone-number" href={data.call610}>02513 511 610</a>
-                                </div>
-                            ))}
+            {/* <Notice /> */}
+            <header ref={headerRef} className='h-[70px] leading-[7rem] max-lg:h-[60px] max-lg:leading-[6rem]'>
+                {/* Nav bar */}
+                <div className='wid-1200'>
+                    <div className='max-md:mx-[8px] items-center grid grid-cols-12 lg:gap-[24px]'>
+                        <div className="col-span-3 max-lg:col-span-6 flex items-center">
+                            <Link to="/" className='text-transparent block w-[60px] no-underline max-lg:w-[50px]'>
+                                <img src={cLogo} alt="" />
+                            </Link>
+                            <h1 className='text-primary leading-[2rem] max-md:hidden text-20 font-bold ml-4 max-md:text-16'>Gas Hiền Phát</h1>
                         </div>
-                        <div className="flex items-center pl-[20px] border-l border-solid border-[#ccc] max-lg:hidden">
-                            <i className="fa-solid fa-motorcycle text-14 mr-[8px]"></i>
-                            <span className="text-16 text-333">
-                                Miễn phí giao hàng cho đơn hàng từ <b className="text-16 font-antonio">999.000đ</b>
+                        <nav ref={menuRef} onClick={menuToggle} className="navigation col-span-6">
+                            <div className='flex items-center justify-center'>
+                                <div ref={menuRef2} className='menu flex flex-1 max-lg:justify-around'>
+                                    {mainNavs.map((mainNav, index) => (
+                                        <nav key={index} className='lg:mr-[40px] navlink'>
+                                            <NavLink 
+                                                to={mainNav.href} 
+                                                className={(navClass) => navClass.isActive ? 'active' : '' }
+                                            >
+                                                {mainNav.title}
+                                            </NavLink>
+                                        </nav>
+                                    ))}
+                                </div>
+                            </div>
+                        </nav>
+                        <div className='col-span-3 text-right max-lg:col-span-6'>
+                            <span className='relative cursor-pointer mr-10'>
+                                <i className='text-20 fa-solid fa-heart text-333'></i>
+                                <span className='cart-badge'>0</span>
+                            </span>
+                            <span className='relative cursor-pointer mr-10'>
+                                <i className='text-20 fa-solid fa-shopping-cart text-333'></i>
+                                <span className='cart-badge'>0</span>
+                            </span>
+                            <span className='cursor-pointer max-lg:mr-10'>
+                                <i className='text-20 fa-solid fa-user text-333'></i>
+                            </span>
+                            <span onClick={menuToggle} className='hidden max-lg:inline-block'>
+                                <i className="fa-solid fa-bars text-20 text-333"></i>
                             </span>
                         </div>
                     </div>
-                    <div className="flex items-center max-md:hidden">
-                        {links?.map(({id, data}) => (
-                            <div key={id} className="flex items-center pr-[20px] max-lg:hidden">
-                                <a className="ml-[16px] text-transparent" target="_blank" href={data.facebookHP}>
-                                    <img className='w-[20px]' src={facebookLogo} alt="" />
-                                </a>
-                                <a className="ml-[16px] text-transparent" target="_blank" href={data.zaloLink926}>
-                                    <img className='w-[20px]' src={zaloLogo} alt="" />
-                                </a>
-                                <a className="ml-[16px] text-transparent" target="_blank" href={data.youtubeLink}>
-                                    <img className='w-[20px]' src={youtubeLogo} alt="" />
-                                </a>
-                            </div>
-                        ))}
-                        <div className="flex items-center lg:pl-[20px] lg:border-l lg:border-solid lg:border-[#ccc]">
-                            <Link to="/SignIn" className='text-333 no-underline'>
-                                <i className='fa-solid fa-user text-16 mr-[8px]'></i>
-                                <span className='text-16 max-lg:text-20'>Đăng nhập/Đăng ký</span>
-                            </Link>
-                        </div>
-                    </div>
+
                 </div>
-                {/* Mobile nav bar */}
-                <div className='hidden max-md:block fixed inset-x-0 bottom-0 h-[46px] bg-rgb237 z-10'>
-                    <div className='grid grid-cols-3 h-full'>
-                        <div>
-                            <Link to="/" className='mobile-nav-link'>
-                                <i className='text-20 fa-solid fa-user'></i>
-                                <span>Tài khoản</span>
-                            </Link>
-                        </div>
-                        <div className='border-l border-solid border-[#e0e0e0]'>
-                            <Link to="/" className='mobile-nav-link'>
-                                <i className='text-20 fa-solid fa-heart'></i>
-                                <span>Yêu thích</span>
-                            </Link>
-                        </div>
-                        <div className='border-l border-solid border-[#e0e0e0]'>
-                            <Link to='/Cart' className='mobile-nav-link'>
-                                <i className='text-20 fa-solid fa-cart-shopping'></i>
-                                <span>Giỏ hàng</span>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                {/* Nav bar */}
-                <div className='max-md:mx-[8px] items-center h-[80px] grid grid-cols-12 lg:gap-[24px] max-lg:grid-cols-1 max-lg:h-[46px]'>
-                <div className="col-span-3 max-lg:hidden">
-                    <Link to="/" className='text-transparent block w-[60px] no-underline'>
-                        <img src={HpLogo} alt="" />
-                    </Link>
-                </div>
-                <nav className="col-span-9 max-lg:col-span-full">
-                    <div className='flex items-center justify-center'>
-                        <div className='flex flex-1 max-md:justify-between max-lg:justify-around'>
-                            {mainNavs.map((mainNav, index) => (
-                                <nav key={index} className='lg:mr-[40px] navlink'>
-                                    <NavLink 
-                                        to={mainNav.href} 
-                                        className={(navClass) => navClass.isActive ? 'active' : '' }
-                                    >
-                                        {mainNav.title}
-                                    </NavLink>
-                                </nav>
-                            ))}
-                        </div>
-                    </div>
-                </nav>
-                </div>
-            </div>
+            </header>
             <div>
                 <Outlet />
             </div>

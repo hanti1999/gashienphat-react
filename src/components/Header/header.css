@@ -1,0 +1,55 @@
+.sticky__header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    background: #f8f9fa;
+}
+
+.cart-badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 2rem;
+    background-color: #302972;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1rem;
+    left: 50%;
+    bottom: 80%;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1023px) {
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.53);
+        z-index: 999;
+        transition: all linear .2s;
+        overflow: hidden;
+    }
+
+    .active__menu {
+        width: 100%;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

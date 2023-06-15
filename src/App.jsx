@@ -1,7 +1,7 @@
 import './App.css'
 import AppFooter from './components/Footer';
 import AppHeader from './components/Header';
-import ScrollToTop from './components/Header/scrollToTop';
+import ScrollToTop from './components/UI/ScrollToTop';
 
 function App() {
     return (

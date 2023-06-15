@@ -1,4 +1,4 @@
-export const catItems = [
+const Category = [
     {
         type: 'Bếp gas',
         typeHref: '#bep-gas',
@@ -230,3 +230,5 @@ export const catItems = [
         ]
     }
 ]
+
+export default Category;

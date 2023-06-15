@@ -1,18 +1,54 @@
-import hpLogo from '../../assets/img/icon/gashienphatlogo.png';
-import facebookLogo from '../../assets/img/icon/facebookLogo.png'
-import zaloLogo from '../../assets/img/icon/zaloLogo.jpg'
-import youtubeLogo from '../../assets/img/icon/youtubeLogo.png'
+import cLogo from '../../assets/img/icon/gashienphatlogo.png';
+import fLogo from '../../assets/img/icon/facebookLogo.png'
+import zLogo from '../../assets/img/icon/zaloLogo.jpg'
+import yLogo from '../../assets/img/icon/youtubeLogo.png'
+
+import { Link } from 'react-router-dom';
+
+const footerLinks = [
+    {
+        text: 'Giới thiệu về công ty',
+        href: '#',
+        target: '',
+    },
+    {
+        text: 'Giao hàng & thanh toán',
+        href: '#',
+        target: '',
+    },
+    {
+        text: 'Hướng dẫn mua online',
+        href: '#',
+        target: '',
+    },
+    {
+        text: 'Cảnh báo giả mạo',
+        href: '#',
+        target: '',
+    },
+    {
+        text: 'Chính sách bảo hành',
+        href: '#',
+        target: '',
+    },
+    {
+        text: 'Tìm cửa hàng',
+        href: 'https://goo.gl/maps/yYy447eNamPJ1FYE9',
+        target: '_blank',
+    }
+]
 
 function AppFooter() {
+    const year = new Date().getFullYear;
     return (
-        <footer id='lien-he' className="appFooter bg-[#f5f5f5] border-t-2 border-primary mt-[20px]">
+        <footer className="appFooter bg-[#f5f5f5] border-t-4 border-primary mt-[20px]">
             <div className='bg-[#f8f9fa] pb-[20px] text-14 max-md:mx-[8px]'>
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 gap-[24px]'>
                         <div className='col-span-4 max-lg:col-span-12'>
                             <div className='mt-[20px]'>
                                 <a href="#" className='mb-[20px] block w-[60px]'>
-                                    <img src={hpLogo} alt="" className='w-full' />
+                                    <img src={cLogo} alt="" className='w-full' />
                                 </a>
                                 <span className='block my-[10px]'>
                                     Địa chỉ: 199, Quốc Lộ 51, ấp 7, xã An Phước, huyện Long Thành, tỉnh Đồng Nai
@@ -23,37 +59,46 @@ function AppFooter() {
                                 <span className='block my-[10px]'>Email: <a className='text-primary' target="_blank" href="mailto:gashienphat1979@gmail.com">gashienphat1979@gmail.com</a></span>
                             </div>
                         </div>
-                        <div className='col-span-4 max-lg:col-span-12'>
-                            <ul className="mt-[20px] w-1/2 float-left">
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Giới thiệu về công ty</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Giao hàng & thanh toán</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Hướng dẫn mua online</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Cảnh báo giả mạo</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Thông tin khuyến mãi</a></li>
+                        <div className='col-span-2 max-lg:col-span-6'>
+                            <ul className="mt-[20px]">
+                                <h4 className='font-bold mb-4'>Truy cập nhanh:</h4>
+                                {footerLinks.map((items, index) => (
+                                    <li key={index} className='block mb-[10px]'><a className='text-primary' target={items.target} href={items.href}>{items.text}</a></li>
+                                ))}
                             </ul>
-                            <ul className="mt-[20px] w-1/2 float-left">
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Chính sách bảo hành</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Gửi góp ý, khiếu nại</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Liên hệ</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' href="#">Chính sách bảo mật</a></li>
-                                <li className='block mb-[10px]'><a className='text-primary' target="_blank" href="https://goo.gl/maps/yYy447eNamPJ1FYE9">Tìm cửa hàng</a></li>
+                        </div>
+                        <div className='col-span-2 max-lg:col-span-6'>
+                            <ul className="mt-[20px]">
+                                <h4 className='font-bold mb-4'>Danh mục nổi bật:</h4>
+                                <li className='block mb-[10px] text-primary'>
+                                    <Link to='/shop'>Bếp gas</Link>
+                                </li>
+                                <li className='block mb-[10px] text-primary'>
+                                    <Link to='/shop'>Bếp điện</Link>
+                                </li>
+                                <li className='block mb-[10px] text-primary'>
+                                    <Link to='/shop'>Điện gia dụng</Link>
+                                </li>
+                                <li className='block mb-[10px] text-primary'>
+                                    <Link to='/shop'>Phụ kiện</Link>
+                                </li>
                             </ul>
                         </div>
                         <div className='col-span-4 max-lg:col-span-12'>
                         <div className="mt-[20px]">
                                 <h4 className='font-bold'>Theo dõi chúng tôi tại:</h4>
                                 <a className='inline-block' target="_blank" href="https://www.facebook.com/hienphatvina">
-                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={facebookLogo} alt=""/>
+                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={fLogo} alt=""/>
                                 </a>
                                 <a className='inline-block' target="_blank" href="https://zalo.me/0975841582">
-                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={zaloLogo} alt=""/>
+                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={zLogo} alt=""/>
                                 </a>
                                 <a className='inline-block' target="_blank" href="https://www.youtube.com/c/gashienphat">
-                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={youtubeLogo} alt=""/>
+                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={yLogo} alt=""/>
                                 </a>
                                 <h4 className='font-bold'>Hướng dẫn thêm ứng dụng gashienphat vào điện thoại:</h4>
                                 <a className='inline-block' target="_blank" href="https://www.youtube.com/c/gashienphat">
-                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={youtubeLogo} alt=""/>
+                                    <img className='w-[30px] mt-[10px] mr-[10px] mb-[20px]' src={yLogo} alt=""/>
                                 </a>
                             </div>
                         </div>

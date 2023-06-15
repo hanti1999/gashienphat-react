@@ -27,7 +27,7 @@ function SignIn() {
                 </h2>
                 <p className="mt-[20px] text-center text-14 text-gray-500">
                     Chưa có tài khoản?{' '}
-                    <a href="#" className="font-semibold leading-6 text-primary hover:text-indigo-500">
+                    <a href="#" className="font-semibold leading-6 text-primary hover:opacity-80">
                     Đăng ký ngay!
                     </a>
                 </p>
@@ -52,7 +52,7 @@ function SignIn() {
                         Mật khẩu
                         </label>
                         <div className="text-12">
-                            <a href="#" className="font-semibold text-primary hover:text-indigo-500">
+                            <a href="#" className="font-semibold text-primary hover:opacity-80">
                                 Quên mật khẩu?
                             </a>
                         </div>
@@ -65,7 +65,7 @@ function SignIn() {
                 </div>
 
                 <div>
-                    <button type="submit" className="flex w-full justify-center rounded-md bg-primary px-3 py-[0.8rem] text-14 font-medium text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="submit" className="flex w-full justify-center rounded-md !bg-primary px-3 py-[0.8rem] text-14 font-medium text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Đăng nhập
                     </button>
                 </div>
@@ -73,11 +73,11 @@ function SignIn() {
 
                 <p className='text-14 mt-10 font-medium'>Hoặc đăng nhập với</p>
                 <div className='grid grid-cols-2 sm:gap-[20px] max-md:grid-cols-1'>
-                    <button id='facebookSignInBtn' onClick={handleFacebookProvider} className='text-white text-14 w-full py-[0.8rem] bg-[#3B5998] rounded-md mt-[5px]'>
+                    <button id='facebookSignInBtn' onClick={handleFacebookProvider} className='text-white text-14 w-full py-[0.8rem] bg-[#3B5998] hover:opacity-90 rounded-md mt-[5px]'>
                         <i className="fa-brands fa-facebook-f"></i>
                         <span className='ml-[10px] font-medium'>Facebook</span>
                     </button>
-                    <button id='googleSignInBtn' onClick={handleGoogleProvider} className='text-white text-14 w-full py-[0.8rem] bg-[#EA4335] rounded-md mt-[5px]'>
+                    <button id='googleSignInBtn' onClick={handleGoogleProvider} className='text-white text-14 w-full py-[0.8rem] bg-[#EA4335] hover:opacity-90 rounded-md mt-[5px]'>
                         <i className="fa-brands fa-google"></i>
                         <span className='ml-[10px] font-medium'>Google</span>
                     </button>
