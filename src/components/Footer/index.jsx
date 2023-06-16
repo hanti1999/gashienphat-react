@@ -123,13 +123,15 @@ function Footer() {
                         <i className="text-16 px-[3px] fa-solid fa-envelope"></i>
                     </a>
                 </div>
-                <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
+                {/* <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
                     Tài nguyên:
                     <a className='text-primary' href="https://fontawesome.com/" target='_blank'> icon: Fontawesome | </a>
                     <a className='text-primary' href="https://tailwindcss.com/" target='_blank'>UI/css: Tailwind | </a>
                     <a className='text-primary' href="https://fonts.google.com/" target='_blank'>font: Google fonts | </a>
-                    <a className='text-primary' href="https://www.freepik.com/" target='_blank'>images: Freepik</a>
-                </div>
+                    <a className='text-primary' href="https://www.freepik.com/" target='_blank'>images: Freepik | </a>
+                    <a className='text-primary' href="https://www.framer.com/motion/" target='_blank'>design tool: Framer motion - </a>
+                    <a className='text-primary' href="https://www.npmjs.com/package/react-toastify" target='_blank'>React toastify</a>
+                </div> */}
             </div>
         </footer>
     )

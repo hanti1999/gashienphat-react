@@ -1,0 +1,7 @@
+.filter__widget select:focus {
+    outline: none !important;
+}
+
+.filter__widget select option {
+    font-size: 1.4rem;
+}

@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, Outlet, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 import cLogo from '../../assets/img/icon/gashienphatlogo.png'
-
-import firebase, { db, auth } from '../../firebase/config';
 
 import './header.css'
 
@@ -27,18 +26,9 @@ const mainNavs = [
 ];
 
 function Header() {
-    // Get 'links' from firebase (test)
-    // const [links, setlinks] = useState([]);
-    // useEffect(() => {
-    //     db.collection("links").onSnapshot((snapshot) => {
-    //         setlinks(snapshot.docs.map(doc => ({
-    //             id: doc.id,
-    //             data: doc.data(),
-    //         })));
-    //     });
-    // }, []);
-
     const headerRef = useRef(null);
+
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     const menuRef = useRef(null)
     const menuRef2 = useRef(null)
@@ -98,7 +88,7 @@ function Header() {
                             </span>
                             <span className='relative cursor-pointer mr-10'>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-shopping-cart text-333'></i>
-                                <span className='cart-badge'>0</span>
+                                <span className='cart-badge'>{totalQuantity}</span>
                             </span>
                             <span className='cursor-pointer max-lg:mr-10'>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-user text-333'></i>
