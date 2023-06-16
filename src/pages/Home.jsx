@@ -16,6 +16,7 @@ import banner1 from '../assets/img/banner/bannerr.jpg'
 import banner2 from '../assets/img/banner/salebanner.jpg'
 import banner3 from '../assets/img/banner/salebanner2.png'
 import banner4 from '../assets/img/banner/chuyendoibinhgas.png'
+import mainBannerImg from '../assets/img/banner/modern-kitchen.png'
 import counterImg from '../assets/img/product/Paloma-7PEJ_1.png'
 
 function Home() {
@@ -41,10 +42,10 @@ function Home() {
     return (
         <>
             <Helmet title={'Trang chủ'} />
-            <div className='mx-0 max-md:mx-[8px]'>
+            <div className='mx-0'>
                 {/* category + search bar */}
                 <div className='wid-1200'>
-                    <div className='grid grid-cols-12 lg:gap-[24px] max-lg:grid-cols-1'>
+                    <div className='header grid grid-cols-12 lg:gap-[24px] max-lg:grid-cols-1'>
                         <div className='col-span-3 max-lg:col-span-full'>
                             <div className="relative shadow-s0">
                                 <label htmlFor='show-category' className='category-btn max-md:h-[46px]'>
@@ -86,15 +87,22 @@ function Home() {
                                 <div className="flex items-center shadow-s0 rounded relative flex-1">
                                     <input className='flex-1 outline-none px-[16px] py-[8px] text-14' type="text" placeholder='Bạn cần tìm gì?' name="" id="" />
                                     <button className='!bg-primary w-[100px] h-full text-center cursor-pointer rounded-r'>
-                                        <span className='text-white text-14 font-bold leading-[5rem] block'>Tìm kiếm</span>
+                                        <span className='text-white text-14 px-1 font-bold leading-[5rem] block'>Tìm kiếm</span>
                                     </button>
                                 </div>
                             </div>
-                            <div className='mt-[10px] rounded overflow-hidden relative max-md:mt-[4px]'>
-                                <div className="bg-mainBanner h-[420px] bg-no-repeat bg-center bg-cover blur-sm"></div>
-                                <div className='absolute top-[60%] left-[10%] text-white cursor-default'>
-                                    <span className='text-20 font-medium'>Chào mừng quý khách <br/>Đến với website chính thức của</span>
-                                    <h2 className='text-[3.2rem] mt-[5px] font-bold'>CTY TNHH HIỀN PHÁT VINA</h2>
+                            <div className='mt-[10px] bg-primary h-[420px] max-md:h-auto rounded overflow-hidden max-md:mt-[4px] grid grid-cols-2'>
+                                <div className='text-white cursor-default col-span-1 px-5 pt-16 pb-4 max-md:col-span-full'>
+                                    <span className='text-16 font-light'>Chào mừng quý khách <br/>Đến với website chính thức của</span>
+                                    <h2 className='text-[3.2rem] max-md:text-24 my-6'>Cty tnhh Hiền Phát Vina</h2>
+                                    <p className='text-16 font-light'>Chuyên cung cấp gas, bếp gas, điện gia dụng, máy lọc nước, máy làm mát, gạo, tấm</p>
+                                    <button className='bg-white text-14 text-primary font-semibold px-3 py-4 mt-20 rounded-lg'><Link to='/shop'>Đến mua ngay!</Link></button>
+                                </div>
+                                <div className='col-span-1 p-4 text-right max-md:col-span-full flex justify-center items-center'>
+                                    <div>
+                                        <img src={mainBannerImg} alt="" className="w-full" />
+                                        <a className="text-white font-light text-sm" target="_blank" href="http://www.freepik.com">Designed by alexandercho / Freepik</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +110,7 @@ function Home() {
                 </div>
             </div>
             {/* Home content */}
-            <div className="mt-[20px] max-md:mx-[8px]">
+            <div className="content mt-[20px]">
                 {/* Home catogory */}
                 <div className='my-4'>
                     <div className='wid-1200'>
@@ -165,9 +173,9 @@ function Home() {
                 </div>
 
                 {/* Timer count */}
-                <div className='my-4 bg-primary'>
-                    <div className="wid-1200 max-md:px-3">
-                        <div className="grid grid-cols-12">
+                <div className='my-4 bg-primary rounded'>
+                    <div className="wid-1200">
+                        <div className="counter grid grid-cols-12">
                             <div className="col-span-6 max-md:col-span-full">
                                 <div>
                                     <h4 className='text-white text-20 mt-8 mb-4'>Ưu đãi giới hạn</h4>

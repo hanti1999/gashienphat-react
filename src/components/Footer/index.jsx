@@ -42,7 +42,7 @@ function Footer() {
     const year = new Date().getFullYear;
     return (
         <footer className="bg-[#f5f5f5] border-t-4 border-primary mt-[20px]">
-            <div className='bg-[#f8f9fa] pb-[20px] text-14 max-md:mx-[8px]'>
+            <div className='footer bg-[#f8f9fa] pb-[20px] text-14'>
                 <div className='wid-1200'>
                     <div className='grid grid-cols-12 gap-[24px]'>
                         <div className='col-span-4 max-lg:col-span-12'>
@@ -105,7 +105,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='pt-[6px] pb-[10px] max-md:pb-[50px] max-md:mx-[8px]'>
+            <div className='pt-[6px] pb-[10px]'>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>Công ty TNHH Hiền Phát Vina</div>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>Mã số doanh nghiệp: 3603240938 do Sở Kế hoạch & Đầu tư tỉnh Đồng Nai cấp lần đầu ngày 30/12/2014</div>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
