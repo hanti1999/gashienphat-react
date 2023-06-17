@@ -1,0 +1,17 @@
+.category-item:hover .category-child {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    #show-category:checked ~ .category-list {
+        height: 430px;
+        transition: height linear .3s;
+    }
+}
+
+.blog-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}

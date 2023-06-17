@@ -1,4 +1,6 @@
 import Helmet from '../components/Helmet/Helmet';
+import '../styles/cart.css'
+import CommonSection from '../components/UI/CommonSection'
 
 function Cart() {
     return (

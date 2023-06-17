@@ -5,6 +5,8 @@ import { cartActions } from '../../redux/slices/cartSlice';
 
 import { toast } from 'react-toastify';
 
+import '../../styles/product-card.css'
+
 function ProductCard({item}) {
     const dispatch = useDispatch()
 

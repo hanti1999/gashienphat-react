@@ -8,6 +8,8 @@ import blogItems from '../assets/data/blogs';
 import ProductCat from '../assets/data/productCat';
 import Category from '../assets/data/category';
 
+import '../styles/home.css'
+
 import Helmet from '../components/Helmet/Helmet';
 import Clock from '../components/UI/Clock';
 import ProductList from "../components/UI/ProductList";
@@ -96,7 +98,7 @@ function Home() {
                                     <span className='text-16 font-light'>Chào mừng quý khách <br/>Đến với website chính thức của</span>
                                     <h2 className='text-[3.2rem] max-md:text-24 my-6'>Cty tnhh Hiền Phát Vina</h2>
                                     <p className='text-16 font-light'>Chuyên cung cấp gas, bếp gas, điện gia dụng, máy lọc nước, máy làm mát, gạo, tấm</p>
-                                    <button className='bg-white text-14 text-primary font-semibold px-3 py-4 mt-20 rounded-lg'><Link to='/shop'>Đến mua ngay!</Link></button>
+                                    <button className='buy__btn bg-white text-primary mt-20'><Link to='/shop'>Đến mua ngay!</Link></button>
                                 </div>
                                 <div className='col-span-1 p-4 text-right max-md:col-span-full flex justify-center items-center'>
                                     <div>
@@ -182,7 +184,7 @@ function Home() {
                                     <h3 className='text-white text-24 mb-4'>Bếp gas Paloma nhập khẩu Nhật Bản</h3>
                                 </div>
                                 <Clock />
-                                <button className='bg-white text-14 text-primary font-semibold px-3 py-4 mt-10 rounded-lg'><Link to='/shop'>Đến xem ngay!</Link></button>
+                                <button className='buy__btn bg-white text-primary mt-10'><Link to='/shop'>Đến xem ngay!</Link></button>
                             </div>
 
                             <div className="col-span-6 max-md:col-span-full">

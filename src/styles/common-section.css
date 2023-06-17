@@ -7,3 +7,13 @@
     justify-content: center;
     padding: 100px 0px;
 }
+
+@media only screen and (max-width: 768px) {
+    .common__section {
+        padding: 70px 0px;
+    }
+
+    .common__section h1 {
+        font-size: 2.6rem;
+    }
+}

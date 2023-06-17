@@ -5,3 +5,18 @@
 .filter__widget select option {
     font-size: 1.4rem;
 }
+
+@media screen and (max-width: 768px) {
+    .filter__widget {
+        margin-bottom: 30px;
+    }
+
+    .filter__widget select {
+        padding: 7px;
+    }
+
+    .shop__filter, .shop__products {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
