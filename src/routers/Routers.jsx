@@ -12,6 +12,7 @@ import ProductDetails from '../pages/ProductDetails.jsx'
 import NewsContent from '../pages/NewsContent.jsx';
 
 import App from '../App.jsx'
+import Checkout from '../pages/Checkout.jsx';
 
 export const Routers = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ export const Routers = createBrowserRouter([
         {
           path: '/SignUp',
           element: <SignUp />
+        },
+        {
+          path: '/Checkout',
+          element: <Checkout />
         }
       ]
     }

@@ -80,9 +80,9 @@ const ProductDetails = () => {
 
                                 <p className='text-[#ff7f50] font-medium'>({avgRating})</p>
                             </div>
-                            <div className='product__price flex items-center gap-5'>
-                                <span className='line-through mr-2 text-14'>{oldPrice}</span>
-                                <span className='text-18 font-medium'>{price} vnđ</span>
+                            <div className='product__price flex items-center'>
+                                <span className={`${oldPrice === '' ? 'hidden' : 'line-through text-14 mr-4'}`}>{oldPrice}</span>
+                                <span className='text-18 font-medium mr-4'>{price.toLocaleString()} vnđ</span>
                                 <span>Danh mục: {category}</span>
                             </div>
 
@@ -126,11 +126,11 @@ const ProductDetails = () => {
                             </div>) : (
                             <div className='product__review mt-6 text-333'>
                                 <div className="review__wrapper">
-                                    <ul className='font-semibold'>
+                                    <ul className='font-semibold border-b'>
                                         {reviews.map((item, index) => (
                                             <li key={index} className='mb-4'>
                                                 <h6>Hong Cuc</h6>
-                                                <span>{item.rating}</span>
+                                                <span className='text-[#ff7f50]'>{item.rating} <i className="fa-solid fa-star"></i></span>
                                                 <p className='mt-4 font-normal'>{item.text}</p>
                                             </li>
                                         ))}

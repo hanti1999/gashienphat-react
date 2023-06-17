@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Link, Outlet, NavLink } from 'react-router-dom';
+import { Link, Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 
 import cLogo from '../../assets/img/icon/gashienphatlogo.png'
@@ -33,6 +33,8 @@ function Header() {
     const menuRef = useRef(null)
     const menuRef2 = useRef(null)
 
+    const navigate = useNavigate()
+
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', () => {
             if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -51,6 +53,10 @@ function Header() {
     const menuToggle = () => {
         menuRef.current.classList.toggle('active__menu')
         menuRef2.current.classList.toggle('active__menu')
+    }
+
+    const navigateToCart = () => {
+        navigate('/cart');
     }
 
     return (
@@ -86,7 +92,7 @@ function Header() {
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-heart text-333'></i>
                                 <span className='cart-badge'>0</span>
                             </span>
-                            <span className='relative cursor-pointer mr-10'>
+                            <span className='relative cursor-pointer mr-10' onClick={navigateToCart}>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-shopping-cart text-333'></i>
                                 <span className='cart-badge'>{totalQuantity}</span>
                             </span>

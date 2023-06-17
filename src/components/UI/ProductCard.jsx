@@ -15,7 +15,7 @@ function ProductCard({item}) {
             id: item.id,
             productName: item.productName,
             price: item.price,
-            image: item.imgUrl,
+            imgUrl: item.imgUrl,
         }))
         toast.success('Đã thêm sản phẩm vào giỏ hàng')
     }
@@ -40,7 +40,7 @@ function ProductCard({item}) {
                     <div className='py-[8x]'>
                         <p className='line-through text-14 max-md:text-13 mr-[5px]'>{item.oldPrice}</p>
                         <div className='flex justify-between items-center'>
-                            <span className='text-[#ff0000] text-20 max-md:text-18 font-medium'>{item.price}</span>
+                            <span className='text-[#ff0000] text-20 max-md:text-18 font-medium'>{item.price.toLocaleString()}</span>
                             <motion.span whileTap={{scale: 1.2}} onClick={addToCart} className='flex items-center justify-center cursor-pointer'>
                                 <i className="fa-solid fa-plus text-white rounded-full p-[6px] bg-primary"></i>
                             </motion.span>

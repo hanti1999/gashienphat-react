@@ -61,8 +61,8 @@ const products = [
         warranty: fiveYearWarranty,
         apr: 'Trả góp 0%',
         sale: 'Giảm 4.000.000',
-        oldPrice: '14.800.000',
-        price: '10.800.000',
+        oldPrice: '1500.000',
+        price: 10800000,
         gift: 'Lưu ý: đầu từ chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt kính Ceramic cường lực, chịu lực, chịu sốc nhiệt',
@@ -75,15 +75,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '02',
@@ -95,7 +91,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 2.200.000',
         oldPrice: '8.000.000',
-        price: '5.800.000',
+        price: 5800000,
         gift: 'Lưu ý: bếp chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt kính cường lực Ceramic chống bám nước, chống xước, chịu sốc nhiệt',
@@ -107,15 +103,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '03',
@@ -127,7 +119,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 1.350.000',
         oldPrice: '6.650.000',
-        price: '5.300.000',
+        price: 5300000,
         gift: '',
         description: [
             '9 cấp lọc',
@@ -139,15 +131,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '04',
@@ -159,7 +147,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 140.000',
         oldPrice: '4.090.000',
-        price: '3.950.000',
+        price: 3950000,
         gift: 'Lưu ý: Chỉ dùng bình nước đầu đứng',
         description: [
             'Công nghệ làm lạnh bằng Block giúp làm lạnh nhanh và sâu 6ºC ~ 12ºC',
@@ -171,15 +159,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '05',
@@ -191,7 +175,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 150.000',
         oldPrice: '1.790.000',
-        price: '1.640.000',
+        price: 1640000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
@@ -204,15 +188,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '06',
@@ -224,7 +204,7 @@ const products = [
         apr: '',
         sale: 'Giảm 10.000',
         oldPrice: '280.000',
-        price: '270.000',
+        price: 270000,
         gift: '',
         description: [
             'Van an toàn Inline-Cut',
@@ -235,15 +215,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '07',
@@ -255,7 +231,7 @@ const products = [
         apr: '',
         sale: 'Giảm 10.000',
         oldPrice: '580.000',
-        price: '570.000',
+        price: 570000,
         gift: '',
         description: [
             'Đầu đốt gang',
@@ -265,15 +241,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '08',
@@ -285,7 +257,7 @@ const products = [
         apr: '',
         sale: 'Giảm 30.000',
         oldPrice: '580.000',
-        price: '550.000',
+        price: 550000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
@@ -296,15 +268,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '09',
@@ -316,7 +284,7 @@ const products = [
         apr: '',
         sale: 'Giảm 40.000',
         oldPrice: '890.000',
-        price: '850.000',
+        price: 850000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
@@ -327,15 +295,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '10',
@@ -347,7 +311,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 51.000',
         oldPrice: '1.250.000',
-        price: '1.199.000',
+        price: 1199000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
@@ -359,15 +323,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '11',
@@ -379,7 +339,7 @@ const products = [
         apr: '',
         sale: 'Giảm 20.000',
         oldPrice: '',
-        price: '99.000',
+        price: 99000,
         gift: 'Giảm thêm 20.000 khi mua kèm dây dẫn gas',
         description: [
             'Điều áp giúp tự ngắt gas khi quá áp',
@@ -389,15 +349,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '12',
@@ -408,8 +364,8 @@ const products = [
         warranty: fiveYearWarranty,
         apr: 'Trả góp 0%',
         sale: 'Giảm 4.000.000',
-        oldPrice: '14.800.000',
-        price: '10.800.000',
+        oldPrice: '1500.000',
+        price: 10800000,
         gift: 'Lưu ý: bếp chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt kính Ceramic cường lực, chịu lực, chịu sốc nhiệt',
@@ -423,15 +379,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '13',
@@ -443,7 +395,7 @@ const products = [
         apr: '',
         sale: 'Giảm 20.000',
         oldPrice: '360.000',
-        price: '340.000',
+        price: 340000,
         gift: 'Tặng chảo chống dính Sunhouse 18cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực',
@@ -454,15 +406,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '14',
@@ -474,7 +422,7 @@ const products = [
         apr: '',
         sale: 'Giảm 10.000',
         oldPrice: '630.000',
-        price: '620.000',
+        price: 620000,
         gift: '',
         description: [
             'Đầu đốt gang',
@@ -484,15 +432,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '15',
@@ -504,7 +448,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 200.000',
         oldPrice: '5.300.000',
-        price: '5.100.000',
+        price: 5100000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực cao ấp',
@@ -517,15 +461,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '16',
@@ -537,7 +477,7 @@ const products = [
         apr: '',
         sale: 'Giảm 10.000',
         oldPrice: '260.000',
-        price: '250.000',
+        price: 250000,
         gift: '',
         description: [
             'Van an toàn Inline-Cut',
@@ -548,15 +488,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '17',
@@ -568,7 +504,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: '',
         oldPrice: '',
-        price: '2.800.000',
+        price: 2800000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực cao ấp',
@@ -581,15 +517,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '18',
@@ -601,7 +533,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 300.000',
         oldPrice: '2.490.000',
-        price: '2.190.000',
+        price: 2190000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực chịu nhiệt',
@@ -614,15 +546,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '19',
@@ -634,7 +562,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: '',
         oldPrice: '',
-        price: '1.950.000',
+        price: 1950000,
         gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
         description: [
             'Mặt inox cao cấp',
@@ -646,15 +574,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '20',
@@ -665,8 +589,8 @@ const products = [
         warranty: twoYearWarranty,
         apr: 'Trả góp 0%',
         sale: 'Giảm 1.480.000',
-        oldPrice: '14.800.000',
-        price: '13.320.000',
+        oldPrice: '1500.000',
+        price: 13320000,
         gift: 'Phụ kiện: vỉ nướng và khay nướng',
         description: [
             'Dung tích 60L có đèn trong lò',
@@ -682,15 +606,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '21',
@@ -702,7 +622,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: '',
         oldPrice: '',
-        price: '7.880.000',
+        price: 7880000,
         gift: 'Phụ kiện: vỉ nướng và khay nướng',
         description: [
             'Thân máy inox, mặt kính cường lực 8mm tráng men',
@@ -717,15 +637,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '22',
@@ -737,7 +653,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'Giảm 590.000',
         oldPrice: '5.580.000',
-        price: '4.990.000',
+        price: 4990000,
         gift: '',
         description: [
             'Chất liệu kính phối inox sang trọng, hiện đại',
@@ -753,15 +669,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '23',
@@ -773,7 +685,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'giảm 1.360.000',
         oldPrice: '13.600.000',
-        price: '12.240.000',
+        price: 12240000,
         gift: 'Phụ kiện: đĩa thủy tinh, vỉ nướng',
         description: [
             'Dung tích 34L có đèn trong lò',
@@ -786,15 +698,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '24',
@@ -806,7 +714,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'giảm 2.000.000',
         oldPrice: '8.500.000',
-        price: '6.300.000',
+        price: 6300000,
         gift: 'Lưu ý: bếp chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt kính cường lực Ceramic chống bám nước, chống xước, chịu sốc nhiệt',
@@ -818,15 +726,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '25',
@@ -838,7 +742,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: 'giảm 500.000',
         oldPrice: '5.490.000',
-        price: '4.990.000',
+        price: 4990000,
         gift: '',
         description: [
             'Dung tích 10L',
@@ -850,15 +754,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '26',
@@ -870,7 +770,7 @@ const products = [
         apr: '',
         sale: 'Giảm 40.000',
         oldPrice: '1.290.000',
-        price: '1.250.000',
+        price: 1250000,
         gift: 'Lưu ý: bếp chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt sứ đen cao cấp chống trầy xước',
@@ -881,15 +781,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '27',
@@ -901,7 +797,7 @@ const products = [
         apr: '',
         sale: 'Giảm 40.000',
         oldPrice: '890.000',
-        price: '850.000',
+        price: 850000,
         gift: 'Lưu ý: bếp chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
             'Mặt kính cường lực',
@@ -912,15 +808,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '28',
@@ -932,7 +824,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: '200.000',
         oldPrice: '6.135.000',
-        price: '5.925.000',
+        price: 5925000,
         gift: '',
         description: [
             '7 cấp lọc',
@@ -943,15 +835,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '29',
@@ -963,7 +851,7 @@ const products = [
         apr: 'Trả góp 0%',
         sale: '600.000',
         oldPrice: '8.290.000',
-        price: '7.690.000',
+        price: 7690000,
         gift: '',
         description: [
             '8 cấp lọc tích hợp lõi ORP Hydrogen làm kiềm nước',
@@ -975,15 +863,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '30',
@@ -995,7 +879,7 @@ const products = [
         apr: '',
         sale: 'giảm 10.000',
         oldPrice: '380.000',
-        price: '370.000',
+        price: 370000,
         gift: 'Tặng chảo chống dính Sunhouse 18cm khi mua kèm van gas',
         description: [
             'Vỏ inox chống gỉ sét',
@@ -1006,15 +890,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '31',
@@ -1026,7 +906,7 @@ const products = [
         apr: '',
         sale: '',
         oldPrice: '',
-        price: '370.000',
+        price: 370000,
         gift: 'Lưu ý: Chỉ dùng nấu cơm, không được nấu cháo, nước sôi và các loại thực phẩm khác',
         description: [
             'Dung tích 1.2L',
@@ -1036,15 +916,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '32',
@@ -1056,7 +932,7 @@ const products = [
         apr: '',
         sale: 'Giảm 40.000',
         oldPrice: '1.290.000',
-        price: '1.250.000',
+        price: 1250000,
         gift: 'Sản phẩm đi kèm vỉ nướng',
         description: [
             'Mặt kính Crystallite đen, thân Inox với tay cầm hai bên',
@@ -1067,15 +943,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '33',
@@ -1087,7 +959,7 @@ const products = [
         apr: '',
         sale: 'Giảm 500.000',
         oldPrice: '2.590.000',
-        price: '2.090.000',
+        price: 2090000,
         gift: 'Phụ kiện: Xưởng hấp, cốc đong gạo, muỗng xới cơm',
         description: [
             'Dung tích 1.8L',
@@ -1098,15 +970,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '34',
@@ -1118,7 +986,7 @@ const products = [
         apr: '',
         sale: '',
         oldPrice: '',
-        price: '2.650.000',
+        price: 2650000,
         gift: 'Phụ kiện: Xưởng hấp, cốc đong gạo, muỗng xới cơm',
         description: [
             'Dung tích 5L',
@@ -1129,15 +997,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '35',
@@ -1149,7 +1013,7 @@ const products = [
         apr: '',
         sale: 'giảm 20.000',
         oldPrice: '',
-        price: '280.000',
+        price: 280000,
         gift: 'Giảm thêm 20.000 khi mau kèm dây dẫn gas',
         description: [
             'Điều áp giúp tự ngắt gas khi quá áp',
@@ -1161,15 +1025,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '36',
@@ -1181,7 +1041,7 @@ const products = [
         apr: '',
         sale: '',
         oldPrice: '',
-        price: '180.000',
+        price: 180000,
         gift: 'Lưu ý: chỉ dùng cho bếp khè cao áp',
         description: [
             'Áp suất đầu vào : 0.7 - 7kgf/cm2',
@@ -1189,15 +1049,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '37',
@@ -1209,7 +1065,7 @@ const products = [
         apr: '',
         sale: 'giảm 20.000',
         oldPrice: '',
-        price: '180.000',
+        price: 180000,
         gift: 'Giảm thêm 20.000 khi mau kèm dây dẫn gas',
         description: [
             'Điều áp giúp tự ngắt gas khi quá áp',
@@ -1220,15 +1076,11 @@ const products = [
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
     {
         id: '38',
@@ -1240,22 +1092,18 @@ const products = [
         apr: '',
         sale: 'Giảm 150.000',
         oldPrice: '',
-        price: '450.000',
+        price: 450000,
         gift: 'Giảm 150.000 khi chuyển đổi từ bình đầu ngang sang đầu đứng',
         description: [
             ''
         ],
         reviews: [
             {
-                rating: 4.8,
-                text: 'lorem'
+                rating: 5,
+                text: 'test comment'
             },
-            {
-                rating: 4.6,
-                text: 'lorem 2'
-            }
         ],
-        avgRating: 4.7,
+        avgRating: 4.5,
     },
 ]
 
