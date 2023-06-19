@@ -87,8 +87,8 @@ function Header() {
         <>
             <header ref={headerRef} className='h-[70px] leading-[7rem] max-lg:h-[60px] max-lg:leading-[6rem]'>
                 {/* Nav bar */}
-                <div className='wid-1200'>
-                    <div className='header items-center grid grid-cols-12 lg:gap-[24px]'>
+                <div className='wid-1200 h-full'>
+                    <div className='header items-center h-full grid grid-cols-12 lg:gap-[24px]'>
                         <div className="col-span-3 max-lg:col-span-6 flex items-center">
                             <Link to="/" className='text-transparent block w-[60px] no-underline max-lg:w-[50px] max-[320px]:w-[40px]'>
                                 <img src={cLogo} alt="" />

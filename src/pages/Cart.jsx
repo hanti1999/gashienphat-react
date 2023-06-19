@@ -23,11 +23,11 @@ function Cart() {
                             <table className='table w-full'>
                                 <thead>
                                     <tr>
-                                        <th>Hình ảnh</th>
+                                        <th className='max-sm:hidden'>Hình ảnh</th>
                                         <th>Tên sản phẩm</th>
-                                        <th>Giá tiền</th>
-                                        <th>Số lượng</th>
-                                        <th>Xóa sản phẩm</th>
+                                        <th>Đơn giá</th>
+                                        <th>SL</th>
+                                        <th>Xóa</th>
                                     </tr>
                                 </thead>
 
@@ -39,7 +39,7 @@ function Cart() {
                             </table>)
                         }
                     </div>
-                    <div className="col-span-3 max-md:col-span-12">
+                    <div className="col-span-3 max-md:col-span-12 max-md:mt-8">
                         <div className='flex justify-between items-center'>
                             <h6 className='text-16'>Tổng tiền:</h6>
                             <span className='font-bold text-20'>{totalAmount.toLocaleString()} vnđ</span>
@@ -64,9 +64,9 @@ const Tr = ({item}) => {
     }
 
     return (
-        <tr>
-            <td><img className='!w-32 !h-32 object-cover' src={item.imgUrl} alt="" /></td>
-            <td className='overflow-hidden text-ellipsis whitespace-nowrap'>{item.productName}</td>
+        <tr className='cart__table-body'>
+            <td className='max-sm:hidden'><img className='!w-32 !h-32 object-cover' src={item.imgUrl} alt="" /></td>
+            <td>{item.productName}</td>
             <td>{item.price.toLocaleString()}</td>
             <td>{item.quantity}</td>
             <td><motion.i 

@@ -110,10 +110,10 @@ function Home() {
                         <div className='grid grid-cols-12 shadow-s0'>
                             {ProductCat.map((product, index) => (
                                 <span key={index} className='product__cat-item'>
-                                    <a href={product.href} className='product__cat-item-link'>
+                                    <Link to={product.href} className='product__cat-item-link'>
                                         <img src={product.src} alt="" className='w-[80%] block bg-[#f8f9fa] rounded-[50%]'/>
                                         <span className='mt-[10px]'>{product.name}</span>
-                                    </a>
+                                    </Link>
                                 </span>
                             ))}
                         </div>
