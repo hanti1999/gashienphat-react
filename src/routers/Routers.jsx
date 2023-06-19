@@ -12,7 +12,7 @@ import App from '../App.jsx';
 import Checkout from '../pages/Checkout.jsx';
 import Login from '../pages/Login.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
-import Signup from '../pages/Signup.jsx';
+import Signup from '../pages/Sign-up.jsx';
 
 export const Routers = createBrowserRouter([
     {

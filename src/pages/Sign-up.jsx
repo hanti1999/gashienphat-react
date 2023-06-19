@@ -1,6 +1,6 @@
 import Helmet from '../components/Helmet/Helmet';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL} from 'firebase/storage';
 import { setDoc, doc } from 'firebase/firestore';
@@ -23,7 +23,7 @@ function Signup() {
     const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
-
+    
     const signup = async (e) => {   
         e.preventDefault();
         setLoading(true);
