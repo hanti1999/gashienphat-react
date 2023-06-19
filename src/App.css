@@ -3,14 +3,10 @@
 
 :root {
     --primary-color: #302972;
-}
-
-.buy__btn {
-    padding: 7.5px;
-    padding: 10px;
-    font-weight: 600;
-    border-radius: 5px;
-    font-size: 1.4rem;
+    --card-bg-01: #fdefe6;
+    --card-bg-02: #d6e5fb;
+    --card-bg-03: #ceede9;
+    --card-bg-04: #e2f2b2;
 }
 
 @media (min-width: 1024px) and (max-width: 1220px) {
@@ -31,71 +27,22 @@
     body {
         @apply font-roboto text-13 !leading-tight;
     }
-
     html {
         @apply scroll-smooth text-[62.5%];
     }
-
     * {
         @apply m-0 p-0 box-border;
     }
 }
 
 @layer components {
-    /* Category */
     .wid-1200 {
         @apply max-w-[1200px] my-0 ml-auto mr-auto md:max-lg:w-[644px];
     }
     .active {
         @apply !text-primary;
     }
-
-    .category-btn {
-        @apply text-white text-18 bg-primary h-[50px] font-bold flex items-center justify-center select-none rounded-t w-full cursor-default;
-    }
-
-    .category-list {
-        @apply shadow-s0 absolute origin-top top-full inset-x-0 rounded-b bg-white z-10 transition-[height] duration-300 max-lg:overflow-hidden;
-    }
-
-    .category-item {
-        @apply text-333 pl-[40px] pr-[12px] h-[43px] flex justify-between items-center relative max-lg:pl-[12px];
-    }
-
-    .category-item-link {
-        @apply text-16 block leading-[43px] w-full hover:text-primary hover:font-medium hover:text-18 transition-all;
-    }
-
-    .category-child {
-        @apply absolute top-0 bg-white shadow-s0 flex invisible opacity-0 rounded-r transition-all left-[100%] before:content-[''] before:block before:absolute before:bg-transparent before:h-full before:w-[20px] before:left-[-19px];
-    }
-
-    .category-child--head {
-        @apply font-medium text-16 cursor-default block border-b border-solid border-[#ccc];
-    }
-
-    .navlink {
-        @apply text-333 font-bold text-16 hover:text-primary md:max-lg:text-20;
-    }
-
-    .phone-number {
-        @apply text-333 text-22 lg:text-18 font-bold ml-[8px] font-antonio block;
-    }
-
-    .showSTTBtn {
-        @apply fixed w-20 h-20 bottom-12 right-12 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300 hover:bg-333;
-    }
-
-    .mobile-nav-link {
-        @apply text-14 no-underline flex h-full items-center justify-center flex-col text-333;
-    }
-
-    /* Main content */
-    .product-cat-item {
-        @apply col-span-2 max-lg:col-span-4 max-md:col-span-6 border-r border-b border-[#0000000d] transition-all duration-150 hover:shadow-s1;
-    }
-
-    .product-cat-item-link {
-        @apply flex flex-col items-center justify-center p-[8px] text-14 text-333 bg-transparent;
+    .buy__btn {
+        @apply px-3 py-4 font-semibold text-14 rounded-lg
     }
 }

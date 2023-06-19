@@ -3,8 +3,17 @@ import { Link, Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 
 import cLogo from '../../assets/img/icon/gashienphatlogo.png'
+import userIcon from '../../assets/img/icon/user.png'
+
+import useAuth from '../../custom-hooks/useAuth'
+
+import { motion } from 'framer-motion'
+
+import { auth } from '../../firebase.config';
 
 import './header.css'
+import { signOut } from 'firebase/auth';
+import { toast } from 'react-toastify';
 
 const mainNavs = [
     {
@@ -28,12 +37,16 @@ const mainNavs = [
 function Header() {
     const headerRef = useRef(null);
 
-    const totalQuantity = useSelector(state => state.cart.totalQuantity)
+    const totalQuantity = useSelector(state => state.cart.totalQuantity);
 
-    const menuRef = useRef(null)
-    const menuRef2 = useRef(null)
+    const menuRef = useRef(null);
+    const menuRef2 = useRef(null);
 
-    const navigate = useNavigate()
+    const profileActionRef = useRef(null)
+
+    const navigate = useNavigate();
+    
+    const { currentUser } = useAuth();
 
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', () => {
@@ -42,6 +55,15 @@ function Header() {
             } else {
                 headerRef.current.classList.remove('sticky__header');
             }
+        })
+    }
+
+    const logout = () => {
+        signOut(auth).then(() => {
+            toast.success('Đã đăng xuất!');
+            navigate('/');
+        }).catch(err => {
+            toast.error(err.message);
         })
     }
 
@@ -56,8 +78,10 @@ function Header() {
     }
 
     const navigateToCart = () => {
-        navigate('/cart');
+        navigate('/Cart');
     }
+
+    const toggleProfileActions = () => profileActionRef.current.classList.toggle('show__profile-actions')
 
     return (
         <>
@@ -87,18 +111,29 @@ function Header() {
                                 </div>
                             </div>
                         </nav>
-                        <div className='col-span-3 text-right max-lg:col-span-6'>
+                        <div className='col-span-3 max-lg:col-span-6 leading-none flex items-center justify-end'>
                             <span className='relative cursor-pointer mr-10'>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-heart text-333'></i>
-                                <span className='cart-badge'>0</span>
+                                <span className='header__badge'>0</span>
                             </span>
                             <span className='relative cursor-pointer mr-10' onClick={navigateToCart}>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-shopping-cart text-333'></i>
-                                <span className='cart-badge'>{totalQuantity}</span>
+                                <span className='header__badge'>{totalQuantity}</span>
                             </span>
-                            <span className='cursor-pointer max-lg:mr-10'>
-                                <i className='max-[320px]:text-14 text-20 fa-solid fa-user text-333'></i>
-                            </span>
+                            <div className='profile cursor-pointer max-lg:mr-10 inline-block'>
+                                <motion.img whileTap={{scale: 1.2}} src={currentUser ? currentUser.photoURL : userIcon} alt="" onClick={toggleProfileActions} />
+                                {/* <p>Xin chào {currentUser.displayName}</p> */}
+                                <div className="profile__actions" ref={profileActionRef}>
+                                    {currentUser ? (
+                                        <span onClick={logout}>Đăng xuất</span>
+                                    ) : (
+                                        <div className='flex flex-col items-center text-14'>
+                                            <Link to='/Signup'>Đăng ký</Link>
+                                            <Link to='/Login'>Đăng nhập</Link>
+                                        </div>
+                                        )}
+                                </div>
+                            </div>
                             <span onClick={menuToggle} className='hidden max-lg:inline-block'>
                                 <i className="max-[320px]:text-14 fa-solid fa-bars text-20 text-333"></i>
                             </span>

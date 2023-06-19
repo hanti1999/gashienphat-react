@@ -1,0 +1,38 @@
+@tailwind components;
+
+@layer components {
+    .checkout__cart {
+        @apply p-8 bg-primary text-white rounded-lg text-14;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .checkout__wrapper {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
+
+.billing__form .form__group input {
+    border: 1px solid var(--card-bg-03);
+    font-size: 1.4rem;
+}
+
+.billing__form .form__group {
+    margin-bottom: 13.8px;
+}
+
+.checkout__cart h6, h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout__cart h6 {
+    margin-bottom: 20px;
+}
+
+.checkout__cart h4 {
+    border-top: 1px solid rgba(221, 221, 221, 0.253);
+    padding-top: 20px;
+}

@@ -1,3 +1,44 @@
+@tailwind components;
+
+@layer components {
+    .navlink {
+        @apply text-333 font-bold text-16 hover:text-primary md:max-lg:text-20;
+    }
+}
+
+.profile {
+    position: relative;
+    z-index: 9;
+}
+
+.profile .profile__actions {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    z-index: 10;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-bg-01);
+    line-height: 30px;
+    display: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile img {
+    border: 1px solid var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.show__profile-actions {
+    display: flex !important;
+}
+
 .sticky__header {
     width: 100%;
     position: sticky;
@@ -8,7 +49,7 @@
     background: #f8f9fa;
 }
 
-.cart-badge {
+.header__badge {
     position: absolute;
     width: 20px;
     height: 20px;

@@ -41,10 +41,14 @@ function Shop() {
 
     const handleSearch = (e) => {
         const searchTerm = e.target.value;
-
         const searchedProducts = products.filter(item => item.productName.toLowerCase().includes(searchTerm.toLowerCase()))
-        
         setProductsData(searchedProducts);
+    }
+
+    const handleBrand = (e) => {
+        const filteredValue = e.target.value;
+        const filteredProds = products.filter(item => item.productName.toLowerCase().includes(filteredValue.toLowerCase()))
+        setProductsData(filteredProds);
     }
 
     return (
@@ -52,8 +56,8 @@ function Shop() {
             <CommonSection title='Sản phẩm'/>
             <section className="wid-1200">
                 <div className="shop__filter grid grid-cols-12 my-8">
-                    <div className="col-span-3 max-lg:col-span-6">
-                        <div className="filter__widget text-">
+                    <div className="col-span-2 max-lg:col-span-4 max-sm:col-span-12">
+                        <div className="filter__widget">
                             <select onChange={handleFilter} className="cursor-pointer rounded-lg bg-primary text-white py-3 px-8 border border-solid border-primary">
                                 <option>Lọc theo danh mục</option>
                                 <option value="bep-gas">Bếp gas</option>
@@ -64,7 +68,29 @@ function Shop() {
                             </select>
                         </div>
                     </div>
-                    <div className="col-span-3 max-lg:col-span-6 max-lg:text-end">
+                    <div className="col-span-2 max-lg:col-span-4 max-sm:col-span-12 sm:max-lg:text-center">
+                        <div className="filter__widget">
+                            <select onChange={handleBrand} className="cursor-pointer rounded-lg bg-primary text-white py-3 px-8 border border-solid border-primary">
+                                <option>Lọc theo hãng</option>
+                                <option value="namilux">Namilux</option>
+                                <option value="rinnai">Rinnai</option>
+                                <option value="akia">Akia</option>
+                                <option value="sanka">Sanka</option>
+                                <option value="nasonal">Nasonal</option>
+                                <option value="paloma">Paloma</option>
+                                <option value="kaff">Kaff</option>
+                                <option value="kangaroo">Kangaroo</option>
+                                <option value="mutosi">Mutosi</option>
+                                <option value="daikio">Daikio</option>
+                                <option value="senko">Senko</option>
+                                <option value="thaiflame">Thaiflame</option>
+                                <option value="ogawa">Ogawa</option>
+                                <option value="sakura">Sakura</option>
+                                <option value="sharp">Sharp</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="col-span-2 max-lg:col-span-4 max-sm:col-span-12 sm:max-lg:text-end">
                         <div className="filter__widget">
                             <select className="cursor-pointer rounded-lg bg-primary text-white py-3 px-8 border border-solid border-primary">
                                 <option>Sắp xếp sản phẩm</option>

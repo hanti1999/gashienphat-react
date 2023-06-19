@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
@@ -56,17 +55,17 @@ function Home() {
                                     <i className='fa-solid fa-angle-down'></i>
                                 </label>
                                 <input type="checkbox" hidden name="" id="show-category" />
-                                <div className='category-list max-lg:h-0 lg:h-[430px]'>
+                                <div className='category__list max-lg:h-0 lg:h-[400px]'>
                                     <ul className='list-none bg-white'>
                                         {Category.map((item, index) => (
-                                            <li key={index} className='category-item'>
-                                                <a className='category-item-link' href={item.typeHref}>{item.type}</a>
+                                            <li key={index} className='category__item'>
+                                                <a className='category__item-link' href={item.typeHref}>{item.type}</a>
                                                 <i className="fa-solid fa-angle-right"></i>
-                                                <div className='category-child'>
+                                                <div className='category__child'>
                                                     {item.childCats.map((childCat, index) => (
                                                         <div key={index} className={childCat.title === '' ? 'hidden' : 'w-[180px]'}>
                                                             <div className="py-[10px] px-[12px]">
-                                                                <span className='category-child--head'>{childCat.title}</span>
+                                                                <span className='category__child--head'>{childCat.title}</span>
                                                             </div>
                                                             <ul className="list-none">
                                                                 {childCat.childItems.map((childItem, index) => (
@@ -85,15 +84,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-span-9 max-lg:col-span-full'>
-                            <div className="flex h-[50px] mt-[10px] lg:my-0 max-md:mt-[4px] max-md:h-[46px]">
-                                <div className="flex items-center shadow-s0 rounded relative flex-1">
-                                    <input className='flex-1 outline-none px-[16px] py-[8px] text-14' type="text" placeholder='Bạn cần tìm gì?' name="" id="" />
-                                    <button className='!bg-primary w-[100px] h-full text-center cursor-pointer rounded-r'>
-                                        <span className='text-white text-14 px-1 font-bold leading-[5rem] block'>Tìm kiếm</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='mt-[10px] bg-primary h-[420px] max-md:h-auto rounded overflow-hidden max-md:mt-[4px] grid grid-cols-2'>
+                            <div className='bg-primary h-[450px] max-md:h-auto rounded overflow-hidden max-lg:mt-[10px] grid grid-cols-2'>
                                 <div className='text-white cursor-default col-span-1 px-5 pt-16 pb-4 max-md:col-span-full'>
                                     <span className='text-16 font-light'>Chào mừng quý khách <br/>Đến với website chính thức của</span>
                                     <h2 className='text-[3.2rem] max-md:text-24 my-6'>Cty tnhh Hiền Phát Vina</h2>
@@ -118,8 +109,8 @@ function Home() {
                     <div className='wid-1200'>
                         <div className='grid grid-cols-12 shadow-s0'>
                             {ProductCat.map((product, index) => (
-                                <span key={index} className='product-cat-item'>
-                                    <a href={product.href} className='product-cat-item-link'>
+                                <span key={index} className='product__cat-item'>
+                                    <a href={product.href} className='product__cat-item-link'>
                                         <img src={product.src} alt="" className='w-[80%] block bg-[#f8f9fa] rounded-[50%]'/>
                                         <span className='mt-[10px]'>{product.name}</span>
                                     </a>

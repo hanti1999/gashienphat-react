@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import '../../styles/scroll-to-top.css'
+
 function ScrollToTop() {
     const [showScrollBtn, setShowScrollBtn] = useState(false);
 

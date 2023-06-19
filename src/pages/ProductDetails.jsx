@@ -46,7 +46,7 @@ const ProductDetails = () => {
     const addToCart = () => {
         dispatch(cartActions.addItem({
             id,
-            image: imgUrl,
+            imgUrl: imgUrl,
             productName,
             price,
         }))
@@ -129,7 +129,7 @@ const ProductDetails = () => {
                                     <ul className='font-semibold border-b'>
                                         {reviews.map((item, index) => (
                                             <li key={index} className='mb-4'>
-                                                <h6>Hong Cuc</h6>
+                                                <h6>Yến Vy</h6>
                                                 <span className='text-[#ff7f50]'>{item.rating} <i className="fa-solid fa-star"></i></span>
                                                 <p className='mt-4 font-normal'>{item.text}</p>
                                             </li>

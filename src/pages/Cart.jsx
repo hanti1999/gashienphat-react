@@ -67,7 +67,7 @@ const Tr = ({item}) => {
         <tr>
             <td><img className='!w-32 !h-32 object-cover' src={item.imgUrl} alt="" /></td>
             <td className='overflow-hidden text-ellipsis whitespace-nowrap'>{item.productName}</td>
-            <td>{item.price.toLocaleString()} vnđ</td>
+            <td>{item.price.toLocaleString()}</td>
             <td>{item.quantity}</td>
             <td><motion.i 
                 whileTap={{scale: 1.2}} 

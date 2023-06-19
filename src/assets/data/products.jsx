@@ -49,19 +49,27 @@ import productImg36 from '../img/product/van-khe-Sawana.png'
 
 import productImg37 from '../img/product/van-Namilux.png'
 import productImg38 from '../img/product/van-ptlm.png'
+import productImg39 from '../img/product/paloma7pej.png'
+import productImg40 from '../img/product/paloma7psj.png'
+
+import productImg41 from '../img/product/kaff-kf-mc01.png'
+import productImg42 from '../img/product/sakura-742as.png'
+import productImg43 from '../img/product/rinnai715slimg.png'
+import productImg44 from '../img/product/rinnai274sb.png'
+
 
 
 const products = [
     {
         id: '01',
         imgUrl: productImg01,
-        productName: 'Bếp điện KAFF KF-FL866GII (1 từ 1 hồng ngoại)', 
+        productName: 'Bếp điện KAFF KF-FL866GIH (1 từ 1 hồng ngoại)', 
         category: 'bep-dien',
         displayHome: 'hotSale',
         warranty: fiveYearWarranty,
         apr: 'Trả góp 0%',
         sale: 'Giảm 4.000.000',
-        oldPrice: '1500.000',
+        oldPrice: '10.500.000',
         price: 10800000,
         gift: 'Lưu ý: đầu từ chỉ sử dụng với các sản phẩm có đáy từ',
         description: [
@@ -1096,6 +1104,180 @@ const products = [
         gift: 'Giảm 150.000 khi chuyển đổi từ bình đầu ngang sang đầu đứng',
         description: [
             ''
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '39',
+        imgUrl: productImg39,
+        productName: 'Bếp gas Paloma 7PEJ cảm ứng ngắt gas', 
+        category: 'bep-gas',
+        displayHome: '',
+        warranty: twoYearWarranty,
+        apr: 'Trả góp 0%',
+        sale: 'Giảm 200.000',
+        oldPrice: '3.890.000',
+        price: 3690000,
+        gift: 'Tặng chảo chống dính Elmich 24cm khi mua kèm van gas',
+        description: [
+            'Mặt bếp phủ men chống dính cao cấp',
+            'Kiềng thép phủ men chống dính, kèm mâm hứng dầu rời',
+            'Đánh lửa IC dùng pin',
+            'Đầu đốt đồng thau Paloma',
+            'Cảm ứng tự động ngắt gas',
+            'Điếu inox 304 chống gỉ sét',
+            'Sản xuất tại Nhật Bản'
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '40',
+        imgUrl: productImg40,
+        productName: 'Bếp gas Paloma 7PSJ cảm ứng ngắt gas', 
+        category: 'bep-gas',
+        displayHome: '',
+        warranty: twoYearWarranty,
+        apr: 'Trả góp 0%',
+        sale: 'Giảm 200.000',
+        oldPrice: '4.090.000',
+        price: 3890000,
+        gift: 'Tặng chảo chống dính Elmich 24cm khi mua kèm van gas',
+        description: [
+            'Mặt inox chống rỉ sét cao cấp',
+            'Kiềng thép phủ men chống dính, kèm mâm hứng dầu rời',
+            'Đánh lửa IC dùng pin',
+            'Đầu đốt đồng thau Paloma',
+            'Cảm ứng tự động ngắt gas',
+            'Điếu inox 304 chống gỉ sét',
+            'Sản xuất tại Nhật Bản'
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '41',
+        imgUrl: productImg41,
+        productName: 'Lò vi sóng âm kệ tủ Kaff KF-MC01', 
+        category: 'dien-gia-dung',
+        displayHome: '',
+        warranty: twoYearWarranty,
+        apr: 'Trả góp 0%',
+        sale: 'Giảm 1.080.000',
+        oldPrice: '10.800.000',
+        price: 9720000,
+        gift: '',
+        description: [
+            'Dung tích 25L',
+            'Màn hình hiển thị LCD',
+            'Điều khiển phím bấm điện tử',
+            '5 mức công suất',
+            'Chức năng nướng đối lưu 2500W',
+            'Khóa trẻ em an toàn',
+            'Công suất vi sóng 900W/nướng 1100W',
+            'Tiêu chuẩn tiết kiệm điện A++ Châu Âu',
+            'Nguồn điện 220-240V/50Hz',
+            'Kích thước cắt hộc tủ: 390C x 560R x 550S'
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '42',
+        imgUrl: productImg42,
+        productName: 'Bếp gas inox Sakura 742AS', 
+        category: 'dien-gas',
+        displayHome: '',
+        warranty: fiveYearWarranty,
+        apr: '',
+        sale: '',
+        oldPrice: '',
+        price: 980000,
+        gift: '',
+        description: [
+            'Toàn thân inox cao cấp chống gỉ sét',
+            'Kiềng thép tráng men chịu lực chịu nhiệt',
+            'Đánh lửa cơ magneto',
+            'Bộ đầu đốt Sakura bền bỉ tiết kiệm gas',
+            'Bảo hành 5 năm cụm đánh lửa'
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '43',
+        imgUrl: productImg43,
+        productName: 'Bếp gas Rinnai 715 SlimG', 
+        category: 'dien-gas',
+        displayHome: '',
+        warranty: twoYearWarranty,
+        apr: 'Trả góp 0%',
+        sale: '',
+        oldPrice: '',
+        price: 1800000,
+        gift: 'Tặng chảo chống dính Elmich 24cm khi mua kèm van gas',
+        description: [
+            'Mặt bếp phủ men cao ấp',
+            'Đầu đốt đồng thau kèm đầu hâm',
+            'Kiềng thép phủ men',
+            'Đánh lửa magneto (cơ)',
+            'Điếu gang bền bỉ',
+            'Lượng gas tiêu thụ ~0.42kg/h',
+            'Sản xuất tại Việt Nam'
+        ],
+        reviews: [
+            {
+                rating: 5,
+                text: 'test comment'
+            },
+        ],
+        avgRating: 4.5,
+    },
+    {
+        id: '44',
+        imgUrl: productImg44,
+        productName: 'Bếp gas Rinnai 274SB', 
+        category: 'dien-gas',
+        displayHome: '',
+        warranty: twoYearWarranty,
+        apr: 'Trả góp 0%',
+        sale: '',
+        oldPrice: '',
+        price: 2350000,
+        gift: 'Tặng chảo chống dính Elmich 24cm khi mua kèm van gas',
+        description: [
+            'Mặt bếp phủ men cao ấp',
+            'Đầu đốt đồng thau kèm đầu hâm',
+            'Kiềng thép phủ men',
+            'Đánh lửa magneto (cơ)',
+            'Điếu inox chống rỉ sét',
+            'Sản xuất tại Việt Nam'
         ],
         reviews: [
             {

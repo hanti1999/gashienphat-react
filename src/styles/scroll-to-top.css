@@ -1,0 +1,8 @@
+@tailwind components;
+
+
+@layer components {
+    .showSTTBtn {
+        @apply fixed w-20 h-20 bottom-8 right-8 z-50 text-18 border-none outline-none text-white cursor-pointer rounded bg-primary transition-opacity duration-300 hover:bg-333;
+    }
+}

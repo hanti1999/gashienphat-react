@@ -5,14 +5,14 @@ import Contact from '../pages/Contact.jsx';
 import News from '../pages/News.jsx';
 import Cart from '../pages/Cart.jsx';
 import PageNotFound from '../pages/PageNotFound.jsx';
-import SignIn from '../pages/SignIn.jsx';
-import SignUp from '../pages/SignUp.jsx';
 import Shop from '../pages/Shop.jsx';
 import ProductDetails from '../pages/ProductDetails.jsx'
 import NewsContent from '../pages/NewsContent.jsx';
-
-import App from '../App.jsx'
+import Signup from '../pages/Signup.jsx';
+import App from '../App.jsx';
 import Checkout from '../pages/Checkout.jsx';
+import Login from '../pages/Login.jsx';
+import ProtectedRoute from './ProtectedRoute.jsx';
 
 export const Routers = createBrowserRouter([
     {
@@ -44,8 +44,12 @@ export const Routers = createBrowserRouter([
           element: <PageNotFound />
         },
         {
-          path: '/SignIn',
-          element: <SignIn />
+          path: '/Login',
+          element: <Login />
+        },
+        {
+          path: '/Signup',
+          element: <Signup />
         },
         {
           path: '/Shop',
@@ -56,12 +60,10 @@ export const Routers = createBrowserRouter([
           element: <ProductDetails />
         },
         {
-          path: '/SignUp',
-          element: <SignUp />
-        },
-        {
           path: '/Checkout',
-          element: <Checkout />
+          element: <ProtectedRoute >
+            <Checkout />
+          </ProtectedRoute>
         }
       ]
     }

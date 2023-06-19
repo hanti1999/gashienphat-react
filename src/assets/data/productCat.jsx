@@ -15,62 +15,62 @@ const ProductCat = [
     {
         name: 'Bếp gas đôi',
         src: Akia,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Bếp gas mini',
         src: NamiLuxPL2021AS,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Bếp gas khè/CN',
         src: ThaiFlameCN,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Bếp điện',
         src: ladomaxha668,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Nồi cơm điện',
         src: SharpKSCOM19V,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Nồi cơm gas',
         src: KiwaMK55RA10L,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Máy lọc nước',
         src: daikiosandsw32009h2,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Quạt làm mát',
         src: daikiodka05000a,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Máy hút mùi',
         src: Kaffkfgb702,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Van điều áp',
         src: VanKatsura,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Gạo',
         src: rice,
-        href: '/shop'
+        href: '/Shop'
     },
     {
         name: 'Dụng cụ làm bếp',
         src: pan,
-        href: '/shop'
+        href: '/Shop'
     },
 ]
 
