@@ -8,11 +8,11 @@ import PageNotFound from '../pages/PageNotFound.jsx';
 import Shop from '../pages/Shop.jsx';
 import ProductDetails from '../pages/ProductDetails.jsx'
 import NewsContent from '../pages/NewsContent.jsx';
-import Signup from '../pages/Signup.jsx';
 import App from '../App.jsx';
 import Checkout from '../pages/Checkout.jsx';
 import Login from '../pages/Login.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
+import Signup from '../pages/Signup.jsx';
 
 export const Routers = createBrowserRouter([
     {
