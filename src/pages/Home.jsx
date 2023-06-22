@@ -59,7 +59,7 @@ function Home() {
                                     <ul className='list-none bg-white'>
                                         {Category.map((item, index) => (
                                             <li key={index} className='category__item'>
-                                                <a className='category__item-link' href={item.typeHref}>{item.type}</a>
+                                                <Link className='category__item-link' to={item.typeHref}>{item.type}</Link>
                                                 <i className="fa-solid fa-angle-right"></i>
                                                 <div className='category__child'>
                                                     {item.childCats.map((childCat, index) => (

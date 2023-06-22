@@ -10,6 +10,8 @@ const Checkout = () => {
 
   const totalQty = useSelector(state => state.cart.totalQuantity)
   const totalAmount = useSelector(state => state.cart.totalAmount)
+
+  let shipping = 0;
   return (
     <Helmet title='Thanh toán' >
       <CommonSection title={'Thanh toán'}/>
@@ -43,11 +45,10 @@ const Checkout = () => {
                 <h6>
                   <span>
                     Phí vận chuyển: <br/>
-                    Miễn phí vận chuyển
                   </span> 
-                  <span>0.000 vnd</span>
+                  <span>{totalAmount > 999000 ? 0 : (shipping = 35000)} vnđ</span>
                 </h6>
-                <h4>Tổng tiền: <span>{totalAmount.toLocaleString()} vnd</span></h4>
+                <h4>Tổng tiền: <span>{(totalAmount + shipping).toLocaleString()} vnđ</span></h4>
                 <button className='buy__btn bg-white text-primary mt-8 w-full'>Đặt hàng</button>
               </div>
             </div>

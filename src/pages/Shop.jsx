@@ -16,26 +16,20 @@ function Shop() {
         if (filterValue === 'bep-gas') {
             const filteredProducts = products.filter(item => item.category === 'bep-gas');
             setProductsData(filteredProducts);
-        }
-
-        if (filterValue === 'bep-dien') {
+        } else if (filterValue === 'bep-dien') {
             const filteredProducts = products.filter(item => item.category === 'bep-dien');
             setProductsData(filteredProducts);
-        }
-
-        if (filterValue === 'dien-gia-dung') {
+        } else if (filterValue === 'dien-gia-dung') {
             const filteredProducts = products.filter(item => item.category === 'dien-gia-dung');
             setProductsData(filteredProducts);
-        }
-
-        if (filterValue === 'may-loc-nuoc') {
+        } else if (filterValue === 'may-loc-nuoc') {
             const filteredProducts = products.filter(item => item.category === 'may-loc-nuoc');
             setProductsData(filteredProducts);
-        }
-
-        if (filterValue === 'phu-kien') {
+        } else if (filterValue === 'phu-kien') {
             const filteredProducts = products.filter(item => item.category === 'phu-kien');
             setProductsData(filteredProducts);
+        } else {
+            setProductsData(products);
         }
     }
 
@@ -47,8 +41,25 @@ function Shop() {
 
     const handleBrand = (e) => {
         const filteredValue = e.target.value;
-        const filteredProds = products.filter(item => item.productName.toLowerCase().includes(filteredValue.toLowerCase()))
-        setProductsData(filteredProds);
+        if (filteredValue === 'Lọc theo hãng') {
+            setProductsData(products);
+        } else {
+            const filteredProds = products.filter(item => item.productName.toLowerCase().includes(filteredValue.toLowerCase()))
+            setProductsData(filteredProds);
+        }
+    }
+
+    const handleSortPrice = (e) => {
+        const sortedPrice = e.target.value;
+        if (sortedPrice === 'ascending') {
+            const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+            setProductsData(sortedProducts);
+        } else if (sortedPrice === 'descending') {
+            const sortedProducts = [...products].sort((a, b) => b.price - a.price);
+            setProductsData(sortedProducts);
+        } else {
+            setProductsData(products);
+        }
     }
 
     return (
@@ -92,7 +103,7 @@ function Shop() {
                     </div>
                     <div className="col-span-2 max-lg:col-span-4 max-sm:col-span-12 sm:max-lg:text-end">
                         <div className="filter__widget">
-                            <select className="cursor-pointer rounded-lg bg-primary text-white py-3 px-8 border border-solid border-primary">
+                            <select onChange={handleSortPrice} className="cursor-pointer rounded-lg bg-primary text-white py-3 px-8 border border-solid border-primary">
                                 <option>Sắp xếp sản phẩm</option>
                                 <option value="ascending">Giá Tăng dần</option>
                                 <option value="descending">Giá giảm dần</option>

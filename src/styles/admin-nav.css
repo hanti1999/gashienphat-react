@@ -1,0 +1,45 @@
+.admin__nav-wrapper-top {
+    column-gap: 3rem;
+}
+
+.admin__nav-top-right {
+    column-gap: 2rem;
+}
+
+.admin__nav-top-right span i {
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.search__box input {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.search__box button {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.search__box button:hover {
+    background: whitesmoke;
+}
+
+.admin__menu {
+    background: var(--card-bg-02);
+}
+
+.admin__menu-list {
+    column-gap: 3rem;
+}
+
+.admin__menu-item a {
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.active__admin-menu {
+    background: whitesmoke;
+}

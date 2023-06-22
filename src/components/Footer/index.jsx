@@ -47,9 +47,9 @@ function Footer() {
                     <div className='grid grid-cols-12 gap-[24px]'>
                         <div className='col-span-4 max-lg:col-span-12'>
                             <div className='mt-[20px]'>
-                                <a href="#" className='mb-[20px] block w-[60px]'>
+                                <Link to='/' className='mb-[20px] block w-[60px]'>
                                     <img src={cLogo} alt="" className='w-full' />
-                                </a>
+                                </Link>
                                 <span className='block my-[10px]'>
                                     Địa chỉ: 199, Quốc Lộ 51, ấp 7, xã An Phước, huyện Long Thành, tỉnh Đồng Nai
                                     <a className='text-primary' href="https://goo.gl/maps/yYy447eNamPJ1FYE9" target='_blank'>(xem trên Google Map)</a>

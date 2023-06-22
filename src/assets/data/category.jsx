@@ -1,7 +1,7 @@
 const Category = [
     {
         type: 'Bếp gas',
-        typeHref: '#bep-gas',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -30,7 +30,7 @@ const Category = [
     },
     {
         type: 'Bếp điện',
-        typeHref: '#bep-dien',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -54,7 +54,7 @@ const Category = [
     },
     {
         type: 'Điện gia dụng',
-        typeHref: '#gia-dung',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -82,7 +82,7 @@ const Category = [
     },
     {
         type: 'Máy lọc nước',
-        typeHref: '#may-loc-nuoc',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -105,7 +105,7 @@ const Category = [
     },
     {
         type: 'Quạt làm mát',
-        typeHref: '#quat-lam-mat',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -130,7 +130,7 @@ const Category = [
     },
     {
         type: 'Máy hút mùi',
-        typeHref: '#quat-lam-mat',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -154,7 +154,7 @@ const Category = [
     },
     {
         type: 'Phụ tùng/Phụ kiện',
-        typeHref: '#phu-kien',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -178,7 +178,7 @@ const Category = [
     },
     {
         type: 'Gạo',
-        typeHref: '#gao',
+        typeHref: '/shop',
         childCats: [
             {
                 title: 'Phân loại',
@@ -203,7 +203,7 @@ const Category = [
     },
     {
         type: 'Dụng cụ làm bếp',
-        typeHref: '#dung-cu-lam-bep',
+        typeHref: '/shop',
         childCats: [
             {
                 title: '',
@@ -217,7 +217,7 @@ const Category = [
     },
     {
         type: 'Khác',
-        typeHref: '#khac',
+        typeHref: '/shop',
         childCats: [
             {
                 title: '',

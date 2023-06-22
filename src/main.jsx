@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
+
 import './index.css'
 
 import { Routers } from './routers/Routers.jsx';
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ToastContainer
         theme="dark"
         position="top-right"
-        autoClose={3000}
+        autoClose={2000}
         closeOnClick
         pauseOnHover={false}
       />
