@@ -33,6 +33,12 @@
     * {
         @apply m-0 p-0 box-border;
     }
+    table, th, td {
+        @apply border-b border-gray-300;
+    }
+    th {
+        @apply text-14 pb-2;
+    }
 }
 
 @layer components {

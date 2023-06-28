@@ -1,6 +1,5 @@
 import Helmet from '../components/Helmet/Helmet';
-import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL} from 'firebase/storage';
 import { setDoc, doc } from 'firebase/firestore';
@@ -9,8 +8,10 @@ import { auth } from '../firebase.config';
 import { storage } from '../firebase.config';
 import { db } from '../firebase.config';
 
-import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+
+import { toast } from 'react-toastify';
 
 import '../styles/signup.css';
 
@@ -57,7 +58,7 @@ function Signup() {
 
             setLoading(false);
             toast.success('Tạo tài khoản thành công!');
-            navigate('/Login')
+            navigate('/shop')
         } catch (error) {
             const errorCode = error.code;
             const errorMessage = error.message;

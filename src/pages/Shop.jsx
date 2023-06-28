@@ -1,15 +1,53 @@
-import CommonSection from "../components/UI/CommonSection";
 import Helmet from '../components/Helmet/Helmet'
-import { useState } from "react";
+import ProductList from "../components/UI/ProductList";
+import CommonSection from "../components/UI/CommonSection";
+
+import { useEffect, useState } from "react";
+import useGetData from "../custom-hooks/useGetData";
 
 import '../styles/shop.css'
 
-import products from "../assets/data/products";
-import ProductList from "../components/UI/ProductList";
-
 function Shop() {
     
+    const { data: products } = useGetData('products');
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPerPage = 16;
+    const lastIndex = currentPage * recordsPerPage;
+    const firstIndex = lastIndex - recordsPerPage;
+    const records = products.slice(firstIndex, lastIndex);
+    const npage = Math.ceil(products.length / recordsPerPage);
+    const numbers = [...Array(npage + 1).keys()].slice(1);
+
+    function prevPage() {
+        if(currentPage !== 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    }
+
+    function changeCurrentPage(id) {
+        setCurrentPage(id)
+    }
+
+    function nextPage() {
+        if(currentPage !== npage) {
+            setCurrentPage(currentPage + 1);
+        }
+    }
+    // === End pagination
+
     const [productsData, setProductsData] = useState(products);
+
+    useEffect(() => {
+        setProductsData(products);
+    },[products])
+
+    // const [productsData, setProductsData] = useState(records);
+
+    // useEffect(() => {
+    //     setProductsData(records);
+    // },[])
 
     const handleFilter = (e) => {
         const filterValue = e.target.value;
@@ -63,7 +101,7 @@ function Shop() {
     }
 
     return (
-        <Helmet title={'Mua hàng'}>
+        <Helmet title='Mua hàng'>
             <CommonSection title='Sản phẩm'/>
             <section className="wid-1200">
                 <div className="shop__filter grid grid-cols-12 my-8">
@@ -126,10 +164,64 @@ function Shop() {
 
             <section className="wid-1200">
                 <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
-                    {productsData.length === 0 ? <h1 className="text-center col-span-full text-20 text-primary font-medium">Không tìm thấy sản phẩm!</h1> : <ProductList data={productsData} />}
+                    {productsData.length === 0 ? (
+                        <h1 className="text-center col-span-full text-20 text-primary font-medium">Không tìm thấy sản phẩm!</h1>
+                        ) : <ProductList data={productsData} />
+                    }
                 </div>
             </section>
+
+            <section className='wid-1200'>
+                <nav className='mt-16 text-center flex justify-center'>
+                    <ul className='pagination flex border rounded-lg text-16 text-primary'>
+                        <li className='page-item'>
+                            <a href="#" 
+                                className='page-link block py-4 px-5 border-x text-center'
+                                onClick={prevPage}>
+                                Prev
+                            </a>
+                        </li>
+                        {
+                            numbers.map((num, index) => (
+                                <li className={`page-item ${currentPage === num ? 'bg-primary text-white' : ''}`} key={index}>
+                                    <a href="#" 
+                                        className='page-link block py-4 px-5 border-x text-center' 
+                                        onClick={() => changeCurrentPage(num)}>
+                                        {num}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                        {/* <MapPage 
+                             numbers={numbers} 
+                             currentPage={currentPage} 
+                             changeCurrentPage={changeCurrentPage} 
+                        /> */}
+                        <li className='page-item'>
+                            <a href="#" 
+                                className='page-link block py-4 px-5 border-x text-center'
+                                onClick={nextPage}>
+                                Next
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </Helmet>
+    )
+}
+
+const MapPage = ({numbers, currentPage, changeCurrentPage}) => {
+    return (
+        numbers.map((num, index) => (
+            <li className={`page-item ${currentPage === num ? 'bg-primary text-white' : ''}`} key={index}>
+                <a href="#" 
+                    className='page-link block py-4 px-5 border-x text-center' 
+                    onClick={() => changeCurrentPage(num)}>
+                    {num}
+                </a>
+            </li>
+        ))
     )
 }
 

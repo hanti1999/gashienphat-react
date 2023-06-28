@@ -130,9 +130,8 @@ function Header() {
                                         <div className='flex flex-col items-center text-14'>
                                             <Link to='/signup'>Đăng ký</Link>
                                             <Link className='border-t border-solid border-[#ccc]' to='/login'>Đăng nhập</Link>
-                                            <Link className='border-t border-solid border-[#ccc]' to='/dashboard'>Dashboard</Link>
                                         </div>
-                                        )}
+                                    )}
                                 </div>
                             </div>
                             <span onClick={menuToggle} className='hidden max-lg:inline-block'>

@@ -14,10 +14,12 @@ import Login from '../pages/Login.jsx';
 import Signup from '../pages/Sign-up.jsx';
 
 import ProtectedRoute from './ProtectedRoute.jsx'; 
+import PrivateRoute from './PrivateRoute.jsx';
 import Checkout from '../pages/Checkout.jsx';
 import Dashboard from '../admin/Dashboard.jsx'
 import AddProducts from '../admin/AddProducts.jsx';
 import AllProducts from '../admin/AllProducts.jsx';
+import Users from '../admin/Users.jsx';
 
 export const Routers = createBrowserRouter([
     {
@@ -62,13 +64,13 @@ export const Routers = createBrowserRouter([
           element: <ProductDetails />
         },
         {
+          path: 'checkout',
+          element: <ProtectedRoute><Checkout /></ProtectedRoute>
+        },
+        {
           path: '/*',
-          element: <ProtectedRoute />,
+          element: <PrivateRoute />,
           children: [
-            {
-              path: 'checkout',
-              element: <Checkout />
-            },
             {
               path: 'dashboard',
               element: <Dashboard />
@@ -80,6 +82,10 @@ export const Routers = createBrowserRouter([
             {
               path: 'dashboard/add-product',
               element: <AddProducts />
+            },
+            {
+              path: 'dashboard/users',
+              element: <Users />
             }
           ]
         },

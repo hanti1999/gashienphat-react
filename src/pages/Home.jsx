@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
-import products from '../assets/data/products'
 import blogItems from '../assets/data/blogs';
 import ProductCat from '../assets/data/productCat';
 import Category from '../assets/data/category';
@@ -20,7 +19,11 @@ import banner4 from '../assets/img/banner/chuyendoibinhgas.png'
 import mainBannerImg from '../assets/img/banner/modern-kitchen.png'
 import counterImg from '../assets/img/product/Paloma-7PEJ_1.png'
 
+import useGetData from "../custom-hooks/useGetData";
+
 function Home() {
+    const { data: products, loading } = useGetData('products');
+
     const [hotSalesProducts, setHotSalesProducts] = useState([])
     const [bestSalesProducts, setBestSalesProducts] = useState([])
     const [newProducts, setNewProducts] = useState([])
@@ -38,7 +41,7 @@ function Home() {
 
         const filterRecommendedProducts = products.filter(item => item.displayHome === 'recommended');
         setRecommendedProducts(filterRecommendedProducts)
-    }, [])
+    }, [products])
 
     return (
         <>
@@ -92,9 +95,9 @@ function Home() {
                                     <button className='buy__btn bg-white text-primary mt-20'><Link to='/shop'>Đến mua ngay!</Link></button>
                                 </div>
                                 <div className='col-span-1 p-4 text-right max-md:col-span-full flex justify-center items-center'>
-                                    <div>
+                                    <div className="relative">
                                         <img src={mainBannerImg} alt="" className="w-full" />
-                                        <a className="text-white font-light text-sm" target="_blank" href="http://www.freepik.com">Designed by alexandercho / Freepik</a>
+                                        <a className="text-333 text-sm absolute right-1/4 bottom-10" target="_blank" href="http://www.freepik.com">Designed by alexandercho / Freepik</a>
                                     </div>
                                 </div>
                             </div>
@@ -132,14 +135,21 @@ function Home() {
                                 <Link to="/shop">Xem tất cả</Link>
                             </div>
                         </div>
-                        <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                            <ProductList data={hotSalesProducts} />
-                        </div>
+                        {
+                            loading ? (
+                                <div className='text-center'>
+                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                                </div>) : (
+                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                        <ProductList data={hotSalesProducts} />
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
                 
                 {/* Banner 1 */}
-                <div className='my-[10px]'>
+                <div className='my-4'>
                     <div className='wid-1200'>
                         <Link to='/shop'>
                             <img src={banner1} alt="" className='w-full rounded shadow-s0'/>
@@ -159,9 +169,15 @@ function Home() {
                                 <Link to="/shop">Xem tất cả</Link>
                             </div>
                         </div>
-                        <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                            <ProductList data={bestSalesProducts} />
-                        </div>
+                        {loading ? (
+                                <div className='text-center'>
+                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                                </div>) : (
+                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                        <ProductList data={bestSalesProducts} />
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
 
@@ -197,14 +213,20 @@ function Home() {
                                 <Link to="/shop">Xem tất cả</Link>
                             </div>
                         </div>
-                        <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                            <ProductList data={newProducts} />
-                        </div>
+                        {loading ? (
+                                <div className='text-center'>
+                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                                </div>) : (
+                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                        <ProductList data={newProducts} />
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
 
                 {/* Banner 2 */}
-                <div className='my-[10px]'>
+                <div className='my-4'>
                     <div className='wid-1200'>
                         <Link to='/shop'>
                             <img src={banner4} alt="" className='w-full rounded shadow-s0'/>
@@ -224,9 +246,15 @@ function Home() {
                                 <Link to="/shop">Xem tất cả</Link>
                             </div>
                         </div>
-                        <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                            <ProductList data={recommendedProducts} />
-                        </div>
+                        {loading ? (
+                                <div className='text-center'>
+                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                                </div>) : (
+                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                        <ProductList data={recommendedProducts} />
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
 

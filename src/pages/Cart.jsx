@@ -16,7 +16,7 @@ function Cart() {
         <Helmet title={'Giỏ hàng'}>
             <CommonSection title={'Giỏ hàng'}/>
             <section className='wid-1200'>
-                <div className='cart__wrapper grid grid-cols-12 mt-8 text-333'>
+                <div className='cart__wrapper grid grid-cols-12 md:gap-8 mt-8 text-333'>
                     <div className="col-span-9 max-md:col-span-12">
                         {
                             cartItems.length === 0 ? (<div className='text-20 text-center font-medium'>Chưa có sản phẩm trong giỏ hàng!</div>) : (

@@ -510,7 +510,7 @@ const products = [
         sale: '',
         oldPrice: '',
         price: 2800000,
-        gift: 'Tặng chảo chống dính Elmich 26cm khi mua kèm van gas',
+        gift: 'Tặng chảo chống dính Elmich 24cm khi mua kèm van gas',
         description: [
             'Mặt kính cường lực cao ấp',
             'Đầu đốt đồng thau kèm đầu hâm',
@@ -670,7 +670,7 @@ const products = [
             'Ống thoát 120mm và ống mềm kèm theo',
             'Lưới lọc mỡ Aluminum 3 lớp',
             'Chế độ hút và khử mùi bằng than hoạt tính',
-            'Kích thước: 700Dx280Rx175C mm'
+            'Kích thước: 700Dx280Rx200C mm'
         ],
         reviews: [
             {

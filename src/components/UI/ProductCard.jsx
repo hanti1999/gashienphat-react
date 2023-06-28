@@ -29,19 +29,19 @@ function ProductCard({item}) {
                         <div className={item.warranty === '' ? 'hidden' : 'inline-block px-[8px] py-[4px] text-[#fff] absolute bottom-[40px] text-13 max-md:text-12 rounded-lg bg-[#ffd21ee6]'}>
                             BH {item.warranty} năm
                         </div>
-                        <div className={item.sale === '' ? 'hidden' : 'inline-block px-[8px] py-[4px] text-[#fff] absolute bottom-[10px] text-13 max-md:text-12 rounded-lg bg-[#ff0000]'}>
-                            {item.sale}
+                        <div className={item.sale === undefined || item.sale < 0 ? 'hidden' : 'inline-block px-[8px] py-[4px] text-[#fff] absolute bottom-[10px] text-13 max-md:text-12 rounded-lg bg-[#ff0000]'}>
+                            Giảm {item.sale.toLocaleString()}
                         </div>
                     </div>
                     <div className='overflow-hidden'>
                         <h1 className='text-16 max-md:text-14 font-bold product-name'><Link to={`/shop/${item.id}`}>{item.productName}</Link></h1>
                     </div>
                     <div className='py-[8x]'>
-                        <p className='line-through text-14 max-md:text-13 mr-[5px]'>{item.oldPrice}</p>
+                        <p className={item.oldPrice === 0 ? 'hidden' : 'line-through text-14 max-md:text-13 mr-[5px]'}>{item.oldPrice.toLocaleString()}</p>
                         <div className='flex justify-between items-center'>
                             <span className='text-[#ff0000] text-20 max-md:text-18 font-medium'>{item.price.toLocaleString()}</span>
                             <motion.span whileTap={{scale: 1.2}} onClick={addToCart} className='flex items-center justify-center cursor-pointer'>
-                                <i className="fa-solid fa-plus text-white rounded-full p-[6px] bg-primary"></i>
+                                <i className="fa-solid fa-shopping-cart text-white rounded-full p-[6px] bg-primary"></i>
                             </motion.span>
                         </div>
                     </div>
