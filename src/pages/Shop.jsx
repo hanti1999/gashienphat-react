@@ -2,52 +2,23 @@ import Helmet from '../components/Helmet/Helmet'
 import ProductList from "../components/UI/ProductList";
 import CommonSection from "../components/UI/CommonSection";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import useGetData from "../custom-hooks/useGetData";
 
 import '../styles/shop.css'
+import ReactPaginate from 'react-paginate';
+import Pagination from '../components/Pagination/Pagination';
+
 
 function Shop() {
     
     const { data: products } = useGetData('products');
-
-    // Pagination
-    const [currentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 16;
-    const lastIndex = currentPage * recordsPerPage;
-    const firstIndex = lastIndex - recordsPerPage;
-    const records = products.slice(firstIndex, lastIndex);
-    const npage = Math.ceil(products.length / recordsPerPage);
-    const numbers = [...Array(npage + 1).keys()].slice(1);
-
-    function prevPage() {
-        if(currentPage !== 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    }
-
-    function changeCurrentPage(id) {
-        setCurrentPage(id)
-    }
-
-    function nextPage() {
-        if(currentPage !== npage) {
-            setCurrentPage(currentPage + 1);
-        }
-    }
-    // === End pagination
 
     const [productsData, setProductsData] = useState(products);
 
     useEffect(() => {
         setProductsData(products);
     },[products])
-
-    // const [productsData, setProductsData] = useState(records);
-
-    // useEffect(() => {
-    //     setProductsData(records);
-    // },[])
 
     const handleFilter = (e) => {
         const filterValue = e.target.value;
@@ -171,58 +142,51 @@ function Shop() {
                 </div>
             </section>
 
-            <section className='wid-1200'>
-                <nav className='mt-16 text-center flex justify-center'>
-                    <ul className='pagination flex border rounded-lg text-16 text-primary'>
-                        <li className='page-item'>
-                            <a href="#" 
-                                className='page-link block py-4 px-5 border-x text-center'
-                                onClick={prevPage}>
-                                Prev
-                            </a>
-                        </li>
-                        {
-                            numbers.map((num, index) => (
-                                <li className={`page-item ${currentPage === num ? 'bg-primary text-white' : ''}`} key={index}>
-                                    <a href="#" 
-                                        className='page-link block py-4 px-5 border-x text-center' 
-                                        onClick={() => changeCurrentPage(num)}>
-                                        {num}
-                                    </a>
-                                </li>
-                            ))
-                        }
-                        {/* <MapPage 
-                             numbers={numbers} 
-                             currentPage={currentPage} 
-                             changeCurrentPage={changeCurrentPage} 
-                        /> */}
-                        <li className='page-item'>
-                            <a href="#" 
-                                className='page-link block py-4 px-5 border-x text-center'
-                                onClick={nextPage}>
-                                Next
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+            <div className="wid-1200">
+                <section className='mt-16'>
+                    <Pagination itemsPerPage={12} />
+                </section>
+            </div>
         </Helmet>
     )
 }
 
-const MapPage = ({numbers, currentPage, changeCurrentPage}) => {
-    return (
-        numbers.map((num, index) => (
-            <li className={`page-item ${currentPage === num ? 'bg-primary text-white' : ''}`} key={index}>
-                <a href="#" 
-                    className='page-link block py-4 px-5 border-x text-center' 
-                    onClick={() => changeCurrentPage(num)}>
-                    {num}
-                </a>
-            </li>
-        ))
-    )
-}
+// const Pagination = ({ itemsPerPage }) => {
+//     const { data: products } = useGetData('products');
+
+//     const [itemOffset, setItemOffset] = useState(0);
+  
+//     const endOffset = itemOffset + itemsPerPage;
+//     const currentItems = products.slice(itemOffset, endOffset);
+//     const pageCount = Math.ceil(products.length / itemsPerPage);
+  
+//     const handlePageClick = (event) => {
+//         const newOffset = (event.selected * itemsPerPage) % products.length;
+//         setItemOffset(newOffset);
+//     };
+  
+//     return (
+//         <>
+//             <section className="wid-1200">
+//                 <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
+//                     <ProductList data={currentItems} />
+//                 </div>
+//             </section>
+
+//             <section className='mt-16'>
+//                 <ReactPaginate
+//                     breakLabel="..."
+//                     nextLabel="Tiếp >"
+//                     onPageChange={handlePageClick}
+//                     pageRangeDisplayed={5}
+//                     pageCount={pageCount}
+//                     previousLabel="< Lùi"
+//                     renderOnZeroPageCount={null}
+//                     containerClassName='page-ul'
+//                 />
+//             </section>
+//         </>
+//     );
+// }
 
 export default Shop;

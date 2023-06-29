@@ -6,6 +6,40 @@
     font-size: 1.4rem;
 }
 
+/* Pagination */
+.page-ul {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.page-ul li {
+    border-right: 1px solid #ccc;
+}
+
+.page-ul li:last-child {
+    border-right: none;
+}
+
+.page-ul li a {
+    display: block;
+    padding: 8px 10px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.selected {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.disabled {
+    color: #ddd;
+}
+/* === End pagination */
+
 @media screen and (max-width: 768px) {
     .filter__widget {
         margin-bottom: 30px;

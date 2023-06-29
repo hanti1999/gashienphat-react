@@ -81,6 +81,10 @@ function Header() {
         navigate('/Cart');
     }
 
+    const navigateToDashboard = () => {
+        navigate('/dashboard')
+    }
+
     const toggleProfileActions = () => profileActionRef.current.classList.toggle('show__profile-actions')
 
     return (
@@ -112,9 +116,9 @@ function Header() {
                             </div>
                         </nav>
                         <div className='col-span-3 max-lg:col-span-6 leading-none flex items-center justify-end'>
-                            <span className='relative cursor-pointer mr-10'>
+                            <span className='relative cursor-pointer mr-10' onClick={navigateToDashboard}>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-heart text-333'></i>
-                                <span className='header__badge'>0</span>
+                                {/* <span className='header__badge'>0</span> */}
                             </span>
                             <span className='relative cursor-pointer mr-10' onClick={navigateToCart}>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-shopping-cart text-333'></i>
@@ -122,7 +126,6 @@ function Header() {
                             </span>
                             <div className='profile cursor-pointer max-lg:mr-10 inline-block'>
                                 <motion.img whileTap={{scale: 1.2}} src={currentUser ? currentUser.photoURL : userIcon} alt="" onClick={toggleProfileActions} />
-                                {/* <p>Xin chào {currentUser.displayName}</p> */}
                                 <div className="profile__actions" ref={profileActionRef}>
                                     {currentUser ? (
                                         <span onClick={logout}>Đăng xuất</span>
