@@ -2,12 +2,12 @@ import Helmet from '../components/Helmet/Helmet'
 import ProductList from "../components/UI/ProductList";
 import CommonSection from "../components/UI/CommonSection";
 
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useGetData from "../custom-hooks/useGetData";
 
 import '../styles/shop.css'
 import ReactPaginate from 'react-paginate';
-import Pagination from '../components/Pagination/Pagination';
+// import Pagination from '../components/Pagination/Pagination';
 
 
 function Shop() {
@@ -142,51 +142,61 @@ function Shop() {
                 </div>
             </section>
 
-            <div className="wid-1200">
-                <section className='mt-16'>
-                    <Pagination itemsPerPage={12} />
-                </section>
-            </div>
+            <Pagination itemsPerPage={12} />
         </Helmet>
     )
 }
 
-// const Pagination = ({ itemsPerPage }) => {
-//     const { data: products } = useGetData('products');
+const Items = ({ currentItems }) => {
+    // Fixing...
+    return (
+        <>
+            <section className='wid-1200'>
+                {/* <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
+                    {currentItems.length === 0 ? (
+                        <h1 className="text-center col-span-full text-20 text-primary font-medium">Không tìm thấy sản phẩm!</h1>
+                        ) : <ProductList data={currentItems} />
+                    }
+                </div> */}
+            </section>
+        </>
+    )
+}
 
-//     const [itemOffset, setItemOffset] = useState(0);
-  
-//     const endOffset = itemOffset + itemsPerPage;
-//     const currentItems = products.slice(itemOffset, endOffset);
-//     const pageCount = Math.ceil(products.length / itemsPerPage);
-  
-//     const handlePageClick = (event) => {
-//         const newOffset = (event.selected * itemsPerPage) % products.length;
-//         setItemOffset(newOffset);
-//     };
-  
-//     return (
-//         <>
-//             <section className="wid-1200">
-//                 <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
-//                     <ProductList data={currentItems} />
-//                 </div>
-//             </section>
+const Pagination = ({ itemsPerPage }) => {
+    const { data: products } = useGetData('products');
 
-//             <section className='mt-16'>
-//                 <ReactPaginate
-//                     breakLabel="..."
-//                     nextLabel="Tiếp >"
-//                     onPageChange={handlePageClick}
-//                     pageRangeDisplayed={5}
-//                     pageCount={pageCount}
-//                     previousLabel="< Lùi"
-//                     renderOnZeroPageCount={null}
-//                     containerClassName='page-ul'
-//                 />
-//             </section>
-//         </>
-//     );
-// }
+    const [itemOffset, setItemOffset] = useState(0);
+  
+    const endOffset = itemOffset + itemsPerPage;
+    const currentItems = products.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(products.length / itemsPerPage);
+  
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % products.length;
+        setItemOffset(newOffset);
+    };
+  
+    return (
+        <>
+            <Items currentItems={currentItems} />
+
+            <section className='wid-1200'>
+                <div className='mt-16'>
+                    <ReactPaginate
+                        breakLabel="..."
+                        nextLabel="Tiếp >"
+                        onPageChange={handlePageClick}
+                        pageRangeDisplayed={5}
+                        pageCount={pageCount}
+                        previousLabel="< Lùi"
+                        renderOnZeroPageCount={null}
+                        containerClassName='page-ul'
+                    />
+                </div>
+            </section>
+        </>
+    );
+}
 
 export default Shop;
