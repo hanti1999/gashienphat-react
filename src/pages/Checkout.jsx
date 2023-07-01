@@ -1,17 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/CommonSection'
+
+import { collection, addDoc } from 'firebase/firestore'
+import { db } from '../firebase.config'
+import { useNavigate } from 'react-router-dom'
 
 import '../styles/checkout.css'
 
 import { useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 
 const Checkout = () => {
 
   const totalQty = useSelector(state => state.cart.totalQuantity)
   const totalAmount = useSelector(state => state.cart.totalAmount)
+  const cartItems = useSelector(state => state.cart.cartItems);
 
   let shipping = 0;
+
+  // checkout
+  const [enterName, setEnterName] = useState('');
+  const [enterEmail, setEnterEmail] = useState('');
+  const [enterPhoneNumber, setEnterPhoneNumber] = useState('');
+  const [enterAddress, setEnterAddress] = useState('');
+  const [enterNote, setEnterNote] = useState('');
+
+  const navigate = useNavigate();
+
+  const completeCheckout = async(e) => {
+    e.preventDefault();
+    try {
+      const docRef = await collection(db, 'orders');
+      await addDoc(docRef, {
+        customerName: enterName,
+        customerEmail: enterEmail,
+        customerPhoneNumber: enterPhoneNumber,
+        customerAddress: enterAddress,
+        customerNote: enterNote,
+        customerOrders: cartItems
+      })
+      toast.success('Đã gửi đơn hàng thành công!');
+      navigate('/')
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      toast.error('Có lỗi xảy ra, vui lòng thử lại!');
+    }
+  }
+  
   return (
     <Helmet title='Thanh toán' >
       <CommonSection title={'Thanh toán'}/>
@@ -22,19 +60,47 @@ const Checkout = () => {
               <h6 className='mb-4 text-20 font-bold'>Thông tin thanh toán</h6>
               <form className='billing__form'>
                 <div className='form__group'>
-                  <input type="text" placeholder='Nhập tên của bạn ...' required />
+                  <input 
+                    value={enterName} 
+                    onChange={e => setEnterName(e.target.value)}
+                    type="text" 
+                    placeholder='Nhập tên của bạn ...' 
+                    required 
+                  />
                 </div>
                 <div className='form__group'>
-                  <input type="email" placeholder='Nhập mail của bạn ... (Không bắt buộc)' />
+                  <input 
+                    value={enterEmail}
+                    onChange={e => setEnterEmail(e.target.value)}
+                    type="email" 
+                    placeholder='Nhập mail của bạn ... (Không bắt buộc)' 
+                  />
                 </div>
                 <div className='form__group'>
-                  <input type="number" placeholder='Nhập số điện thoại của bạn ...' required/>
+                  <input 
+                    value={enterPhoneNumber}
+                    onChange={e => setEnterPhoneNumber(e.target.value)} 
+                    type="number" 
+                    placeholder='Nhập số điện thoại của bạn ...' 
+                    required
+                  />
                 </div>
                 <div className='form__group'>
-                  <input type="text" placeholder='Nhập địa chỉ của bạn ...' required/>
+                  <input 
+                    value={enterAddress} 
+                    onChange={e => setEnterAddress(e.target.value)}
+                    type="text" 
+                    placeholder='Nhập địa chỉ của bạn ...' 
+                    required
+                  />
                 </div>
                 <div className='form__group'>
-                  <input type="text" placeholder='Nhập tên của bạn ...' required/>
+                  <textarea 
+                    value={enterNote} 
+                    onChange={e => setEnterNote(e.target.value)}
+                    type="text" 
+                    placeholder='Ghi chú ... (Không bắt buộc)'
+                  />
                 </div>
               </form>
             </div>
@@ -49,7 +115,7 @@ const Checkout = () => {
                   <span>{totalAmount > 999000 ? 0 : (shipping = 35000)} vnđ</span>
                 </h6>
                 <h4>Tổng tiền: <span>{(totalAmount + shipping).toLocaleString()} vnđ</span></h4>
-                <button className='buy__btn bg-white text-primary mt-8 w-full'>Đặt hàng</button>
+                <button onClick={completeCheckout} className='buy__btn bg-white text-primary mt-8 w-full'>Đặt hàng</button>
               </div>
             </div>
           </div>

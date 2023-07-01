@@ -20,6 +20,7 @@ import Dashboard from '../admin/Dashboard.jsx'
 import AddProducts from '../admin/AddProducts.jsx';
 import AllProducts from '../admin/AllProducts.jsx';
 import Users from '../admin/Users.jsx';
+import Orders from '../admin/Orders.jsx';
 
 export const Routers = createBrowserRouter([
     {
@@ -86,6 +87,10 @@ export const Routers = createBrowserRouter([
             {
               path: 'dashboard/users',
               element: <Users />
+            },
+            {
+              path: 'dashboard/orders',
+              element: <Orders />
             }
           ]
         },

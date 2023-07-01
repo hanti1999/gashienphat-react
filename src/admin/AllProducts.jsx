@@ -19,8 +19,7 @@ const AllProducts = () => {
 }
 
 const Items = ({ currentItems }) => {
-  const {loading} = useGetData('products');
-
+  
   const deleteProduct = async(id) => {
     await deleteDoc(doc(db, 'products', id));
     toast.success('Đã xóa!');
@@ -40,12 +39,7 @@ const Items = ({ currentItems }) => {
           </tr>
         </thead>
         <tbody>
-          {
-            loading ? (
-              <tr className='text-center w-full mt-10'>
-                <td className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></td>
-              </tr>) : (
-              currentItems.map((item, index) => (
+          {currentItems.map((item, index) => (
                 <tr key={index}>
                   <td>
                     <img src={item.imgUrl} alt="" className='w-[220px] h-[220px]' />
@@ -65,7 +59,7 @@ const Items = ({ currentItems }) => {
                     </button>
                   </td>
                 </tr>
-              ))
+              )
             )
           }
         </tbody>

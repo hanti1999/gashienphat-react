@@ -7,18 +7,24 @@ import useGetData from "../custom-hooks/useGetData";
 
 import '../styles/shop.css'
 import ReactPaginate from 'react-paginate';
-// import Pagination from '../components/Pagination/Pagination';
-
 
 function Shop() {
-    
+    return (
+        <Helmet title='Mua hàng'>
+            <CommonSection title='Sản phẩm'/>
+            <Pagination itemsPerPage={12} />
+        </Helmet>
+    )
+}
+
+const Items = ({ currentItems }) => {
+
+    const [productsData, setProductsData] = useState(currentItems);
     const { data: products } = useGetData('products');
 
-    const [productsData, setProductsData] = useState(products);
-
-    useEffect(() => {
-        setProductsData(products);
-    },[products])
+    useEffect(()=> {
+        setProductsData(currentItems)
+    }, [currentItems])
 
     const handleFilter = (e) => {
         const filterValue = e.target.value;
@@ -38,7 +44,7 @@ function Shop() {
             const filteredProducts = products.filter(item => item.category === 'phu-kien');
             setProductsData(filteredProducts);
         } else {
-            setProductsData(products);
+            setProductsData(currentItems);
         }
     }
 
@@ -51,7 +57,7 @@ function Shop() {
     const handleBrand = (e) => {
         const filteredValue = e.target.value;
         if (filteredValue === 'Lọc theo hãng') {
-            setProductsData(products);
+            setProductsData(currentItems);
         } else {
             const filteredProds = products.filter(item => item.productName.toLowerCase().includes(filteredValue.toLowerCase()))
             setProductsData(filteredProds);
@@ -67,13 +73,12 @@ function Shop() {
             const sortedProducts = [...products].sort((a, b) => b.price - a.price);
             setProductsData(sortedProducts);
         } else {
-            setProductsData(products);
+            setProductsData(currentItems);
         }
     }
 
     return (
-        <Helmet title='Mua hàng'>
-            <CommonSection title='Sản phẩm'/>
+        <>
             <section className="wid-1200">
                 <div className="shop__filter grid grid-cols-12 my-8">
                     <div className="col-span-2 max-lg:col-span-4 max-sm:col-span-12">
@@ -133,31 +138,13 @@ function Shop() {
                 </div>
             </section>
 
-            <section className="wid-1200">
+            <section className='wid-1200'>
                 <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
                     {productsData.length === 0 ? (
                         <h1 className="text-center col-span-full text-20 text-primary font-medium">Không tìm thấy sản phẩm!</h1>
                         ) : <ProductList data={productsData} />
                     }
                 </div>
-            </section>
-
-            <Pagination itemsPerPage={12} />
-        </Helmet>
-    )
-}
-
-const Items = ({ currentItems }) => {
-    // Fixing...
-    return (
-        <>
-            <section className='wid-1200'>
-                {/* <div className="shop__products grid grid-cols-12 max-md:gap-[8px] gap-[24px]">
-                    {currentItems.length === 0 ? (
-                        <h1 className="text-center col-span-full text-20 text-primary font-medium">Không tìm thấy sản phẩm!</h1>
-                        ) : <ProductList data={currentItems} />
-                    }
-                </div> */}
             </section>
         </>
     )

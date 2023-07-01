@@ -13,7 +13,8 @@
     }
 }
 
-.billing__form .form__group input {
+.billing__form .form__group input,
+.billing__form .form__group textarea {
     border: 1px solid var(--card-bg-03);
     font-size: 1.4rem;
 }
