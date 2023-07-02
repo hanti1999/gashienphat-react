@@ -115,19 +115,15 @@ const AddProducts = () => {
                     </div>
 
                     <div className="form__group w-1/3">
-                      <span>Bảo hành</span>
-                      <select 
-                        className='w-full border rounded-lg py-3' 
-                        value={enterWarranty} 
-                        onChange={e => setEnterWarranty(e.target.value)}
-                        >
-                        <option>Chọn thời hạn</option>
-                        <option value="1">1 năm</option>
-                        <option value="2">2 năm</option>
-                        <option value="3">3 năm</option>
-                        <option value="5">5 năm</option>
-                      </select>
-                    </div>
+                      <span>Khuyến mãi</span>
+                      <input 
+                        type="text"
+                        placeholder='..'
+                        className='w-full border rounded-lg py-3'
+                        value={enterGift}
+                        onChange={e => setEnterGift(e.target.value)}
+                      />
+                    </div>                    
                   </div>
 
                   <div className='flex items-center justify-between gap-4'>
@@ -163,15 +159,19 @@ const AddProducts = () => {
                     </div>
 
                     <div className="form__group w-1/3">
-                      <span>Khuyến mãi</span>
-                      <input 
-                        type="text"
-                        placeholder='..'
-                        className='w-full border rounded-lg py-3'
-                        value={enterGift}
-                        onChange={e => setEnterGift(e.target.value)}
-                      />
-                    </div>
+                      <span>Bảo hành</span>
+                      <select 
+                        className='w-full border rounded-lg py-3' 
+                        value={enterWarranty} 
+                        onChange={e => setEnterWarranty(e.target.value)}
+                        >
+                        <option>Chọn thời hạn</option>
+                        <option value="1">1 năm</option>
+                        <option value="2">2 năm</option>
+                        <option value="3">3 năm</option>
+                        <option value="5">5 năm</option>
+                      </select>
+                    </div>                    
                   </div>
 
                   <div className="form__group">

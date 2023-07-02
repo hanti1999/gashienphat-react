@@ -38,7 +38,8 @@ const Checkout = () => {
         customerPhoneNumber: enterPhoneNumber,
         customerAddress: enterAddress,
         customerNote: enterNote,
-        customerOrders: cartItems
+        customerOrders: cartItems,
+        orderState: 'Chưa xử lý',
       })
       toast.success('Đã gửi đơn hàng thành công!');
       navigate('/')

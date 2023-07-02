@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 import useAuth from '../custom-hooks/useAuth'
 import useGetData from '../custom-hooks/useGetData'
 
@@ -32,7 +32,7 @@ const admin__nav = [
 
 const AdminNav = () => {
     const {currentUser} = useAuth()
-    const [orders, setOrders] = useState(0)
+    const { data: orders } = useGetData('orders')
 
     return (
     <>
@@ -54,7 +54,7 @@ const AdminNav = () => {
                         <div className="admin__nav-top-right flex items-center">
                             <span className='relative'>
                                 <i className="fa-regular fa-bell"></i>
-                                <span className='admin__nav-badge'>{orders}</span>
+                                <span className='admin__nav-badge'>{orders.length}</span>
                             </span>
                             <span><i className="fa-solid fa-gear"></i></span>
                             <img className='w-16 h-16 rounded-[50px] cursor-pointer' src={currentUser && currentUser.photoURL} alt="" />
