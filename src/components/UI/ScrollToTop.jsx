@@ -9,6 +9,7 @@ function ScrollToTop() {
         window.onscroll = () => {handleScroll()};
 
         const handleScroll = () => {
+            // return boolean
             setShowScrollBtn(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
         }
     }, [])

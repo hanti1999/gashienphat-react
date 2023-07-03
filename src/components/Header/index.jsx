@@ -8,12 +8,12 @@ import userIcon from '../../assets/img/icon/user.png'
 import useAuth from '../../custom-hooks/useAuth'
 
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify';
 
 import { auth } from '../../firebase.config';
+import { signOut } from 'firebase/auth';
 
 import './header.css'
-import { signOut } from 'firebase/auth';
-import { toast } from 'react-toastify';
 
 const mainNavs = [
     {
@@ -35,18 +35,19 @@ const mainNavs = [
 ];
 
 function Header() {
-    const headerRef = useRef(null);
-
     const totalQuantity = useSelector(state => state.cart.totalQuantity);
-
+    
     const menuRef = useRef(null);
     const menuRef2 = useRef(null);
-
+    
     const profileActionRef = useRef(null)
-
+    
     const navigate = useNavigate();
     
     const { currentUser } = useAuth();
+    
+    // Sticky header =>
+    const headerRef = useRef(null);
 
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', () => {
@@ -58,6 +59,12 @@ function Header() {
         })
     }
 
+    useEffect(() => {
+        stickyHeaderFunc();
+        return () => window.removeEventListener('scroll', stickyHeaderFunc)
+    })
+    // <= end sticky header
+
     const logout = () => {
         signOut(auth).then(() => {
             toast.success('Đã đăng xuất!');
@@ -66,11 +73,6 @@ function Header() {
             toast.error(err.message);
         })
     }
-
-    useEffect(() => {
-        stickyHeaderFunc();
-        return () => window.removeEventListener('scroll', stickyHeaderFunc)
-    })
 
     const menuToggle = () => {
         menuRef.current.classList.toggle('active__menu')

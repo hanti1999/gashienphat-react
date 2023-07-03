@@ -55,7 +55,7 @@ function Login() {
                                 <form className="auth__form space-y-6" action="#" method="POST" onSubmit={signIn}>
                                 <div>
                                     <label htmlFor="email" className="block text-14 font-medium text-333">
-                                        Địa chỉ Email
+                                        Địa chỉ Email *
                                     </label>
                                     <div className="mt-2">
                                         <input id="email" name="email" type="email" value={email} autoComplete="email" required
@@ -68,7 +68,7 @@ function Login() {
                                 <div>
                                     <div className="flex items-center justify-between">
                                         <label htmlFor="password" className="block text-14 font-medium text-333">
-                                        Mật khẩu
+                                        Mật khẩu &
                                         </label>
                                         <div className="text-12">
                                             <Link to='/Signup' className="font-semibold text-primary hover:opacity-80">
