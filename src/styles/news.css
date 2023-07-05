@@ -1,0 +1,10 @@
+.blog-card .blog-desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+   	-webkit-line-clamp: 3;
+}
+
+.blog__mini:last-child {
+    margin-bottom: 0;
+}

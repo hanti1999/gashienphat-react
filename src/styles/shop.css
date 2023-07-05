@@ -49,7 +49,7 @@
         padding: 7px;
     }
 
-    .shop__filter, .shop__products {
+    .shop__filter, .shop__products, .shop__paginate {
         margin-right: 8px;
         margin-left: 8px;
     }
@@ -58,5 +58,12 @@
 @media screen and (max-width: 640px) {
     .filter__widget {
         margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1220px) {
+    .shop__filter, .shop__products, .shop__paginate {
+        margin-right: 8px;
+        margin-left: 8px;
     }
 }

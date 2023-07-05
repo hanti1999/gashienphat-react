@@ -10,7 +10,7 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1220px) {
-    .header, .content, .footer, .counter, .shop__filter, .shop__products {
+    .header, .content, .footer, .counter {
         margin-left: 8px;
         margin-right: 8px;
     }

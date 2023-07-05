@@ -169,7 +169,7 @@ const Pagination = ({ itemsPerPage }) => {
             <Items currentItems={currentItems} />
 
             <section className='wid-1200'>
-                <div className='mt-16'>
+                <div className='shop__paginate mt-16'>
                     <ReactPaginate
                         breakLabel="..."
                         nextLabel="Tiếp >"

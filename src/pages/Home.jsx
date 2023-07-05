@@ -170,13 +170,13 @@ function Home() {
                             </div>
                         </div>
                         {loading ? (
-                                <div className='text-center'>
-                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
-                                </div>) : (
-                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                                        <ProductList data={bestSalesProducts} />
-                                    </div>
-                                )
+                            <div className='text-center'>
+                                <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                            </div>) : (
+                                <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                    <ProductList data={bestSalesProducts} />
+                                </div>
+                            )
                         }
                     </div>
                 </div>
@@ -214,13 +214,13 @@ function Home() {
                             </div>
                         </div>
                         {loading ? (
-                                <div className='text-center'>
-                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
-                                </div>) : (
-                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                                        <ProductList data={newProducts} />
-                                    </div>
-                                )
+                            <div className='text-center'>
+                                <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                            </div>) : (
+                                <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                    <ProductList data={newProducts} />
+                                </div>
+                            )
                         }
                     </div>
                 </div>
@@ -247,13 +247,13 @@ function Home() {
                             </div>
                         </div>
                         {loading ? (
-                                <div className='text-center'>
-                                    <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
-                                </div>) : (
-                                    <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
-                                        <ProductList data={recommendedProducts} />
-                                    </div>
-                                )
+                            <div className='text-center'>
+                                <h5 className='font-bold text-18'>Loading... <i className="fa-solid fa-spinner fa-spin"></i></h5>
+                            </div>) : (
+                                <div className='grid grid-cols-12 max-md:gap-[8px] gap-[24px]'>
+                                    <ProductList data={recommendedProducts} />
+                                </div>
+                            )
                         }
                     </div>
                 </div>
@@ -271,7 +271,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='grid grid-cols-12 gap-[24px]'>
-                            {blogItems.map((blogItem, index) => (
+                            {blogItems.slice(0,3).map((blogItem, index) => (
                                 <div key={index} className='col-span-4 max-md:col-span-12'>
                                     <div className='text-14'>
                                         <div className='shadow-s0 overflow-hidden rounded aspect-video'>
