@@ -1,4 +1,4 @@
-import blogImg1 from '../../assets/img/banner/Thang7.png';
+import blogImg1 from '../../assets/img/banner/thang7.png';
 import blogImg2 from '../../assets/img/banner/safe.jpg';
 import blogImg3 from '../../assets/img/luadao.jpg';
 
