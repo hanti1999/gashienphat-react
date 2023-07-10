@@ -22,15 +22,15 @@ const mainNavs = [
     },
     {
         title: 'Mua hàng',
-        href: '/Shop'
+        href: '/shop'
     }
     ,{
         title: 'Tin tức',
-        href: '/News'
+        href: '/news'
     },
     {
         title: 'Giỏ hàng',
-        href: '/Cart'
+        href: '/cart'
     },
 ];
 
@@ -118,10 +118,10 @@ function Header() {
                             </div>
                         </nav>
                         <div className='col-span-3 max-lg:col-span-6 leading-none flex items-center justify-end'>
-                            <span className='relative cursor-pointer mr-10' onClick={navigateToDashboard}>
+                            {/* <span className='relative cursor-pointer mr-10'>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-heart text-333'></i>
-                                {/* <span className='header__badge'>0</span> */}
-                            </span>
+                                <span className='header__badge'>0</span>
+                            </span> */}
                             <span className='relative cursor-pointer mr-10' onClick={navigateToCart}>
                                 <i className='max-[320px]:text-14 text-20 fa-solid fa-shopping-cart text-333'></i>
                                 <span className='header__badge'>{totalQuantity}</span>
@@ -130,7 +130,10 @@ function Header() {
                                 <motion.img whileTap={{scale: 1.2}} src={currentUser ? currentUser.photoURL : userIcon} alt="" onClick={toggleProfileActions} />
                                 <div className="profile__actions" ref={profileActionRef}>
                                     {currentUser ? (
-                                        <span onClick={logout}>Đăng xuất</span>
+                                        <div>
+                                            {currentUser.email === 'nth.anh020209@gmail.com' ? (<div onClick={navigateToDashboard}>Dashboard</div>) : ''}
+                                            <div onClick={logout}>Đăng xuất</div>
+                                        </div>
                                     ) : (
                                         <div className='flex flex-col items-center text-14'>
                                             <Link to='/signup'>Đăng ký</Link>

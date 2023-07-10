@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 
 import '../../styles/product-card.css'
 
+import ConvertVie from '../../assets/ConvertVie'
+
 function ProductCard({item}) {
     const dispatch = useDispatch()
 
@@ -34,7 +36,7 @@ function ProductCard({item}) {
                         </div>
                     </div>
                     <div className='overflow-hidden'>
-                        <h1 className='text-16 max-md:text-14 font-bold product-name'><Link to={`/shop/${item.id}`}>{item.productName}</Link></h1>
+                        <h1 className='text-16 max-md:text-14 font-bold product-name'><Link to={`/shop/${ConvertVie(item.productName)}${item.id}`}>{item.productName}</Link></h1>
                     </div>
                     <div className='py-[8x]'>
                         <p className={item.oldPrice === 0 ? 'hidden' : 'line-through text-14 max-md:text-13 mr-[5px]'}>{item.oldPrice.toLocaleString()}</p>

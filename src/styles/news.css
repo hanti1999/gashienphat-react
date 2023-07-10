@@ -8,3 +8,51 @@
 .blog__mini:last-child {
     margin-bottom: 0;
 }
+
+/* Pagination */
+.page-ul {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.page-ul li {
+    border-right: 1px solid #ccc;
+}
+
+.page-ul li:last-child {
+    border-right: none;
+}
+
+.page-ul li a {
+    display: block;
+    padding: 8px 10px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.selected {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.disabled {
+    color: #ddd;
+}
+/* === End pagination */
+
+@media screen and (max-width: 768px) {
+    .news__paginate, .new-blogs, .main__paginate {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1220px) {
+    .news__paginate, .new-blogs, .main__paginate {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}

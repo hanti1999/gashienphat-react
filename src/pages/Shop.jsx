@@ -167,7 +167,6 @@ const Pagination = ({ itemsPerPage }) => {
     return (
         <>
             <Items currentItems={currentItems} />
-
             <section className='wid-1200'>
                 <div className='shop__paginate mt-16'>
                     <ReactPaginate

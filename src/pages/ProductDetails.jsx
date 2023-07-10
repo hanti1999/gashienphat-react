@@ -13,23 +13,24 @@ import { db } from '../firebase.config'
 import { doc, getDoc } from 'firebase/firestore'
 import useGetData from '../custom-hooks/useGetData'
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import '../styles/product-details.css'
 
 const ProductDetails = () => {
-    const [tab, setTab] = useState('desc')
-    const reviewUser = useRef('')
-    const reviewMsg = useRef('')
-    const dispatch = useDispatch()
+    const [tab, setTab] = useState('desc');
+    const reviewUser = useRef('');
+    const reviewMsg = useRef('');
+    const dispatch = useDispatch();
 
     const [product, setProduct] = useState({})
     const {data: products} = useGetData('products');
 
-    const [rating, setRating] = useState(null)
+    const [rating, setRating] = useState(null);
+    
+    // Cắt chuỗi ở đầu để lấy được id trỏ về database (id của firebase có 20 ký tự)
     const {id} = useParams()
-
-    const docRef = doc(db, 'products', id)
+    const docRef = doc(db, 'products', id.slice(-20, id.length));
 
     useEffect(() => {
         const getProduct = async() => {
