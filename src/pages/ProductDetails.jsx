@@ -127,25 +127,26 @@ const ProductDetails = () => {
                         <div className="col-span-12">
                             <div className="tab__wrapper flex items-center gap-5">
                                 <h6 
-                                    className={`${tab === 'desc' ? 'active__tab' : ''}`}
+                                    className={`text-16 ${tab === 'desc' ? 'active__tab' : ''}`}
                                     onClick={() => setTab('desc')}
                                 >
                                     Thông tin sản phẩm
                                 </h6>
                                 <h6 
-                                    className={`${tab === 'rev' ? 'active__tab' : ''}`}
+                                    className={`text-16 ${tab === 'rev' ? 'active__tab' : ''}`}
                                     onClick={() => setTab('rev')}
                                 >
-                                    {/* Đánh giá ({reviews.length}) */}
                                     Đánh giá
                                 </h6>
                             </div>
 
                             {tab === 'desc' ? (
                                 <div className='tab__content mt-6 text-333'>
-                                    {/* {description.map((des,index) => (
-                                        <li key={index}>{des}</li>
-                                    ))} */}
+                                    {description?.map((des, index) => (
+                                        <ul key={index}>
+                                            <li className='text-14'>{des}</li>
+                                        </ul>
+                                    ))}
                                 </div>) : (
                                 <div className='product__review mt-6 text-333'>
                                     <div className="review__wrapper">
@@ -185,7 +186,7 @@ const ProductDetails = () => {
                         </div>
                         
                         <div className='col-span-12 mt-5'>
-                            <h2 className="related__title text-14 font-semibold mt-12">Có thể bạn cũng thích</h2>
+                            <h2 className="related__title text-16 font-semibold mt-12">Có thể bạn cũng thích</h2>
                         </div>
                         <ProductList data={relatedProduct} />
                     </div>

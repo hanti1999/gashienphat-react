@@ -22,6 +22,9 @@ import AllProducts from '../admin/AllProducts.jsx';
 import Users from '../admin/Users.jsx';
 import Orders from '../admin/Orders.jsx';
 
+import BepGas from '../pages/Shop-bepGas.jsx';
+import BepDien from '../pages/Shop-bepDien.jsx';
+
 export const Routers = createBrowserRouter([
     {
       path: '/',
@@ -63,6 +66,18 @@ export const Routers = createBrowserRouter([
         {
           path: 'shop/:id',
           element: <ProductDetails />
+        },
+        {
+          path: 'shop/bep-gas',
+          element: <BepGas />
+        },
+        {
+          path: 'shop/bep-dien',
+          element: <BepDien />
+        },
+        {
+          path: 'shop/may-loc-nuoc',
+          element: <Shop />
         },
         {
           path: 'checkout',

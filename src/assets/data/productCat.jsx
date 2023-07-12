@@ -15,7 +15,7 @@ const ProductCat = [
     {
         name: 'Bếp gas đôi',
         src: Akia,
-        href: '/Shop'
+        href: '/Shop/bep-gas'
     },
     {
         name: 'Bếp gas mini',
@@ -30,7 +30,7 @@ const ProductCat = [
     {
         name: 'Bếp điện',
         src: ladomaxha668,
-        href: '/Shop'
+        href: '/Shop/bep-dien'
     },
     {
         name: 'Nồi cơm điện',
@@ -45,7 +45,7 @@ const ProductCat = [
     {
         name: 'Máy lọc nước',
         src: daikiosandsw32009h2,
-        href: '/Shop'
+        href: '/Shop/may-loc-nuoc'
     },
     {
         name: 'Quạt làm mát',

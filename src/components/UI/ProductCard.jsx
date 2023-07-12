@@ -47,7 +47,7 @@ function ProductCard({item}) {
                             </motion.span>
                         </div>
                     </div>
-                    <div className='bg-[#f8f9fa] rounded-t p-[8px]'>
+                    <div className='bg-[#f8f9fa] rounded-t-md p-[8px]'>
                         <ul className='ml-[12px]'>
                             {item.description.map((des, index) => (
                                 <li key={index} className='text-13 max-md:text-12 mb-[4px] list-disc'>{des}</li>

@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 768px) {
     .filter__widget {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .filter__widget select {
@@ -52,12 +52,6 @@
     .shop__filter, .shop__products, .shop__paginate {
         margin-right: 8px;
         margin-left: 8px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .filter__widget {
-        margin-bottom: 10px;
     }
 }
 
