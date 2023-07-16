@@ -26,7 +26,7 @@ const Orders = () => {
 
     return (
         <>
-            <div className="wid-1200">
+            <div className="container mx-auto px-4">
                 <div className='w-full mt-16 orders-table'>
                     <div className='grid grid-cols-12 font-semibold pb-4 border-b text-14'>
                         <div className='col-span-2'>Tên KH</div>

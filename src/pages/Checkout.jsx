@@ -32,21 +32,26 @@ const Checkout = () => {
     e.preventDefault();
     try {
       const docRef = await collection(db, 'orders');
-      await addDoc(docRef, {
-        customerName: enterName,
-        customerEmail: enterEmail,
-        customerPhoneNumber: enterPhoneNumber,
-        customerAddress: enterAddress,
-        customerNote: enterNote,
-        customerOrders: cartItems,
-        orderState: 'Chưa xử lý',
-      })
-      toast.success('Đã gửi đơn hàng thành công!');
-      navigate('/')
+      const validatePhoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      if (enterPhoneNumber.match(validatePhoneNum) && enterPhoneNumber.charAt(0) === 0) {
+        await addDoc(docRef, {
+          customerName: enterName,
+          customerEmail: enterEmail,
+          customerPhoneNumber: enterPhoneNumber,
+          customerAddress: enterAddress,
+          customerNote: enterNote,
+          customerOrders: cartItems,
+          orderState: 'Chưa xử lý',
+        })
+        toast.success('Đã gửi đơn hàng thành công!');
+        navigate('/')
+      } else {
+        toast.error('Số điện thoại không hợp lệ!')
+      }
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+      console.log(error);
       toast.error('Có lỗi xảy ra, vui lòng thử lại!');
     }
   }

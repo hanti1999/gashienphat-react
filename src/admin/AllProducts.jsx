@@ -9,7 +9,7 @@ import ReactPaginate from 'react-paginate';
 const AllProducts = () => {
   return (
     <>
-      <section className='wid-1200'>
+      <section className='container mx-auto px-4'>
         <div className="mt-16">
           <PaginationItems itemsPerPage={12} />
         </div>

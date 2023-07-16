@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
     <section>
-      <div className="wid-1200">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-12 mt-16 md:gap-6">
           <div className="col-span-3">
             <div className="revenue__box">

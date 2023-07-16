@@ -58,7 +58,7 @@ const AddProducts = () => {
   }
 
   return (
-    <section className='wid-1200'>
+    <section className='container mx-auto px-4'>
       <div className="grid grid-cols-12 mt-16">
         <div className="col-span-12">
           {

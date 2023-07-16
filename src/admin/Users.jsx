@@ -18,7 +18,7 @@ const Users = () => {
 
     return (  
         <section>
-            <div className="wid-1200">
+            <div className="container mx-auto px-4">
                 <div className="grid grid-cols-12 mt-16">
                     <div className="col-span-12"><h4 className='font-medium text-24'>Danh sách người dùng</h4></div>
 
