@@ -124,16 +124,12 @@ function Footer() {
                     </a>
                 </div>
                 <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
-                    Tài nguyên: library:
-                    <a className='text-primary' href="https://react.dev/" target='_blank'> React</a> | icon:
-                    <a className='text-primary' href="https://fontawesome.com/" target='_blank'> Fontawesome</a> | css:
-                    <a className='text-primary' href="https://tailwindcss.com/" target='_blank'> Tailwind</a> | font: 
-                    <a className='text-primary' href="https://fonts.google.com/" target='_blank'> Google fonts</a> | images: 
-                    <a className='text-primary' href="https://www.freepik.com/" target='_blank'> Freepik</a> | tools:
-                    <a className='text-primary' href="https://www.framer.com/motion/" target='_blank'> Framer motion</a> -
-                    <a className='text-primary' href="https://github.com/fkhadra/react-toastify" target='_blank'> React toastify</a> -
-                    <a className='text-primary' href="https://github.com/AdeleD/react-paginate" target='_blank'> React paginate</a> - 
-                    <a className='text-primary' href="https://redux.js.org/" target='_blank'> Redux toolkit</a> - 
+                    Tài nguyên: library/framework:
+                    <a className='text-primary' href="https://react.dev/" target='_blank'> React</a> - 
+                    <a className='text-primary' href="https://redux.js.org/" target='_blank'> Redux toolkit</a> -
+                    <a className='text-primary' href="https://tailwindcss.com/" target='_blank'> TailwindCSS</a> | icon:
+                    <a className='text-primary' href="https://fontawesome.com/" target='_blank'> Fontawesome</a> | images: 
+                    <a className='text-primary' href="https://www.freepik.com/" target='_blank'> Freepik</a> | other:                     
                     <a className='text-primary' href="https://vitejs.dev/" target='_blank'> Vite</a> | db:
                     <a className='text-primary' href="https://firebase.google.com/" target='_blank'> Firebase</a>
                 </div>
