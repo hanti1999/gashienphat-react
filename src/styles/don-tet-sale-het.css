@@ -1,0 +1,15 @@
+.sale-page {
+    @apply !text-[100%]
+}
+
+.container-1 {
+    @apply mx-auto xl:max-w-[1200px] max-xl:px-2;
+}
+
+.service-card-item {
+    background-image: linear-gradient(to bottom right, #fb77c5, white);
+}
+
+.product-card {
+    background-image: linear-gradient(to bottom right, #fb77c5, white);
+}

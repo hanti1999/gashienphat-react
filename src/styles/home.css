@@ -39,12 +39,17 @@
     opacity: 1;
 }
 
+#show-category:checked ~ .category__list {
+    height: 400px;
+    transition: height linear .3s;
+}
+/* 
 @media (max-width: 1024px) {
     #show-category:checked ~ .category__list {
         height: 400px;
         transition: height linear .3s;
     }
-}
+} */
 
 .blog-desc {
     display: -webkit-box;
