@@ -3,6 +3,9 @@ import productImg02 from '../img/product/Daikiosan-dkt-200006_5910.png';
 import productImg03 from '../img/product/daikiosan-dkn-100002_1200.png';
 import productImg04 from '../img/product/daikiosan-dkt-100002_1200.png';
 import productImg05 from '../img/product/Kaff-kf330i.png';
+import productImg06 from '../img/product/kaff-kf-fl866gih.png';
+import productImg07 from '../img/product/kaff-kf-fl866gii.png';
+import productImg08 from '../img/product/Kangagroo-kg435i_front.png';
 
 const bepDien = [
   {
@@ -34,6 +37,24 @@ const bepDien = [
     productName: 'Bếp từ đơn Kaff KF-330I',
     oldPrice: 3080000,
     currentPrice: 2310000,
+  },
+  {
+    imgUrl: productImg06,
+    productName: 'Bếp từ đôi Kaff KF-FL866GII',
+    oldPrice: 14800000,
+    currentPrice: 11100000,
+  },
+  {
+    imgUrl: productImg07,
+    productName: 'Bếp từ đôi Kaff KF-FL866GIH',
+    oldPrice: 14800000,
+    currentPrice: 11100000,
+  },
+  {
+    imgUrl: productImg08,
+    productName: 'Bếp điện từ đôi Kangaroo KG435i',
+    oldPrice: 8000000,
+    currentPrice: 5600000,
   },
 ];
 

@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 import ScrollToTop from '../components/UI/ScrollToTop';
 import '../styles/don-tet-sale-het.css';
+import Footer from '../components/Footer/index';
 import logo from '../assets/img/icon/gashienphatlogo.png';
 import banner from '../assets/img/banner/DonTetSaleHet1.png';
-import banner2 from '../assets/img/banner/DonTetSaleHet_BepDien.png';
-import Footer from '../components/Footer/index';
+import banner2 from '../assets/img/banner/DonTetSaleHet_MayLocNuoc.png';
+import banner3 from '../assets/img/banner/DonTetSaleHet_BepDien.png';
+import ruleImg from '../assets/img/banner/asset-2bgr-20231120072644-om_8h.png';
 import mayLocNuoc from '../assets/data/mayLocNuoc.js';
 import bepDien from '../assets/data/bepDien.js';
 
@@ -35,7 +37,7 @@ const Header = () => {
           </Link>
 
           <div className=' border-2 rounded-full border-333 text-333'>
-            <div className=' px-4 py-2'>
+            <div className=' px-4 py-2  text-16 md:text-20'>
               <i className='fa-solid fa-phone-volume pr-2'></i>
               <a href='tel:0986359498'>
                 <b>0986 359 498</b>
@@ -58,15 +60,85 @@ const Body = () => {
       </section>
 
       <section className='container-1 services'>
-        <div className=' my-10'>
-          <ServiceList />
+        <ServiceList />
+      </section>
+
+      <section className='container-1 rule rounded-2xl '>
+        <div className='mt-10 text-center px-6 py-6 text-333'>
+          <div>
+            <h3 className=' text-30 font-bold'>THỂ LỆ</h3>
+            <ul className='text-20'>
+              <li>- Mỗi mã hàng chỉ có thể mua 1 sản phẩm</li>
+              <li>
+                - Sản phẩm chính hãng được bảo hành theo chính sách của hãng
+              </li>
+              <li>
+                - Áp dụng mua trực tiếp tại cửa hàng hoặc giao hàng trong khu
+                vực Long Thành
+              </li>
+            </ul>
+          </div>
+          <div className='font-bold text-20 bg-white py-4 my-2 mx-10 rounded-2xl text-[#fb77c5]'>
+            <i className='fa-solid fa-location-dot mr-2'></i>
+            199, QL 51, Xã An Phước, huyện Long Thành, tỉnh Đồng Nai
+            <a
+              className='px-2 py-2 ml-2 text-white bg-[#fb77c5] md:mt-0 mt-2 rounded-lg inline-block'
+              href='https://maps.app.goo.gl/YC47K6zwn6efQNK27'
+              target='_blank'
+            >
+              <i className='fa-solid fa-hand-point-right mr-2'></i>
+              Bản đồ
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className='container-1 rule rounded-2xl '>
+        <div className='mt-10 px-6 py-6 text-333 grid md:grid-cols-2 grid-cols-1'>
+          <div>
+            <h3 className=' text-30 font-bold'>QUÀ TẶNG HẤP DẪN</h3>
+            <ul className='text-20'>
+              <li>
+                - Giảm giá trực tiếp lên đến <b>50%</b>
+              </li>
+              <li>
+                - Khi mua các sản phẩm của Daikiosan sẽ được tham gia chương
+                trình <b>BÃO QUÀ 38 TỶ</b>, chi tiết chương trình:
+              </li>
+            </ul>
+            <div className='text-20 bg-white py-4 px-4 my-2 rounded-2xl text-333'>
+              <h4 className='text-[#fb77c5]'>
+                <b>Lần 1: Kích hoạt bảo hành - trúng quà liền tay</b>
+              </h4>
+              <p>
+                Khi khách hàng mua sản phẩm và được Đại Lý của Đại Việt kích
+                hoạt bảo hành điện tử thành công thì sẽ có mã dự thưởng và được
+                tham gia “Vòng Quay Trúng Thưởng” trên ứng dụng điện thoại "Đại
+                Việt Go". Chọn mục “Vòng Quay Trúng Thưởng” và quét mã QR Code
+                của tem bảo hành dán trên sản phẩm. Khách hàng bấm vào “Quay
+                ngay” để thực hiện vòng quay và có cơ hội nhận được hàng ngàn
+                quà có tổng giá trị gần <b>6 TỶ đồng</b>.
+              </p>
+              <h4 className='text-[#fb77c5]'>
+                <b>Lần 2: Livestream quay số</b>
+              </h4>
+              <p>
+                Mã dự thưởng của khách hàng sẽ lưu trữ trên hệ thống của chương
+                trình để tiếp tục tham gia chương trình "Livestream quay số
+                trúng thưởng" với giá trị lên đến gần 500 triệu đồng. (Chương
+                trình Livestream sẽ diễn ra vào ngày <b>11.03.2024</b> tại
+                Fanpage Daikiosan).
+              </p>
+            </div>
+          </div>
+          <div className='md:block hidden'>
+            <img src={ruleImg} alt='' />
+          </div>
         </div>
       </section>
 
       <section className='container-1 sub-banner'>
-        <div className=' rounded-3xl overflow-hidden'>
-          <img src={banner2} alt='' />
-        </div>
+        <Banner img={banner2} />
       </section>
 
       <section className=' border-b-4 border-[#fb77c5]'>
@@ -82,13 +154,17 @@ const Body = () => {
           className=' bg-fixed bg-cover bg-no-repeat w-full mt-10'
         >
           <div className='container-1'>
-            <div className=' grid grid-cols-4 gap-4 py-[20px]'>
+            <div className=' grid grid-cols-2 md:grid-cols-4 gap-4 py-[20px]'>
               {mayLocNuoc.map((i, index) => (
                 <ProductCard item={i} key={index} />
               ))}
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='container-1 sub-banner'>
+        <Banner img={banner3} />
       </section>
 
       <section>
@@ -102,7 +178,7 @@ const Body = () => {
           className=' bg-fixed bg-cover bg-no-repeat w-full mt-10 mb-[-20px]'
         >
           <div className='container-1'>
-            <div className=' grid grid-cols-4 gap-4 py-[20px]'>
+            <div className=' grid grid-cols-2 md:grid-cols-4 gap-4 py-[20px]'>
               {bepDien.map((i, index) => (
                 <ProductCard item={i} key={index} />
               ))}
@@ -110,6 +186,14 @@ const Body = () => {
           </div>
         </div>
       </section>
+    </div>
+  );
+};
+
+const Banner = ({ img }) => {
+  return (
+    <div className=' rounded-3xl overflow-hidden mt-10'>
+      <img src={img} alt='' />
     </div>
   );
 };
@@ -135,7 +219,7 @@ const servicesData = [
 
 const ServiceList = () => {
   return (
-    <div className='flex justify-around select-none'>
+    <div className=' grid grid-cols-2 md:grid-cols-4 gap-10 justify-center items-center select-none mt-10'>
       {servicesData.map((item, index) => (
         <ServiceCard item={item} key={index} />
       ))}
@@ -146,9 +230,9 @@ const ServiceList = () => {
 const ServiceCard = ({ item }) => {
   const { icon, desc } = item;
   return (
-    <div className=' rounded-3xl overflow-hidden border shadow-md w-72 h-72'>
-      <div className=' flex items-center justify-center flex-col h-full px-10 py-10 service-card-item text-primary'>
-        <i className={`text-4xl ${icon}`}></i>
+    <div className=' rounded-3xl overflow-hidden border shadow-md h-60'>
+      <div className=' flex items-center justify-center flex-col h-full px-10 py-10 service-card-item text-333'>
+        <i className={`text-5xl ${icon}`}></i>
         <p className='text-16 text-center mt-4'>{desc}</p>
       </div>
     </div>
@@ -169,12 +253,14 @@ const ProductCard = ({ item }) => {
       </div>
       <div className='mx-6 my-6'>
         <h2 className='font-medium text-20'>{productName}</h2>
-        <span className='text-red-500 font-bold text-20 mr-2'>
-          {currentPrice.toLocaleString()}đ
-        </span>
-        <span className=' line-through text-[#999] text-16'>
-          {oldPrice.toLocaleString()}đ
-        </span>
+        <div className=' flex flex-col md:flex-row'>
+          <span className='text-red-500 font-bold text-20 mr-2'>
+            {currentPrice.toLocaleString()}đ
+          </span>
+          <span className=' line-through text-[#999] text-16'>
+            {oldPrice.toLocaleString()}đ
+          </span>
+        </div>
       </div>
       {/* <div className='mx-6 my-6'>
         {description.map((d, index) => (
