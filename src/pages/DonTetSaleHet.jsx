@@ -284,7 +284,7 @@ const ProductCard = ({ item }) => {
       </div>
       <div className='md:mx-6 md:my-6 mx-3 my-3'>
         <h2 className='font-medium text-18 md:text-20'>{productName}</h2>
-        <div className=' flex flex-col md:flex-row'>
+        <div className=' flex flex-col md:flex-row md:items-end'>
           <span className='text-red-500 font-bold text-18 md:text-20 mr-2'>
             {currentPrice.toLocaleString()}đ
           </span>

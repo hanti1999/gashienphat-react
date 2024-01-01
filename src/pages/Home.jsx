@@ -116,7 +116,7 @@ function Home() {
               </div>
             </div>
             <div className='col-span-9 max-lg:col-span-full'>
-              <div className='bg-primary h-auto max-md:h-auto rounded overflow-hidden '>
+              <div className=' h-auto max-md:h-auto rounded overflow-hidden '>
                 {/* <div className='text-white cursor-default col-span-1 px-5 pt-16 pb-4 max-md:col-span-full'>
                   <span className='text-16 font-light'>
                     Chào mừng quý khách <br />
@@ -146,7 +146,7 @@ function Home() {
                   </div>
                 </div> */}
                 <Link to='/don-tet-sale-het'>
-                  <img src={mainBanner2} alt='' />
+                  <img src={mainBanner2} alt='' className=' mt-4 md:mt-0' />
                 </Link>
               </div>
             </div>
