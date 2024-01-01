@@ -189,13 +189,12 @@ const Present = () => {
             <b>Lần 1: Kích hoạt bảo hành - trúng quà liền tay</b>
           </h4>
           <p>
-            Khi khách hàng mua sản phẩm và được Đại Lý của Đại Việt kích hoạt
-            bảo hành điện tử thành công thì sẽ có mã dự thưởng và được tham gia
-            “Vòng Quay Trúng Thưởng” trên ứng dụng điện thoại "Đại Việt Go".
-            Chọn mục “Vòng Quay Trúng Thưởng” và quét mã QR Code của tem bảo
-            hành dán trên sản phẩm. Khách hàng bấm vào “Quay ngay” để thực hiện
-            vòng quay và có cơ hội nhận được hàng ngàn quà có tổng giá trị gần{' '}
-            <b>6 TỶ đồng</b>.
+            Khi khách hàng mua sản phẩm và được chúng tôi kích hoạt bảo hành
+            điện tử thành công thì sẽ có mã dự thưởng và được tham gia “Vòng
+            Quay Trúng Thưởng” trên ứng dụng điện thoại "Đại Việt Go". Chọn mục
+            “Vòng Quay Trúng Thưởng” và quét mã QR Code của tem bảo hành dán
+            trên sản phẩm, bấm vào “Quay ngay” để thực hiện vòng quay và có cơ
+            hội nhận được hàng ngàn quà có tổng giá trị gần <b>6 TỶ đồng</b>.
           </p>
           <h4 className='text-[#fb77c5]'>
             <b>Lần 2: Livestream quay số</b>
