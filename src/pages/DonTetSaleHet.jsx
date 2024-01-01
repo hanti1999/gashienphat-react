@@ -8,9 +8,10 @@ import logo from '../assets/img/icon/gashienphatlogo.png';
 import banner from '../assets/img/banner/DonTetSaleHet1.png';
 import banner2 from '../assets/img/banner/DonTetSaleHet_MayLocNuoc.png';
 import banner3 from '../assets/img/banner/DonTetSaleHet_BepDien.png';
-import ruleImg from '../assets/img/banner/asset-2bgr-20231120072644-om_8h.png';
+import ruleImg from '../assets/img/banner/popup-banner.jpg';
 import mayLocNuoc from '../assets/data/mayLocNuoc.js';
 import bepDien from '../assets/data/bepDien.js';
+import frame from '../assets/img/banner/Frame.png';
 
 const DonTetSaleHet = () => {
   return (
@@ -63,8 +64,8 @@ const Body = () => {
         <ServiceList />
       </section>
 
-      <section className='container-1 rule rounded-2xl '>
-        <div className='mt-10 text-center px-6 py-6 text-333'>
+      <section className='container-1 rule md:rounded-2xl rounded-none '>
+        <div className='mt-10 text-center md:px-6 md:py-6 px-3 py-3 text-333'>
           <div>
             <h3 className=' text-30 font-bold'>THỂ LỆ</h3>
             <ul className='text-20'>
@@ -78,7 +79,7 @@ const Body = () => {
               </li>
             </ul>
           </div>
-          <div className='font-bold text-20 bg-white py-4 my-2 mx-10 rounded-2xl text-[#fb77c5]'>
+          <div className='font-bold text-20 bg-white py-4 px-4 my-2 mx-10 rounded-2xl text-[#fb77c5]'>
             <i className='fa-solid fa-location-dot mr-2'></i>
             199, QL 51, Xã An Phước, huyện Long Thành, tỉnh Đồng Nai
             <a
@@ -93,8 +94,8 @@ const Body = () => {
         </div>
       </section>
 
-      <section className='container-1 rule rounded-2xl '>
-        <div className='mt-10 px-6 py-6 text-333 grid md:grid-cols-2 grid-cols-1'>
+      <section className='container-1 rule md:rounded-2xl rounded-none '>
+        <div className='mt-10 md:px-6 md:py-6 px-3 py-3 text-333 grid md:grid-cols-2 grid-cols-1 gap-6'>
           <div>
             <h3 className=' text-30 font-bold'>QUÀ TẶNG HẤP DẪN</h3>
             <ul className='text-20'>
@@ -131,8 +132,8 @@ const Body = () => {
               </p>
             </div>
           </div>
-          <div className='md:block hidden'>
-            <img src={ruleImg} alt='' />
+          <div className=''>
+            <img src={ruleImg} alt='' className=' rounded-2xl' />
           </div>
         </div>
       </section>
@@ -209,17 +210,17 @@ const servicesData = [
   },
   {
     icon: 'fa-solid fa-truck-fast',
-    desc: 'Miễn phí giao hàng trong khu vực Long Thành',
+    desc: 'Miễn phí giao hàng khu vực Long Thành',
   },
   {
     icon: 'fa-solid fa-money-check',
-    desc: 'Đang dạng phương thức thanh toán như COD, chuyển khoản',
+    desc: 'Đang dạng phương thức thanh toán',
   },
 ];
 
 const ServiceList = () => {
   return (
-    <div className=' grid grid-cols-2 md:grid-cols-4 gap-10 justify-center items-center select-none mt-10'>
+    <div className=' grid grid-cols-2 md:grid-cols-4 md:gap-10 gap-5 justify-center items-center select-none mt-10'>
       {servicesData.map((item, index) => (
         <ServiceCard item={item} key={index} />
       ))}
@@ -243,7 +244,12 @@ const ProductCard = ({ item }) => {
   const { imgUrl, productName, oldPrice, currentPrice, description } = item;
   return (
     <div className='product-card rounded-2xl overflow-hidden'>
-      <div className=' bg-[#ffffff99] mx-6 mt-6 rounded-lg relative'>
+      <div className=' bg-[#ffffff99] md:mx-6 md:mt-6 mx-3 mt-3 rounded-lg relative'>
+        {productName.includes('Daikiosan') ? (
+          <img src={frame} alt='' className='absolute' />
+        ) : (
+          <></>
+        )}
         <div className='absolute bg-red-500 rounded-br-lg rounded-tl-lg'>
           <span className='block px-2 py-1 text-white text-16 font-bold'>
             Giảm {100 - (currentPrice * 100) / oldPrice} %
@@ -251,7 +257,7 @@ const ProductCard = ({ item }) => {
         </div>
         <img src={imgUrl} alt='' />
       </div>
-      <div className='mx-6 my-6'>
+      <div className='md:mx-6 md:my-6 mx-3 my-3'>
         <h2 className='font-medium text-20'>{productName}</h2>
         <div className=' flex flex-col md:flex-row'>
           <span className='text-red-500 font-bold text-20 mr-2'>
