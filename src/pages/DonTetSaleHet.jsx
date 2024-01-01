@@ -239,7 +239,7 @@ const servicesData = [
   },
   {
     icon: 'fa-solid fa-money-check',
-    desc: 'Đang dạng phương thức thanh toán',
+    desc: 'Đa dạng phương thức thanh toán',
   },
 ];
 

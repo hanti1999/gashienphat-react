@@ -22,7 +22,7 @@ const bepDien = [
   },
   {
     imgUrl: productImg03,
-    productName: 'Bếp hồng noại đơn Daikiosan DKN-100002',
+    productName: 'Bếp hồng ngoại đơn Daikiosan DKN-100002',
     oldPrice: 1200000,
     currentPrice: 900000,
   },
