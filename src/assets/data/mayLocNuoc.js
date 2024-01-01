@@ -12,6 +12,18 @@ import productImg11 from '../img/product/bo-loi-nang-cap-may-loc-nuoc-daikiosan.
 
 const mayLocNuoc = [
   {
+    imgUrl: productImg08,
+    productName: 'Máy lọc nước để gầm Mutosi 7 cấp MP-370UGT',
+    oldPrice: 6130000,
+    currentPrice: 3065000,
+  },
+  {
+    imgUrl: productImg09,
+    productName: 'Máy lọc nước Mutosi 8 cấp nóng nguội MP-582H',
+    oldPrice: 8140000,
+    currentPrice: 4070000,
+  },
+  {
     imgUrl: productImg01,
     productName: 'Máy lọc nước RO Daikiosan 9 cấp DSW 32009H2',
     oldPrice: 6650000,
@@ -56,18 +68,7 @@ const mayLocNuoc = [
     oldPrice: 12900000,
     currentPrice: 9030000,
   },
-  {
-    imgUrl: productImg08,
-    productName: 'Máy lọc nước để gầm Mutosi 7 cấp MP-370UGT',
-    oldPrice: 6130000,
-    currentPrice: 3065000,
-  },
-  {
-    imgUrl: productImg09,
-    productName: 'Máy lọc nước Mutosi 8 cấp nóng nguội MP-582H',
-    oldPrice: 8140000,
-    currentPrice: 4070000,
-  },
+
   {
     imgUrl: productImg10,
     productName: 'Bộ 3 lõi lọc thô dùng cho máy lọc nước',

@@ -8,6 +8,7 @@ import banner from '../assets/img/banner/DonTetSaleHet1.png';
 import banner2 from '../assets/img/banner/DonTetSaleHet_BepDien.png';
 import Footer from '../components/Footer/index';
 import mayLocNuoc from '../assets/data/mayLocNuoc.js';
+import bepDien from '../assets/data/bepDien.js';
 
 const DonTetSaleHet = () => {
   return (
@@ -102,7 +103,7 @@ const Body = () => {
         >
           <div className='container-1'>
             <div className=' grid grid-cols-4 gap-4 py-[20px]'>
-              {mayLocNuoc.map((i, index) => (
+              {bepDien.map((i, index) => (
                 <ProductCard item={i} key={index} />
               ))}
             </div>
@@ -148,7 +149,7 @@ const ServiceCard = ({ item }) => {
     <div className=' rounded-3xl overflow-hidden border shadow-md w-72 h-72'>
       <div className=' flex items-center justify-center flex-col h-full px-10 py-10 service-card-item text-primary'>
         <i className={`text-4xl ${icon}`}></i>
-        <p className='text-[16px] text-center mt-4'>{desc}</p>
+        <p className='text-16 text-center mt-4'>{desc}</p>
       </div>
     </div>
   );
@@ -160,18 +161,18 @@ const ProductCard = ({ item }) => {
     <div className='product-card rounded-2xl overflow-hidden'>
       <div className=' bg-[#ffffff99] mx-6 mt-6 rounded-lg relative'>
         <div className='absolute bg-red-500 rounded-br-lg rounded-tl-lg'>
-          <span className='block px-2 py-1 text-white text-[16px] font-bold'>
+          <span className='block px-2 py-1 text-white text-16 font-bold'>
             Giảm {100 - (currentPrice * 100) / oldPrice} %
           </span>
         </div>
         <img src={imgUrl} alt='' />
       </div>
       <div className='mx-6 my-6'>
-        <h2 className='font-medium text-[20px]'>{productName}</h2>
-        <span className='text-red-500 font-bold text-[20px] mr-2'>
+        <h2 className='font-medium text-20'>{productName}</h2>
+        <span className='text-red-500 font-bold text-20 mr-2'>
           {currentPrice.toLocaleString()}đ
         </span>
-        <span className=' line-through text-[#999]'>
+        <span className=' line-through text-[#999] text-16'>
           {oldPrice.toLocaleString()}đ
         </span>
       </div>
