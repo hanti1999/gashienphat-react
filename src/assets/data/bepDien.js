@@ -5,7 +5,11 @@ import productImg04 from '../img/product/daikiosan-dkt-100002_1200.png';
 import productImg05 from '../img/product/Kaff-kf330i.png';
 import productImg06 from '../img/product/kaff-kf-fl866gih.png';
 import productImg07 from '../img/product/kaff-kf-fl866gii.png';
-import productImg08 from '../img/product/Kangagroo-kg435i_front.png';
+import productImg08 from '../img/product/Chiffs-CH112s.png';
+import productImg09 from '../img/product/Kangagroo-kg435i_front.png';
+import productImg10 from '../img/product/Sakura-se-3150.png';
+import productImg11 from '../img/product/midea-miB2015de_1.png';
+import productImg12 from '../img/product/ladomax-ha668_1.png';
 
 const bepDien = [
   {
@@ -40,21 +44,39 @@ const bepDien = [
   },
   {
     imgUrl: productImg06,
-    productName: 'Bếp từ đôi Kaff KF-FL866GII',
-    oldPrice: 14800000,
-    currentPrice: 11100000,
-  },
-  {
-    imgUrl: productImg07,
     productName: 'Bếp từ đôi Kaff KF-FL866GIH',
     oldPrice: 14800000,
     currentPrice: 11100000,
   },
   {
     imgUrl: productImg08,
+    productName: 'Bếp từ đôi Kaff KF-FL866GIH',
+    oldPrice: 8500000,
+    currentPrice: 6800000,
+  },
+  {
+    imgUrl: productImg09,
     productName: 'Bếp điện từ đôi Kangaroo KG435i',
     oldPrice: 8000000,
     currentPrice: 5600000,
+  },
+  {
+    imgUrl: productImg10,
+    productName: 'Bếp hồng ngoại đơn Sakura SE-3150',
+    oldPrice: 1290000,
+    currentPrice: 1032000,
+  },
+  {
+    imgUrl: productImg11,
+    productName: 'Bếp điện từ đôi Kangaroo KG435i',
+    oldPrice: 1290000,
+    currentPrice: 1032000,
+  },
+  {
+    imgUrl: productImg12,
+    productName: 'Bếp điện từ đôi Kangaroo KG435i',
+    oldPrice: 850000,
+    currentPrice: 680000,
   },
 ];
 
