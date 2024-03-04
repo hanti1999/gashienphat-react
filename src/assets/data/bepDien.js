@@ -68,13 +68,13 @@ const bepDien = [
   },
   {
     imgUrl: productImg11,
-    productName: 'Bếp điện từ đôi Kangaroo KG435i',
+    productName: 'Bếp điện từ đơn Midea MiB2015de',
     oldPrice: 1290000,
     currentPrice: 1032000,
   },
   {
     imgUrl: productImg12,
-    productName: 'Bếp điện từ đôi Kangaroo KG435i',
+    productName: 'Bếp điện từ đơn LadoMax HA668',
     oldPrice: 850000,
     currentPrice: 680000,
   },
