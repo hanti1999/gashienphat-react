@@ -177,12 +177,12 @@ function Footer() {
         <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
           Công ty TNHH Hiền Phát Vina
         </div>
-        <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
+        {/* <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
           Mã số doanh nghiệp: 3603240938 do Sở Kế hoạch & Đầu tư tỉnh Đồng Nai
           cấp lần đầu ngày 30/12/2014
-        </div>
+        </div> */}
         <div className='w-full text-center text-14 mt-[4px] text-[#00000099]'>
-          Phát triển bởi: <b>Nguyễn Thông Hoàng Anh</b>
+          Web thử nghiệm bởi: <b>Nguyễn Thông Hoàng Anh</b>
           <a target='_blank' href='https://www.instagram.com/hoangfanh.99/'>
             <i className='text-16 px-[3px] fa-brands fa-instagram'></i>
           </a>
