@@ -17,13 +17,13 @@ function App() {
       <p>Vui lòng trở lại sau</p>
       <p>Xin cảm ơn!</p>
       <p>
-        mọi thông tin khác vui lòng liên hệ:{' '}
+        Mọi thông tin khác vui lòng liên hệ:{' '}
         <a
           className='text-blue-500 underline'
           href='https://zalo.me/0986359498'
           target='_blank'
         >
-          Zalo (Hoàng ANh)
+          Zalo (Hoàng Anh)
         </a>
       </p>
     </div>
